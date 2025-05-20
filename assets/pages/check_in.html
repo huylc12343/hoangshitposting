@@ -1,51 +1,21 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QR Scanner</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- QR Scanner -->
   <script src="https://unpkg.com/html5-qrcode"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: #f8f8f8;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    #qr-reader {
-      width: 90%;
-      max-width: 400px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    @media (max-width: 600px) {
-      #qr-reader {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
 </head>
-<body>
-  <h1>Quét mã QR</h1>
-  <div id="qr-reader"></div>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+  <h1 class="text-2xl font-semibold mb-4 text-center text-gray-800">🔍 Quét mã QR</h1>
+
+  <div id="qr-reader" class="w-full max-w-md rounded-lg overflow-hidden shadow-lg bg-white p-2"></div>
 
   <script>
     function onScanSuccess(decodedText, decodedResult) {
@@ -54,14 +24,20 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: decodedText })
-      }).then(res => res.json())
-        .then(result => alert(result.message));
+      })
+      .then(res => res.json())
+      .then(result => alert(result.message))
+      .catch(err => alert("Lỗi gửi dữ liệu: " + err));
     }
 
-    let html5QrcodeScanner = new Html5QrcodeScanner(
-      "qr-reader", { fps: 10, qrbox: { width: 250, height: 250 } }
+    const html5QrcodeScanner = new Html5QrcodeScanner(
+      "qr-reader",
+      { fps: 10, qrbox: { width: 250, height: 250 } },
+      false
     );
+
     html5QrcodeScanner.render(onScanSuccess);
   </script>
+
 </body>
 </html>
