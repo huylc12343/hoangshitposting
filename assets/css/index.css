@@ -1,0 +1,196 @@
+/* Body styling */
+body {
+    margin: 0;
+    background-color: #1a1a2e; /* Màu nền tối */
+    color: #ffffff; /* Màu chữ trắng */
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Timeline styling */
+.timeline {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    height: 80vh;
+    scroll-snap-type: x mandatory;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách đều giữa các phần */
+}
+
+/* Section styling */
+.section {
+    min-width: 280px;
+    max-width: 280px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Đổ bóng mượt */
+    text-align: center;
+    font-size: 1.8em;
+    color: #ffffff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Hiệu ứng mượt mà */
+    scroll-snap-align: center;
+    background-size: cover; /* Chỉnh hình nền vừa với phần */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Đổ bóng khi hover */
+}
+
+/* Link styling */
+.section .dir {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+/* Background colors for each section */
+.lsvn { background-color: rgba(76, 175, 80, 0.9); }
+.lsqt { background-color: rgba(33, 150, 243, 0.9); }
+.tlls { background-color: rgba(255, 152, 0, 0.9); }
+.shop { background-color: rgba(233, 127, 95, 0.9); }
+
+/* Hover effect */
+.section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Logout button styling */
+#logoutButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nút */
+}
+
+#logoutButton:hover {
+    background-color: #c0392b;
+}
+
+/* Image styling */
+.section img {
+    border-radius: 8px; /* Làm mềm các cạnh ảnh */
+    width: 100%; /* Ảnh tự động vừa với khung */
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+/* Đặt video-cover khớp với section */
+.section {
+    position: relative; /* Đảm bảo các phần tử con định vị theo section */
+    overflow: hidden; /* Đảm bảo nội dung không tràn ra ngoài */
+}
+
+/* Video-cover khớp hoàn toàn với kích thước section */
+.video-cover {
+    position: absolute; /* Để chiếm toàn bộ section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Đảm bảo video không bị tràn */
+}
+
+/* Video chiếm toàn bộ kích thước của video-cover */
+.video-cover video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo video vừa với khung mà không méo */
+    opacity: 0; /* Ẩn video mặc định */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Hiệu ứng mượt */
+}
+
+/* Hiển thị video khi hover */
+.section:hover .video-cover video {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 700px) {
+    .section {
+        font-size: 1.4em;
+        min-width: 180px;
+        max-width: 180px;
+    }
+    #logoutButton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Modal popup styling */
+.modal-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content styling */
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    color: #333333;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #333333;
+}
+/* Media query for mobile screens */
+@media screen and (max-width: 700px) {
+    .timeline {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Tạo lưới 2 cột */
+        gap: 20px; /* Khoảng cách giữa các ô */
+        justify-items: center;
+    }
+
+    .section {
+        font-size: 1.4em;
+        flex: 1 1 auto; /* Điều chỉnh lại kích thước ô */
+        width: 100%;
+    }
+
+    #logoutButton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
