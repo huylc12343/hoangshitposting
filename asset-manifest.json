@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/hoangshitposting/static/css/main.4189db64.css",
+    "main.js": "/hoangshitposting/static/js/main.25e2ec80.js",
+    "static/js/453.a4d90313.chunk.js": "/hoangshitposting/static/js/453.a4d90313.chunk.js",
+    "static/media/bg-TuDo.png": "/hoangshitposting/static/media/bg-TuDo.a632c9f0080d08f52b16.png",
+    "static/media/join_us.jpg": "/hoangshitposting/static/media/join_us.49a3a2cfddfa55a37efc.jpg",
+    "static/media/g3.png": "/hoangshitposting/static/media/g3.fdeb4c4180818c6a3885.png",
+    "static/media/g4.png": "/hoangshitposting/static/media/g4.a3dd7d57ad688a80e744.png",
+    "static/media/g1.png": "/hoangshitposting/static/media/g1.8502effc52a136a83ff1.png",
+    "static/media/g2.png": "/hoangshitposting/static/media/g2.09bf8cfaaa4a3cdfbc37.png",
+    "static/media/g5.png": "/hoangshitposting/static/media/g5.4e1ef890207a238d0695.png",
+    "static/media/combo2.jpg": "/hoangshitposting/static/media/combo2.2ebe9f2c43af0b5f1676.jpg",
+    "static/media/combo4.jpg": "/hoangshitposting/static/media/combo4.b982fdaa92f6148e4325.jpg",
+    "static/media/combo1.jpg": "/hoangshitposting/static/media/combo1.2a1a2d6eb5bf2f062b14.jpg",
+    "static/media/combo3.jpg": "/hoangshitposting/static/media/combo3.c9c4695370fb3ca2e3c1.jpg",
+    "static/media/auto_scroll.png": "/hoangshitposting/static/media/auto_scroll.5a2a186cc781d41b9324.png",
+    "static/media/fa-solid-900.ttf": "/hoangshitposting/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/Averta-Cyrillic-Bold.otf": "/hoangshitposting/static/media/Averta-Cyrillic-Bold.c230801e9712d934591b.otf",
+    "static/media/Averta-Cyrillic-Regular.otf": "/hoangshitposting/static/media/Averta-Cyrillic-Regular.9cfd0bd43bdd4b9357ad.otf",
+    "static/media/Averta-Cyrillic-Regular-Italic.otf": "/hoangshitposting/static/media/Averta-Cyrillic-Regular-Italic.d5bb4ed6bb230b5d0f53.otf",
+    "static/media/fa-brands-400.ttf": "/hoangshitposting/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/Averta-Cyrillic-Extra-Thin.otf": "/hoangshitposting/static/media/Averta-Cyrillic-Extra-Thin.135bf9f5c9787abd0eac.otf",
+    "static/media/Averta-Cyrillic-Black-Italic.otf": "/hoangshitposting/static/media/Averta-Cyrillic-Black-Italic.e4dac2b008385fab3cc4.otf",
+    "static/media/Averta-Cyrillic-Extra-Thin-Italic.otf": "/hoangshitposting/static/media/Averta-Cyrillic-Extra-Thin-Italic.27c9acf4086c2f4e3172.otf",
+    "static/media/fa-solid-900.woff2": "/hoangshitposting/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/fa-brands-400.woff2": "/hoangshitposting/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/hoangshitposting/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/fa-regular-400.woff2": "/hoangshitposting/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/fa-v4compatibility.ttf": "/hoangshitposting/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/hoangshitposting/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "static/media/Cas.svg": "/hoangshitposting/static/media/Cas.a929b46d5ef5f27edf98553e1fbb926b.svg",
+    "static/media/down-arrow-svgrepo-com.svg": "/hoangshitposting/static/media/down-arrow-svgrepo-com.3ec8b2827490c303470f8054fa6c3702.svg",
+    "index.html": "/hoangshitposting/index.html",
+    "main.4189db64.css.map": "/hoangshitposting/static/css/main.4189db64.css.map",
+    "main.25e2ec80.js.map": "/hoangshitposting/static/js/main.25e2ec80.js.map",
+    "453.a4d90313.chunk.js.map": "/hoangshitposting/static/js/453.a4d90313.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4189db64.css",
+    "static/js/main.25e2ec80.js"
+  ]
+}
