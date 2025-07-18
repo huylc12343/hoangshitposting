@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
-import TuDobg from '../assets/bg-TuDo-min.png';
-import NguoiTimVangbg from '../assets/bg-NguoiTimVang-min.png';
+import TuDobg from '../assets/bg-TuDo-min.jpg';
+import NguoiTimVangbg from '../assets/bg-NguoiTimVang-min.jpg';
 
 // Theme context
 const ThemeContext = createContext();
