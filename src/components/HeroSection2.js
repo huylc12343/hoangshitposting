@@ -1,12 +1,15 @@
 import React from 'react';
-import backgroundTexture from '../assets/bg-TuDo-min.png';
+// import backgroundTexture from '../assets/bg-TuDo-min.png'; // Không còn cần import này nữa
+import { useTheme } from '../contexts/Theme'; // Đảm bảo đường dẫn đúng đến file theme.js của bạn
 
 export default function HeroSection2() {
+  const { theme } = useTheme(); // Lấy theme hiện tại từ context
+
   return (
     <div
       className="relative w-full min-h-screen flex items-center justify-center p-8 overflow-hidden"
       style={{
-        backgroundImage: `url(${backgroundTexture})`,
+        backgroundImage: theme.background, // Sử dụng background từ theme context
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

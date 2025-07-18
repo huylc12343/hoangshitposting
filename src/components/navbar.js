@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import CasIcon from '../assets/Cas.svg'; // Import the CAS icon
 import '../assets/fonts/fonts.css';
+import { useTheme } from '../contexts/Theme'; // Đảm bảo đường dẫn đúng đến file theme.js của bạn
 
 const Navbar = () => {
-  const [themeColor, setThemeColor] = useState('#1A56DB'); // màu mặc định
+  // Lấy theme hiện tại và các hàm thay đổi theme từ hook useTheme
+  const { theme, setThemeTuDo, setThemeNguoiTimVang } = useTheme();
 
-  const toggleTheme = () => {
-    setThemeColor(prev => (prev === '#1A56DB' ? '#B9400C' : '#1A56DB'));
+  // Xác định màu sắc của nút theme dựa trên theme hiện tại
+  const currentThemeButtonColor = theme.color;
+
+  // Hàm để chuyển đổi giữa hai theme
+  const handleToggleTheme = () => {
+    if (theme.color === "#1A56DB") {
+      setThemeNguoiTimVang(); // Nếu đang là TuDoTheme, chuyển sang NguoiTimVangTheme
+    } else {
+      setThemeTuDo(); // Ngược lại, chuyển sang TuDoTheme
+    }
   };
 
   return (
@@ -33,15 +43,15 @@ const Navbar = () => {
           <span className="text-white font-medium">Theme:</span>
           <button
             className="w-8 h-8 rounded-full border border-white"
-            style={{ backgroundColor: themeColor }}
-            onClick={toggleTheme}
+            style={{ backgroundColor: currentThemeButtonColor }} // Sử dụng màu từ theme context
+            onClick={handleToggleTheme} // Gọi hàm để chuyển đổi theme
           ></button>
         </div>
 
         {/* Giỏ hàng */}
         <button
           className="flex items-center gap-2 px-4 py-2 text-white rounded-md hover:opacity-90 transition-colors duration-300"
-          style={{ backgroundColor: themeColor }}
+          style={{ backgroundColor: currentThemeButtonColor }} // Sử dụng màu từ theme context
         >
           <i className="fas fa-shopping-cart"></i>
           <span>Giỏ hàng</span>

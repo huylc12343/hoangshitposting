@@ -1,16 +1,19 @@
 import React from 'react';
-import backgroundImage from '../assets/bg-TuDo-min.png';
+// import backgroundImage from '../assets/bg-TuDo-min.png'; // Không còn cần import này nữa
 import g2 from '../assets/g2-min.png';
 import g3 from '../assets/g3-min.png';
 import g5 from '../assets/g5-min.png';
 import joinus from '../assets/join_us-min.jpg'; 
+import { useTheme } from '../contexts/Theme'; // Đảm bảo đường dẫn đúng đến file theme.js của bạn
 
 export default function HeroSection3() {
+  const { theme } = useTheme(); // Lấy theme hiện tại từ context
+
   return (
     <div
       className="relative w-full min-h-screen flex flex-col items-center justify-center p-8 overflow-hidden text-white"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: theme.background, // Sử dụng background từ theme context
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -94,15 +97,15 @@ export default function HeroSection3() {
             <p>
               Và trên hành trình đó, chúng mình hy vọng có sự đồng hành của bạn!
             </p>
-                      <button
-            className="px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"
-            style={{
-              backgroundColor: '#1A56DB',
-              fontFamily: 'Averta CY',
-            }}
-          >
-            Đồng hành cùng chúng mình
-          </button>
+            <button
+              className="px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"
+              style={{
+                backgroundColor: theme.color, // Sử dụng màu từ theme context
+                fontFamily: 'Averta CY',
+              }}
+            >
+              Đồng hành cùng chúng mình
+            </button>
           </div>
 
           {/* Hình ảnh bên phải */}
@@ -114,8 +117,6 @@ export default function HeroSection3() {
             />
           </div>
         </div>
-
-
       </div>
     </div>
   );

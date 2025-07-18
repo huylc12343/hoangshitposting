@@ -3,25 +3,28 @@ import merchMainImage from '../assets/combo4-min.jpg';
 import merchItem1 from '../assets/combo3-min.jpg';
 import merchItem2 from '../assets/combo2-min.jpg';
 import merchItem3 from '../assets/combo1-min.jpg';
-import bgImage from '../assets/bg-TuDo-min.png';
+// import bgImage from '../assets/bg-TuDo-min.png'; // No longer needed
+import { useTheme } from '../contexts/Theme'; // Import the useTheme hook
 
 export default function Merch() {
+  const { theme } = useTheme(); // Access the current theme from context
+
   return (
     <section
       className="relative w-full py-20 text-white px-4 md:px-8 lg:px-12 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      style={{ backgroundImage: theme.background }} // Use the background from the theme context
     >
-      {/* Lớp phủ tối */}
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
-      {/* Nội dung chính */}
+      {/* Main content */}
       <div className="relative z-10">
         <h1 className="text-5xl md:text-7xl font-extrabold text-center mb-16 font-AvertaCY tracking-wide">
           Merch
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto p-6">
-          {/* Hình lớn bên trái */}
+          {/* Large image on the left */}
           <div className="flex justify-center items-center p-2 overflow-hidden bg-white/5">
             <img
               src={merchMainImage}
@@ -30,7 +33,7 @@ export default function Merch() {
             />
           </div>
 
-          {/* Grid 2x2 hình nhỏ */}
+          {/* 2x2 grid of small images */}
           <div className="grid grid-cols-2 grid-rows-2 gap-4 p-2">
             <div className="flex justify-center items-center overflow-hidden bg-white/5">
               <img

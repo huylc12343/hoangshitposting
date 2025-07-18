@@ -1,9 +1,11 @@
 import React from 'react';
-import bgImage from '../assets/bg-TuDo-min.png';
 import arrowDownIcon from '../assets/down-arrow-svgrepo-com.svg';
 import gapgap from '../assets/gapgap-min.png';
+import { useTheme } from '../contexts/Theme'; // Import hook useTheme từ file theme.js của bạn
 
 const HeroSection = () => {
+  const { theme } = useTheme(); // Lấy theme hiện tại từ context
+
   const scrollToBottom = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
@@ -12,28 +14,27 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative w-full h-screen items-center overflow-hidden font-imbue text-white">
-      {/* Background và lớp mờ */}
-      <div className="absolute inset-0">
-        <img
-          src={bgImage}
-          alt="Background"
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-s"></div>
-      </div>
+    <div
+      className="relative w-full h-screen items-center overflow-hidden font-imbue text-white"
+      style={{
+        backgroundImage: theme.background, // Sử dụng background từ theme
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Lớp mờ - giữ nguyên */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-s"></div>
 
       {/* Nội dung chính */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-16">
         <div className="w-full max-w-6xl flex flex-col items-center">
-            <div className="w-[800px] h-[400px] overflow-hidden rounded-xl">
-              <img
-                src={gapgap}
-                alt="GẤP GÁP"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-
+          <div className="w-[800px] h-[400px] overflow-hidden rounded-xl">
+            <img
+              src={gapgap}
+              alt="GẤP GÁP"
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
 
           {/* Mũi tên xuống */}
           <div
