@@ -1,19 +1,19 @@
 import React from 'react';
-import bgImage from '../assets/bg-TuDo.png';
+import bgImage from '../assets/bg-TuDo-min.png';
 import arrowDownIcon from '../assets/down-arrow-svgrepo-com.svg';
-import '../assets/fonts/fonts.css'; // Đảm bảo font Averta được import ở đây
+import gapgap from '../assets/gapgap-min.png';
 
 const HeroSection = () => {
   const scrollToBottom = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden font-Averta text-white">
-      {/* Background hình ảnh và lớp làm mờ */}
+    <div className="relative w-full h-screen items-center overflow-hidden font-imbue text-white">
+      {/* Background và lớp mờ */}
       <div className="absolute inset-0">
         <img
           src={bgImage}
@@ -24,24 +24,42 @@ const HeroSection = () => {
       </div>
 
       {/* Nội dung chính */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pt-20">
-        <p className="text-3xl md:text-4xl font-bold mb-4 text-left">CHUỖI SỰ KIỆN</p>
-        <h1 className="text-6xl md:text-9xl font-extrabold leading-tight tracking-wider">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-16">
+        <div className="w-full max-w-6xl flex flex-col items-center">
+            <div className="w-[800px] h-[400px] overflow-hidden rounded-xl">
+              <img
+                src={gapgap}
+                alt="GẤP GÁP"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+
+
+          {/* Mũi tên xuống */}
+          <div
+            className="mt-8 animate-bounce cursor-pointer"
+            onClick={scrollToBottom}
+          >
+            <img
+              src={arrowDownIcon}
+              alt="Scroll Down"
+              className="w-10 h-10 filter invert"
+            />
+          </div>
+        </div>
+
+        {/* Phần chữ đã ẩn đi bằng comment */}
+        {/*
+        <p className="text-3xl md:text-4xl font-extralight mb-2 tracking-wide">
+          CHUỖI SỰ KIỆN
+        </p>
+        <h1 className="text-[200px] md:text-[220px] font-extrabold leading-[0.9] tracking-wider">
           GẤP GÁP
         </h1>
-        <p className="text-xl md:text-4xl mt-8">CÓ CẦN PHẢI CÓ LÝ KHÔNG?</p>
-
-        {/* Icon mũi tên */}
-        <div
-          className="mt-16 animate-bounce cursor-pointer"
-          onClick={scrollToBottom}
-        >
-          <img
-            src={arrowDownIcon}
-            alt="Scroll Down"
-            className="w-10 h-10 filter invert"
-          />
-        </div>
+        <p className="text-xl md:text-4xl mt-2 font-extralight tracking-[.35em]">
+          CÓ CẦN PHẢI CÓ LÝ KHÔNG?
+        </p>
+        */}
       </div>
     </div>
   );

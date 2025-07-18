@@ -1,9 +1,9 @@
 import React from 'react';
-import merchMainImage from '../assets/combo4.jpg';
-import merchItem1 from '../assets/combo3.jpg';
-import merchItem2 from '../assets/combo2.jpg';
-import merchItem3 from '../assets/combo1.jpg';
-import bgImage from '../assets/bg-TuDo.png';
+import merchMainImage from '../assets/combo4-min.jpg';
+import merchItem1 from '../assets/combo3-min.jpg';
+import merchItem2 from '../assets/combo2-min.jpg';
+import merchItem3 from '../assets/combo1-min.jpg';
+import bgImage from '../assets/bg-TuDo-min.png';
 
 export default function Merch() {
   return (

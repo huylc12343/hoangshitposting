@@ -1,12 +1,14 @@
-@keyframes scrollLeft {
+/* scroll.css */
+.scroll-container {
+  animation: scroll-left 40s linear infinite;
+}
+
+@keyframes scroll-left {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
-}
-
-.scroll-container {
-  animation: scrollLeft 20s linear infinite;
 }
