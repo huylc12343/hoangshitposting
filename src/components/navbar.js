@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="flex items-center gap-10">
         <img src={CasIcon} alt="cas" className="w-20 h-20" />
         <ul className="flex gap-8 text-white font-medium items-center">
-          <li className="hover:text-blue-300 cursor-pointer"><Link to="/">Trang chủ</Link>{' '}</li>
+          <li className="hover:text-blue-300 cursor-pointer"><Link to="/hoangshitposting">Trang chủ</Link>{' '}</li>
           <li className="hover:text-blue-300 cursor-pointer"><Link to="/about">Về chúng tôi</Link> {' '}</li>
           <li className="hover:text-blue-300 cursor-pointer"><Link to="/upcoming">Sự kiện sắp tới</Link></li>
           <li className="hover:text-blue-300 cursor-pointer"><Link to="merch">Merch</Link></li>
