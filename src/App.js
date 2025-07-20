@@ -1,27 +1,31 @@
 import './App.css';
 import Navbar from './components/navbar';
-import HeroSection from './components/HeroSection'; // Import HeroSection component
-import HeroSection2 from './components/HeroSection2'; // Import HeroSection2 component
-import HeroSection3 from './components/HeroSection3'; // Import HeroSection3 component
-import Merch from './components/Merch'; // Import Merch component
 import Footer from './components/footer';
-import { ThemeProvider } from './contexts/Theme'; // Đường dẫn đến file Theme.js của bạn
-import AutoScrollBanner from './components/AutoScroll'; // Import AutoScrollBanner component
+import { ThemeProvider } from './contexts/Theme';
+import { Routes, Route } from 'react-router-dom';
+
+import Home from './pages/home';
+import About from './pages/About';
+import Merch from './pages/merch';
+import Upcoming from './pages/upcoming';
+
 function App() {
   return (
     <div className="App">
       <ThemeProvider>
         <Navbar />
-        <HeroSection />
-        <HeroSection2 />
-        <AutoScrollBanner />
-        <HeroSection3 />      
-        <Merch />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/merch" element={<Merch />} />
+          <Route path="/upcoming" element={<Upcoming/>}/>
+          <Route path="*" element={<h1>404 - Không tìm thấy trang</h1>} />
+        </Routes>
         <Footer />
-      </ThemeProvider>  
+      </ThemeProvider>
     </div>
-    
   );
+  
 }
 
 export default App;
