@@ -1,7 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
 import TuDobg from '../assets/bg-TuDo-min.jpg';
+import TuDoIcon from '../assets/TuDoBird.svg';
 import NguoiTimVangbg from '../assets/bg-NguoiTimVang-min.jpg';
-
+import NguoiTimVangIcon from '../assets/pickaxe-svgrepo-com.svg';
 // Theme context
 const ThemeContext = createContext();
 
@@ -9,11 +10,13 @@ const ThemeContext = createContext();
 const TuDoTheme = {
     color: "#1A56DB",
     background: `url(${TuDobg})`,
+    icon: TuDoIcon,
 };
 
 const NguoiTimVangTheme = {
     color: "#B9400C",
     background: `url(${NguoiTimVangbg})`,
+    icon: NguoiTimVangIcon,
 };
 
 // Theme provider

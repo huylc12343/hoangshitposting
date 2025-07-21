@@ -1,71 +1,54 @@
-import React from 'react';
-// import backgroundTexture from '../assets/bg-TuDo-min.png'; // Không còn cần import này nữa
-import { useTheme } from '../contexts/Theme'; // Đảm bảo đường dẫn đúng đến file theme.js của bạn
+import React from "react";
+import AboutUsImg from "../assets/PWM01219-min.jpg";
+import Cas from "../assets/Cas.svg";
+import { useTheme } from "../contexts/Theme";
 
-export default function AboutUs_HeroSection() {
-  const { theme } = useTheme(); // Lấy theme hiện tại từ context
+const AboutUs_HeroSection = () => {
+  const { theme } = useTheme();
 
   return (
     <div
-      className="relative w-full min-h-screen flex items-center justify-center p-8 overflow-hidden"
-      style={{
-        backgroundImage: theme.background, // Sử dụng background từ theme context
+      className="w-full py-32 px-8 shadow-md transition-all duration-500"
+      style={{ 
+        backgroundImage: theme.background,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
+
     >
-      {/* Lớp phủ tối */}
-      <div className="absolute inset-0 bg-black opacity-70"></div>
-
-      {/* Nội dung chính */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto flex flex-col items-center">
-
-        {/* Cụm trung tâm gồm dấu ngoặc kép và tiêu đề chia 2 dòng */}
-        <div className="flex items-start justify-center mb-2 w-full px-4">
-          {/* Dấu " trái */}
-          <span
-            className="text-[10rem] text-white opacity-80 mr-4"
-            style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
-          >
-            “
-          </span>
-
-          {/* Tiêu đề */}
-          <div className="flex flex-col items-center leading-tight">
-            <h1
-              className="text-center text-7xl md:text-8xl tracking-wider"
-              style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
-            >
-              Đây là về chúng tôi
-            </h1>
-            <h1
-              className="text-center text-7xl md:text-8xl mt-2 tracking-wider whitespace-nowrap"
-              style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
-            >
-              
-            </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        {/* Bên trái: Tiêu đề và nội dung */}
+        <div className="flex justify-end">
+          <div className="max-w-lg text-left">
+            <h2 className="text-5xl font-bold mb-8 text-[#BC4535] flex items-center gap-3">
+              VỀ CHÚNG TÔI
+              <img src={Cas} alt="Cas Icon" className="h-[1.2em] w-auto" />
+            </h2>
+            <p className="text-white text-base leading-relaxed mb-6">
+              Chương trình Offline Hội Hoang được thực hiện bởi những fan 
+              đã gắn bó với Cá Hồi Hoang, những người đã trưởng thành cùng âm nhạc của band.
+            </p>
+            <p className="text-white text-base leading-relaxed">
+              Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023, 
+              nhưng với chúng mình, âm nhạc ấy vẫn luôn tồn tại – là ký ức, 
+              là nguồn cảm hứng, là nơi chữa lành, và sẽ luôn là một điều gì đó mãi mãi.
+            </p>
           </div>
-
-          {/* Dấu " phải */}
-          <span
-            className="text-[10rem] text-white opacity-80 ml-4"
-            style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
-          >
-            “
-          </span>
         </div>
 
-        {/* Đường kẻ ngang nằm ngay dưới tiêu đề */}
-        <hr className="w-[220px] border-t-[1.5px] border-white mb-6" />
-
-        {/* Đoạn mô tả */}
-        <p
-          className="text-center text-lg md:text-xl leading-relaxed opacity-90 w-[400px] mt-4"
-          style={{ fontFamily: 'Courier New' }}
-        >
-
-        </p>
+        {/* Bên phải: Hình ảnh */}
+        <div className="flex justify-start">
+          <img
+            src={AboutUsImg}
+            alt="Hình minh họa"
+            width={600}
+            height={400}
+            className="object-cover rounded-none"
+          />
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default AboutUs_HeroSection;

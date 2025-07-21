@@ -9,7 +9,7 @@ export default function Thanks() {
       </div>
 
       {/* Nội dung căn giữa */}
-      <div className="space-y-6 text-center text-white max-w-3xl mx-auto">
+      <div className="space-y-6 text-justify text-white max-w-3xl mx-auto">
         <p className="text-lg ">
           BTC Offline Hội Hoang xin gửi lời cảm ơn chân thành đến các ban nhạc,
           các cá nhân và tổ chức đã dành thời gian quan tâm đến hồ sơ chương trình.

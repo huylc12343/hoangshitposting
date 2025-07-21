@@ -1,63 +1,102 @@
-import React from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import CasIcon from '../assets/Cas.svg'; // Import the CAS icon
+import React, { useState } from 'react';
+import CasIcon from '../assets/Cas.svg';
 import '../assets/fonts/fonts.css';
-import { useTheme } from '../contexts/Theme'; // Đảm bảo đường dẫn đúng đến file theme.js của bạn
+import { useTheme } from '../contexts/Theme';
 import { Link } from 'react-router-dom';
+
 const Navbar = () => {
-  // Lấy theme hiện tại và các hàm thay đổi theme từ hook useTheme
   const { theme, setThemeTuDo, setThemeNguoiTimVang } = useTheme();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Xác định màu sắc của nút theme dựa trên theme hiện tại
-  const currentThemeButtonColor = theme.color;
-
-  // Hàm để chuyển đổi giữa hai theme
-  const handleToggleTheme = () => {
+  const handleToggle = () => {
     if (theme.color === "#1A56DB") {
-      setThemeNguoiTimVang(); // Nếu đang là TuDoTheme, chuyển sang NguoiTimVangTheme
+      setThemeNguoiTimVang();
     } else {
-      setThemeTuDo(); // Ngược lại, chuyển sang TuDoTheme
+      setThemeTuDo();
     }
   };
 
   return (
-    <nav
-      className="fixed top-0 left-0 w-full z-50 px-6 py-2 flex items-center justify-between font-Averta
-                 bg-white/10 backdrop-blur-md shadow-md">
-      {/* Logo + Menu */}
+    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-2 font-Averta
+                    bg-white/10 backdrop-blur-md shadow-md flex items-center justify-between">
+      
+      {/* LEFT: Logo + Menu */}
       <div className="flex items-center gap-10">
-        <img src={CasIcon} alt="cas" className="w-20 h-20" />
-        <ul className="flex gap-8 text-white font-medium items-center">
-          <li className="hover:text-blue-300 cursor-pointer"><Link to="/hoangshitposting">Trang chủ</Link>{' '}</li>
-          <li className="hover:text-blue-300 cursor-pointer"><Link to="/about">Về chúng tôi</Link> {' '}</li>
-          <li className="hover:text-blue-300 cursor-pointer"><Link to="/upcoming">Sự kiện sắp tới</Link></li>
-          <li className="hover:text-blue-300 cursor-pointer"><Link to="merch">Merch</Link></li>
+        <img src={CasIcon} alt="cas" className="w-20 h-20 flex-shrink-0" />
+        <ul className="hidden md:flex items-center gap-8 text-white font-medium">
+          <li className="hover:text-blue-300 cursor-pointer">
+            <Link to="/hoangshitposting">Trang chủ</Link>
+          </li>
+          <li className="hover:text-blue-300 cursor-pointer">
+            <Link to="/about">Về chúng tôi</Link>
+          </li>
+          <li className="hover:text-blue-300 cursor-pointer">
+            <Link to="/upcoming">Sự kiện sắp tới</Link>
+          </li>
+          <li className="hover:text-blue-300 cursor-pointer">
+            <Link to="/merch">Merch</Link>
+          </li>
         </ul>
       </div>
 
-      {/* Giỏ hàng + Theme */}
+      {/* RIGHT: Toggle + Cart + Hamburger */}
       <div className="flex items-center gap-4">
-
-        {/* Theme Toggle */}
-        <div className="flex items-center gap-2">
-          <span className="text-white font-medium">Theme:</span>
-          <button
-            className="w-8 h-8 rounded-full border border-white"
-            style={{ backgroundColor: currentThemeButtonColor }} // Sử dụng màu từ theme context
-            onClick={handleToggleTheme} // Gọi hàm để chuyển đổi theme
-          ></button>
+        {/* Theme toggle */}
+        <div
+          onClick={handleToggle}
+          className="w-14 h-8 rounded-full p-1 bg-white/30 cursor-pointer flex items-center transition-all duration-300 relative"
+        >
+          <div
+            className={`w-6 h-6 rounded-full shadow-md transform transition-all duration-300 relative
+              ${theme.color === "#1A56DB" ? 'translate-x-0' : 'translate-x-6'}`}
+            style={{
+              backgroundImage: theme.background,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <img
+              src={theme.icon}
+              alt="theme icon"
+              className="absolute top-1/2 left-1/2 w-3.5 h-3.5 -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
         </div>
 
-        {/* Giỏ hàng */}
+        {/* Cart - desktop */}
         <button
-          className="flex items-center gap-2 px-4 py-2 text-white rounded-md hover:opacity-90 transition-colors duration-300"
-          style={{ backgroundColor: currentThemeButtonColor }} // Sử dụng màu từ theme context
+          className="hidden md:flex items-center gap-2 px-4 py-2 text-white rounded-md hover:opacity-90 transition duration-300"
+          style={{ backgroundColor: theme.color }}
         >
           <i className="fas fa-shopping-cart"></i>
-          <span>Giỏ hàng</span>
+          <span><Link to="/cart">Giỏ hàng</Link></span>
           <span className="ml-2 bg-white text-red-500 text-xs font-bold px-2 py-0.5 rounded-full">3</span>
         </button>
+
+        {/* Cart - mobile */}
+        <Link to="/cart" className="md:hidden relative text-white text-xl">
+          <i className="fas fa-shopping-cart"></i>
+          <span className="absolute -top-2 -right-2 bg-white text-red-500 text-xs font-bold px-1.5 py-0.5 rounded-full">3</span>
+        </Link>
+
+        {/* Hamburger - mobile */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-white text-2xl"
+        >
+          <i className="fas fa-bars"></i>
+        </button>
       </div>
+
+      {/* Mobile menu dropdown */}
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full bg-[#000000cc] text-white py-4 px-6 flex flex-col gap-4 md:hidden">
+          <Link to="/hoangshitposting" onClick={() => setMenuOpen(false)}>Trang chủ</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>Về chúng tôi</Link>
+          <Link to="/upcoming" onClick={() => setMenuOpen(false)}>Sự kiện sắp tới</Link>
+          <Link to="/merch" onClick={() => setMenuOpen(false)}>Merch</Link>
+        </div>
+      )}
     </nav>
   );
 };

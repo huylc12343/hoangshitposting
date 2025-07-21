@@ -1,10 +1,10 @@
 import React from 'react';
 import arrowDownIcon from '../assets/down-arrow-svgrepo-com.svg';
 import gapgap from '../assets/gapgap-min.png';
-import { useTheme } from '../contexts/Theme'; // Import hook useTheme từ file theme.js của bạn
+import { useTheme } from '../contexts/Theme';
 
 const HeroSection = () => {
-  const { theme } = useTheme(); // Lấy theme hiện tại từ context
+  const { theme } = useTheme();
 
   const scrollToBottom = () => {
     window.scrollTo({
@@ -15,20 +15,21 @@ const HeroSection = () => {
 
   return (
     <div
-      className="relative w-full h-screen items-center overflow-hidden font-imbue text-white"
+      className="relative w-full h-screen font-imbue text-white overflow-hidden"
       style={{
-        backgroundImage: theme.background, // Sử dụng background từ theme
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundImage: theme.background,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
-      {/* Lớp mờ - giữ nguyên */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-s"></div>
+      {/* Lớp mờ phủ đen */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
 
       {/* Nội dung chính */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-16">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-20 md:pt-16">
         <div className="w-full max-w-6xl flex flex-col items-center">
-          <div className="w-[800px] h-[400px] overflow-hidden rounded-xl">
+          {/* Hình ảnh với responsive */}
+          <div className="w-full max-w-[800px] aspect-video overflow-hidden rounded-xl shadow-xl">
             <img
               src={gapgap}
               alt="GẤP GÁP"
@@ -44,22 +45,16 @@ const HeroSection = () => {
             <img
               src={arrowDownIcon}
               alt="Scroll Down"
-              className="w-10 h-10 filter invert"
+              className="w-8 h-8 md:w-10 md:h-10 filter invert"
             />
           </div>
         </div>
 
-        {/* Phần chữ đã ẩn đi bằng comment */}
-        {/*
-        <p className="text-3xl md:text-4xl font-extralight mb-2 tracking-wide">
-          CHUỖI SỰ KIỆN
-        </p>
-        <h1 className="text-[200px] md:text-[220px] font-extrabold leading-[0.9] tracking-wider">
-          GẤP GÁP
-        </h1>
-        <p className="text-xl md:text-4xl mt-2 font-extralight tracking-[.35em]">
-          CÓ CẦN PHẢI CÓ LÝ KHÔNG?
-        </p>
+        {/* Nếu muốn hiện chữ sau này, bỏ comment */}
+        {/* 
+        <p className="text-2xl md:text-4xl font-extralight mb-2 tracking-wide text-center">CHUỖI SỰ KIỆN</p>
+        <h1 className="text-6xl md:text-[120px] font-extrabold leading-[0.9] tracking-wider text-center">GẤP GÁP</h1>
+        <p className="text-lg md:text-3xl mt-2 font-extralight tracking-[.35em] text-center">CÓ CẦN PHẢI CÓ LÝ KHÔNG?</p> 
         */}
       </div>
     </div>

@@ -1,91 +1,84 @@
 import React from 'react';
-// import backgroundImage from '../assets/bg-TuDo-min.png'; // Không còn cần import này nữa
 import g2 from '../assets/g2-min.png';
 import g3 from '../assets/g3-min.png';
 import g5 from '../assets/g5-min.png';
-import joinus from '../assets/join_us-min.jpg'; 
-import { useTheme } from '../contexts/Theme'; // Đảm bảo đường dẫn đúng đến file theme.js của bạn
+import joinus from '../assets/join_us-min.jpg';
+import { useTheme } from '../contexts/Theme';
 
 export default function HeroSection3() {
-  const { theme } = useTheme(); // Lấy theme hiện tại từ context
+  const { theme } = useTheme();
 
   return (
     <div
-      className="relative w-full min-h-screen flex flex-col items-center justify-center p-8 overflow-hidden text-white"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden text-white"
       style={{
-        backgroundImage: theme.background, // Sử dụng background từ theme context
+        backgroundImage: theme.background,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      {/* Lớp phủ tối */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
-      {/* Grid hình ảnh */}
-      <div className="relative z-10 max-w-7xl w-full grid grid-cols-5 gap-0">
-        {/* Hàng 1 */}
+      {/* Image Grid (giữ nguyên trên mobile) */}
+      <div className="relative z-10 w-full max-w-7xl grid grid-cols-5 gap-0">
         <div className="col-span-3">
           <img
             src={g5}
             alt="Image g5"
-            className="w-full h-full object-cover"
+            className="w-full h-[200px] sm:h-[250px] md:h-full object-cover"
           />
         </div>
         <div className="col-span-2">
           <img
             src={g2}
             alt="Image g2"
-            className="w-full h-full object-cover"
+            className="w-full h-[200px] sm:h-[250px] md:h-full object-cover"
           />
         </div>
-
-        {/* Hàng 2: g3 chiếm toàn bộ */}
         <div className="col-span-5">
           <img
             src={g3}
             alt="Image g3"
-            className="w-full h-full object-cover"
+            className="w-full h-[200px] sm:h-[250px] md:h-[400px] object-cover"
           />
         </div>
       </div>
 
-      {/* Đoạn văn bản giữa */}
+      {/* Text Block */}
       <div
-        className="relative z-10 max-w-4xl mt-8 text-center text-lg leading-relaxed px-4"
+        className="relative z-10 mt-8 text-center text-sm sm:text-base md:text-lg leading-relaxed px-4 sm:px-6 md:px-0 max-w-3xl"
         style={{
-          width: '880px',
-          height: '95px',
           fontFamily: 'Averta CY',
-          whiteSpace: 'normal', // Cho phép xuống dòng
-          lineHeight: '1.5', // Điều chỉnh khoảng dòng cho phù hợp chiều cao
-          marginTop: '4rem', // Khoảng cách phía trên
-          marginBottom: '10rem',
-          textAlign: 'center',
+          lineHeight: '1.6',
         }}
       >
         Chúng mình tôn trọng quyết định của các thành viên Band nhưng cũng mong rằng những giai điệu đã gắn bó suốt bao năm vẫn tiếp tục đồng hành cùng những người yêu nhạc Cá Hồi Hoang, từ fan lâu năm đến khán giả mới.
         Các hoạt động trên Fanpage, trong cộng đồng fan, các chương trình Offline Hội Hoang được tổ chức với mục tiêu kết nối những trái tim yêu nhạc Cá Hồi Hoang, cùng nhau cất lên những giai điệu đã chạm đến tâm hồn mỗi người, để “Âm nhạc Cá Hồi Hoang sẽ luôn là cái gì đó mãi mãi”.
       </div>
 
-      {/* Head1: Chuỗi sự kiện */}
-      <div className="relative z-10 w-full max-w-7xl mt-12 px-4 text-left">
-        <h2 className="text-4xl md:text-8xl leading-tight tracking-wide" style={{ fontFamily: 'Imbue'}}>
+      {/* Heading */}
+      <div className="relative z-10 w-full max-w-7xl mt-12 px-4 text-center md:text-left">
+        <h2
+          className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight tracking-wide"
+          style={{ fontFamily: 'Imbue' }}
+        >
           CHUỖI SỰ KIỆN<br />
           GẤP GÁP CÓ CẦN PHẢI CÓ LÝ KHÔNG?
         </h2>
       </div>
 
-      {/* Phần mô tả và ảnh */}
+      {/* Description + Image */}
       <div
         className="relative z-10 w-full max-w-7xl px-4 mx-auto mt-10"
         style={{
           fontFamily: 'Averta CY',
-          textAlign: 'left',
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start"> {/* Changed items-center to items-start for top alignment */}
-          {/* Văn bản bên trái */}
-          <div className="text-base md:text-lg leading-relaxed space-y-4">
+        {/* Stack content on mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          {/* Text + Button */}
+          <div className="text-sm sm:text-base md:text-lg leading-relaxed space-y-4 text-left">
             <p>
               Chúng mình cũng mong muốn tạo một sân chơi dành cho các band cover, giúp band có cơ hội thử sức, xây dựng tệp khán giả và mang đến những sân khấu đáng nhớ.
             </p>
@@ -97,23 +90,25 @@ export default function HeroSection3() {
             <p>
               Và trên hành trình đó, chúng mình hy vọng có sự đồng hành của bạn!
             </p>
-            <button
-              className="px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"
-              style={{
-                backgroundColor: theme.color, // Sử dụng màu từ theme context
-                fontFamily: 'Averta CY',
-              }}
-            >
-              Đồng hành cùng chúng mình
-            </button>
+            <div className="w-full flex justify-center md:justify-start">
+              <button
+                className="mt-4 px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"
+                style={{
+                  backgroundColor: theme.color,
+                  fontFamily: 'Averta CY',
+                }}
+              >
+                Đồng hành cùng chúng mình
+              </button>
+            </div>
           </div>
 
-          {/* Hình ảnh bên phải */}
-          <div className="w-full">
+          {/* Image moved below on mobile */}
+          <div className="w-full order-first md:order-none">
             <img
               src={joinus}
               alt="Triển lãm Gấp Gáp"
-              className="w-full h-auto shadow-lg object-cover"
+              className="w-full h-auto shadow-lg object-cover rounded-md"
             />
           </div>
         </div>
