@@ -8,7 +8,7 @@ import Home from './pages/home';
 import About from './pages/About';
 import Merch from './pages/merch';
 import Upcoming from './pages/upcoming';
-
+import Cart from './pages/cart';
 function App() {
   return (
     <div className="App">
@@ -19,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/merch" element={<Merch />} />
           <Route path="/upcoming" element={<Upcoming/>}/>
+          <Route path="/cart" element={<Cart/>}/>
           <Route path="*" element={<h1>404 - Không tìm thấy trang</h1>} />
         </Routes>
         <Footer />

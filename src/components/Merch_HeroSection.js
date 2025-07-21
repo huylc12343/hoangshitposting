@@ -1,71 +1,65 @@
-import React from 'react';
-// import backgroundTexture from '../assets/bg-TuDo-min.png'; // Không còn cần import này nữa
-import { useTheme } from '../contexts/Theme'; // Đảm bảo đường dẫn đúng đến file theme.js của bạn
+import React, { useState } from 'react';
+import { useTheme } from '../contexts/Theme';
+import Merch_bg from '../assets/merch_bg_min.jpg';
+import Merch_Popup from './Merch_Popup';
+
+// Import ảnh sản phẩm
+import product1 from '../assets/combo1-min.jpg';
+import product2 from '../assets/combo2-min.jpg';
+import product3 from '../assets/combo3-min.jpg';
+import product4 from '../assets/combo4-min.jpg';
 
 export default function Merch_HeroSection() {
-  const { theme } = useTheme(); // Lấy theme hiện tại từ context
+  const { theme } = useTheme();
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  const products = [product1, product2, product3, product4];
 
   return (
     <div
-      className="relative w-full min-h-screen flex items-center justify-center p-8 overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col items-center justify-start p-8 overflow-x-hidden overflow-y-auto"
       style={{
-        backgroundImage: theme.background, // Sử dụng background từ theme context
+        backgroundImage: `url(${Merch_bg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      {/* Lớp phủ tối */}
-      <div className="absolute inset-0 bg-black opacity-70"></div>
+      {/* Lớp phủ màu đen dần từ trên (40%) xuống dưới (100%) */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,1))',
+        }}
+      ></div>
 
-      {/* Nội dung chính */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto flex flex-col items-center">
-
-        {/* Cụm trung tâm gồm dấu ngoặc kép và tiêu đề chia 2 dòng */}
-        <div className="flex items-start justify-center mb-2 w-full px-4">
-          {/* Dấu " trái */}
-          <span
-            className="text-[10rem] text-white opacity-80 mr-4"
-            style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
-          >
-            “
-          </span>
-
-          {/* Tiêu đề */}
-          <div className="flex flex-col items-center leading-tight">
-            <h1
-              className="text-center text-7xl md:text-8xl tracking-wider"
-              style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
-            >
-              Đây là về Merch
-            </h1>
-            <h1
-              className="text-center text-7xl md:text-8xl mt-2 tracking-wider whitespace-nowrap"
-              style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
-            >
-              
-            </h1>
-          </div>
-
-          {/* Dấu " phải */}
-          <span
-            className="text-[10rem] text-white opacity-80 ml-4"
-            style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
-          >
-            “
-          </span>
-        </div>
-
-        {/* Đường kẻ ngang nằm ngay dưới tiêu đề */}
-        <hr className="w-[220px] border-t-[1.5px] border-white mb-6" />
-
-        {/* Đoạn mô tả */}
-        <p
-          className="text-center text-lg md:text-xl leading-relaxed opacity-90 w-[400px] mt-4"
-          style={{ fontFamily: 'Courier New' }}
-        >
-
-        </p>
+      {/* Tiêu đề */}
+      <div className="relative z-10 text-white text-center mb-12 mt-24 w-full max-w-7xl">
+        <h1 className="text-5xl font-bold mb-4">Merch Combo</h1>
       </div>
+
+      {/* Lưới sản phẩm */}
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-7xl">
+        {products.map((img, index) => (
+          <div
+            key={index}
+            className="bg-white cursor-pointer"
+            onClick={() => setSelectedIndex(index)}
+          >
+            <img
+              src={img}
+              alt={`product-${index}`}
+              className="w-full h-auto block"
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Popup chi tiết sản phẩm */}
+      <Merch_Popup
+        selectedIndex={selectedIndex}
+        onClose={() => setSelectedIndex(null)}
+      />
     </div>
   );
 }
