@@ -23,7 +23,7 @@ const HeroSection = () => {
       }}
     >
       {/* Lớp mờ phủ đen */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Nội dung chính */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-20 md:pt-16">
