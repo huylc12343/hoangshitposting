@@ -8,7 +8,7 @@ const AboutUs_HeroSection2 = () => {
     <div
       className="w-full py-32 px-8 shadow-md flex flex-col items-center"
       style={{
-        backgroundImage: theme.background,
+        backgroundColor: "#0F0F0F",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

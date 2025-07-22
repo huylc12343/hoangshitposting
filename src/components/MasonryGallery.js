@@ -16,41 +16,38 @@ import g14 from '../assets/g14-min.png';
 
 const MasonryGallery = () => {
   return (
-    <div className="bg-black text-white px-4 py-6 space-y-8">
+    <div className="bg-[#0F0F0F] text-white px-4 py-6 space-y-8">
 
       {/* Hàng 1: 2 hình, 1 to 1 nhỏ */}
-      <div className="grid grid-cols-12 gap-2">
-        <img src={g1} alt="g1" className="col-span-8 w-full object-cover" />
-        <img src={g2} alt="g2" className="col-span-4 h-full object-cover" />
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
+        <img src={g1} alt="g1" className="w-full object-cover md:col-span-8" />
+        <img src={g2} alt="g2" className="h-full object-cover md:col-span-4" />
       </div>
 
       {/* Hàng 2: 3 hình bằng nhau */}
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
         <img src={g3} alt="g3" className="w-full object-cover" />
         <img src={g4} alt="g4" className="w-full object-cover" />
         <img src={g5} alt="g5" className="w-full object-cover" />
       </div>
 
       {/* Bố cục chia ngang 2/3 */}
-      <div className="grid grid-cols-12 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         {/* Bên trái: 8/12 */}
-        <div className="col-span-8 space-y-4">
-          {/* Hình lớn trên */}
+        <div className="space-y-4 md:col-span-8">
           <img src={g6} alt="g6" className="w-full object-cover" />
-
-          {/* 2 hàng, mỗi hàng 2 hình nhỏ */}
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <img src={g7} alt="g7" className="w-full object-cover" />
             <img src={g8} alt="g8" className="w-full object-cover" />
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <img src={g9} alt="g9" className="w-full object-cover" />
             <img src={g10} alt="g10" className="w-full object-cover" />
           </div>
         </div>
 
         {/* Bên phải: 4/12 - ảnh dọc */}
-        <div className="col-span-4 space-y-2">
+        <div className="space-y-2 md:col-span-4">
           <img src={g11} alt="g11" className="w-full object-cover" />
           <img src={g12} alt="g12" className="w-full object-cover" />
           <img src={g13} alt="g13" className="w-full object-cover" />

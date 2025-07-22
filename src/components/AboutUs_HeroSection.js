@@ -7,36 +7,45 @@ const AboutUs_HeroSection = () => {
   const { theme } = useTheme();
 
   return (
-    <div
-      className="w-full py-32 px-8 shadow-md transition-all duration-500"
-      style={{ 
-        backgroundImage: theme.background,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+<div className="relative w-full py-20 px-6 md:py-32 md:px-8 shadow-md transition-all duration-500 overflow-hidden">
+  {/* Layer nền blur + ảnh nền */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: `url(${AboutUsImg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      filter: "blur(8px)",
+      transform: "scale(1.05)", // phóng to nhẹ để che viền do blur
+    }}
+  ></div>
 
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        {/* Bên trái: Tiêu đề và nội dung */}
+  {/* Lớp phủ đen thêm chiều sâu */}
+  <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+
+
+      {/* Nội dung desktop */}
+      <div className="relative z-10 hidden md:grid grid-cols-2 gap-12 items-center">
+        {/* Trái: Nội dung */}
         <div className="flex justify-end">
-          <div className="max-w-lg text-left">
-            <h2 className="text-5xl font-bold mb-8 text-[#BC4535] flex items-center gap-3">
+          <div className="text-white text-left max-w-lg">
+            <h2 className="text-5xl font-bold mb-6 text-[#BC4535] flex items-center gap-3">
               VỀ CHÚNG TÔI
               <img src={Cas} alt="Cas Icon" className="h-[1.2em] w-auto" />
             </h2>
-            <p className="text-white text-base leading-relaxed mb-6">
-              Chương trình Offline Hội Hoang được thực hiện bởi những fan 
-              đã gắn bó với Cá Hồi Hoang, những người đã trưởng thành cùng âm nhạc của band.
+            <p className="text-base leading-relaxed mb-4 text-justify">
+              Chương trình Offline Hội Hoang được thực hiện bởi những fan đã gắn bó với Cá Hồi Hoang,
+              những người đã trưởng thành cùng âm nhạc của band.
             </p>
-            <p className="text-white text-base leading-relaxed">
-              Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023, 
-              nhưng với chúng mình, âm nhạc ấy vẫn luôn tồn tại – là ký ức, 
-              là nguồn cảm hứng, là nơi chữa lành, và sẽ luôn là một điều gì đó mãi mãi.
+            <p className="text-base leading-relaxed text-justify">
+              Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023,
+              nhưng với chúng mình, âm nhạc ấy vẫn luôn tồn tại – là ký ức, là nguồn cảm hứng,
+              là nơi chữa lành, và sẽ luôn là một điều gì đó mãi mãi.
             </p>
           </div>
         </div>
 
-        {/* Bên phải: Hình ảnh */}
+        {/* Phải: Hình ảnh */}
         <div className="flex justify-start">
           <img
             src={AboutUsImg}
@@ -45,6 +54,38 @@ const AboutUs_HeroSection = () => {
             height={400}
             className="object-cover rounded-none"
           />
+        </div>
+      </div>
+
+      {/* Nội dung mobile */}
+      <div className="relative z-10 md:hidden flex flex-col items-center text-white text-center space-y-6 mt-8">
+
+        {/* Logo + Tiêu đề */}
+        <div className="flex flex-col items-center space-y-2">
+          <img src={Cas} alt="Cas Icon" className="h-10 w-auto" />
+          <h2 className="text-3xl font-bold text-[#BC4535]">VỀ CHÚNG TÔI</h2>
+        </div>
+
+        {/* Hình ảnh */}
+        <div className="w-full flex justify-center">
+          <img
+            src={AboutUsImg}
+            alt="Hình minh họa"
+            className="w-full max-w-md object-cover rounded-none"
+          />
+        </div>
+
+        {/* Nội dung */}
+        <div className="text-sm leading-relaxed text-justify max-w-md">
+          <p className="mb-3">
+            Chương trình Offline Hội Hoang được thực hiện bởi những fan đã gắn bó với Cá Hồi Hoang,
+            những người đã trưởng thành cùng âm nhạc của band.
+          </p>
+          <p>
+            Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023, nhưng với chúng mình,
+            âm nhạc ấy vẫn luôn tồn tại – là ký ức, là nguồn cảm hứng, là nơi chữa lành,
+            và sẽ luôn là một điều gì đó mãi mãi.
+          </p>
         </div>
       </div>
     </div>
