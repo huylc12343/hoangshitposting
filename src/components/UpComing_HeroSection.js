@@ -31,9 +31,13 @@ export default function Upcoming_HeroSection_HeroSection() {
 
       {/* Nội dung phía trên */}
 <div className="relative z-20 text-white text-left mb-12 mt-24 w-full max-w-7xl">
-  <h1 className="text-5xl font-bold mb-4">Sự kiện sắp tới</h1>
+  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center md:text-left">
+  Sự kiện sắp tới
+</h1>
+
   <TimelineSection />
 </div>
+
 
     </div>
   );

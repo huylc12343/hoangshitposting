@@ -34,34 +34,40 @@ const timelineData = [
 
 export default function TimelineComponent() {
     return (
-        <div className="relative w-full max-w-7xl mx-auto py-20 z-10">
+        <div className="relative w-full max-w-7xl mx-auto z-10">
             <div className="space-y-20 relative">
+                {/* Vertical line for mobile timeline */}
+                <div className="md:hidden absolute left-[7px] top-0 bottom-0 w-0.5 bg-white/30 z-0" />
+
+
                 {timelineData.map((item, index) => (
                     <div key={index} className="relative flex flex-col md:flex-row gap-4 md:gap-6 items-start">
 
                         {/* LEFT: Date + Time + Dot */}
                         <div className="relative flex w-full md:w-auto md:justify-end items-center">
-                            <div className="bg-white/10 p-4 text-white w-full md:min-w-[200px] md:max-w-[200px] flex-shrink-0">
-
-                                <p className="text-sm text-white/60 font-light" style={{textAlign: "Right"}}>{item.date}</p>
-                                
+                            {/* Dot and Line Segment for Mobile */}
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 flex md:hidden">
+                                <div className="w-4 h-4 rounded-full bg-[#BC4535] border-2 border-white flex-shrink-0" />
                             </div>
 
-                            {/* Dot and Line Segment */}
-                            <div className="absolute left-[calc(100%+1.5rem)] top-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
+                            <div className="bg-white/10 p-4 text-white w-full md:min-w-[200px] md:max-w-[200px] flex-shrink-0 pl-12 md:pl-4">
+                                <p className="text-sm text-white/60 font-light md:text-right">{item.date}</p>
+                            </div>
+
+                            {/* Dot and Line Segment for Desktop */}
+                            <div className="hidden md:flex absolute left-[calc(100%+1.5rem)] top-1/2 -translate-y-1/2 z-10 flex-col items-center">
                                 <div className="w-4 h-4 rounded-full bg-[#BC4535] border-2 border-white" />
                                 {index < timelineData.length - 1 && (
                                     <div className="absolute top-full w-0.5 bg-white/30" style={{ height: '260px' }} />
-                                    // Adjust '20px' to match your space-y-20 gap or calculate dynamically
                                 )}
                             </div>
                         </div>
 
                         {/* RIGHT: Content */}
                         <div className="md:w-3/4 w-full">
-                            <div className="h-full bg-white/10  p-6 ml-10 shadow-md text-white">
+                            <div className="h-full bg-white/10 p-6 md:ml-10 shadow-md text-white">
                                 <div className="flex flex-col md:flex-row items-start gap-6 h-full">
-                                    
+
                                     {/* Text */}
                                     <div className="w-full md:w-2/3 text-left">
                                         <h3 className="text-lg md:text-xl font-bold mb-2">{item.title}</h3>
@@ -80,7 +86,6 @@ export default function TimelineComponent() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 ))}
             </div>

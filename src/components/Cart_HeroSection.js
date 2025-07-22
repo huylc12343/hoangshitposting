@@ -4,9 +4,12 @@ import Merch_bg from '../assets/merch_bg_min.jpg';
 import qr from '../assets/qr_test.png';
 import up from '../assets/arrow-up-svgrepo-com.svg';
 import down from '../assets/arrow-down-angle-svgrepo-com.svg';
+import ConfirmPopup from '../components/Confirm_Popup'; // đường dẫn tùy theo vị trí file
+import SuccessPopup from '../components/Success_Popup';
 
 export default function Cart_HeroSection() {
   const { theme } = useTheme();
+const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
   const [showCustomerForm, setShowCustomerForm] = useState(true);
   const [showShippingForm, setShowShippingForm] = useState(true);
@@ -17,6 +20,14 @@ export default function Cart_HeroSection() {
 
   const [showProductList, setShowProductList] = useState(true);
   const toggleProductList = () => setShowProductList(!showProductList);
+  const [showConfirmPopup, setShowConfirmPopup] = useState(false);
+  const handleCompleteOrder = () => setShowConfirmPopup(true);
+
+const handleOrderSubmit = () => {
+  setShowConfirmPopup(false); // Ẩn popup xác nhận
+  setShowSuccessPopup(true);  // Hiện popup thành công
+};
+
 
   return (
     <div
@@ -322,13 +333,26 @@ export default function Cart_HeroSection() {
           </div>
         </div>
         <div className="w-full">
-          <button
-            className="w-full text-white py-4 rounded text-lg hover:opacity-90 transition"
-            style={{ backgroundColor: theme.color }}
-          >
-            Hoàn thành mua hàng
-          </button>
+        <button
+          onClick={handleCompleteOrder}
+          className="w-full text-white py-4 rounded text-lg hover:opacity-90 transition"
+          style={{ backgroundColor: theme.color }}
+        >
+          Hoàn thành mua hàng
+        </button>
         </div>
+        <ConfirmPopup
+          isOpen={showConfirmPopup}
+          onClose={() => setShowConfirmPopup(false)}
+          onConfirm={handleOrderSubmit}
+          message="Vui lòng kiểm tra kỹ thông tin và tải lên minh chứng chuyển khoản để đảm bảo giao dịch chính xác."
+        />
+        <SuccessPopup
+          isOpen={showSuccessPopup}
+          onClose={() => setShowSuccessPopup(false)}
+          onConfirm={() => setShowSuccessPopup(false)}
+        />
+
       </div>
     </div>
   );
