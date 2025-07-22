@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/hoangshitposting/static/css/main.ca3c0922.css",
-    "main.js": "/hoangshitposting/static/js/main.56fc119f.js",
+    "main.css": "/hoangshitposting/static/css/main.52d37fad.css",
+    "main.js": "/hoangshitposting/static/js/main.1902b02b.js",
     "static/js/453.a4d90313.chunk.js": "/hoangshitposting/static/js/453.a4d90313.chunk.js",
     "static/media/bg-TuDo-min.jpg": "/hoangshitposting/static/media/bg-TuDo-min.f9f83797bfe77e1cc02d.jpg",
     "static/media/bg-NguoiTimVang-min.jpg": "/hoangshitposting/static/media/bg-NguoiTimVang-min.03371f23e4a09990f694.jpg",
     "static/media/g4-min.png": "/hoangshitposting/static/media/g4-min.092eddf59c6d863d0143.png",
     "static/media/g3-min.png": "/hoangshitposting/static/media/g3-min.c9be7772ba4f22029148.png",
+    "static/media/upcoming_bg.png": "/hoangshitposting/static/media/upcoming_bg.19c3e1811ae077db4bcf.png",
     "static/media/g1-min.png": "/hoangshitposting/static/media/g1-min.4337e04c7f0f238902cc.png",
     "static/media/g2-min.png": "/hoangshitposting/static/media/g2-min.b2d1597ab14d4904c5dd.png",
     "static/media/g5-min.png": "/hoangshitposting/static/media/g5-min.e607446da6e9126ac7b4.png",
@@ -49,12 +50,12 @@
     "index.html": "/hoangshitposting/index.html",
     "static/media/arrow-down-angle-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-down-angle-svgrepo-com.b8434f126a8dbfe1baabe2b03c588c9c.svg",
     "static/media/arrow-up-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-up-svgrepo-com.105962570a84ea14fe61103d7f4aeb21.svg",
-    "main.ca3c0922.css.map": "/hoangshitposting/static/css/main.ca3c0922.css.map",
-    "main.56fc119f.js.map": "/hoangshitposting/static/js/main.56fc119f.js.map",
+    "main.52d37fad.css.map": "/hoangshitposting/static/css/main.52d37fad.css.map",
+    "main.1902b02b.js.map": "/hoangshitposting/static/js/main.1902b02b.js.map",
     "453.a4d90313.chunk.js.map": "/hoangshitposting/static/js/453.a4d90313.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca3c0922.css",
-    "static/js/main.56fc119f.js"
+    "static/css/main.52d37fad.css",
+    "static/js/main.1902b02b.js"
   ]
 }
