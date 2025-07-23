@@ -11,11 +11,11 @@ export default function HeroSection3() {
   return (
     <div
       className="relative w-full min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden text-white"
-      style={{
-        backgroundImage: theme.background,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      // style={{
+      //   backgroundImage: theme.background,
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      // }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-70 z-0"></div>

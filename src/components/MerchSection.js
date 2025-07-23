@@ -11,7 +11,7 @@ export default function Merch() {
   return (
     <section
       className="relative w-full py-20 text-white px-4 md:px-8 lg:px-12 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: theme.background }}
+      // style={{ backgroundImage: theme.background }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-70 z-0"></div>

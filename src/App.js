@@ -9,6 +9,8 @@ import About from './pages/About';
 import Merch from './pages/merch';
 import Upcoming from './pages/upcoming';
 import Cart from './pages/cart';
+import Event from './pages/Events';
+import BuyTicket from './pages/BuyTicket';
 function App() {
   return (
     <div className="App">
@@ -21,6 +23,8 @@ function App() {
           <Route path="/upcoming" element={<Upcoming/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="*" element={<h1>404 - Không tìm thấy trang</h1>} />
+          <Route path="/event" element={<Event/>}/>
+          <Route path="/buyticket" element={<BuyTicket/>}/>
         </Routes>
         <Footer />
       </ThemeProvider>
