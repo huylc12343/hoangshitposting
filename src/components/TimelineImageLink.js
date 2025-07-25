@@ -13,7 +13,7 @@ export default function TimelineImageLink({
   return (
     <Link to={link}>
       <div
-        className={`group w-full max-w-[${maxWidth}px] min-h-[220px] rounded-xl shadow-2xl  transition relative overflow-hidden`}
+        className={`group w-full max-w-[${maxWidth}px] rounded-xl shadow-2xl  transition relative overflow-hidden`}
         style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: 'contain',
@@ -23,7 +23,7 @@ export default function TimelineImageLink({
       >
         {/* Layout chia 2 cột: trái là text, phải là ảnh */}
         <div className="flex flex-row items-center h-full w-full px-4 py-6 gap-4">
-          {/* Bên trái: text - chiếm 40% */}
+          {/* Bên trái: text - chiếm 40% */}    
           <div className="w-2/5 text-white text-left">
             <h3 className="text-xl sm:text-2xl font-semibold">{name}</h3>
             <p className="text-sm sm:text-base opacity-80 mt-1">{location}</p>

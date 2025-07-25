@@ -150,11 +150,13 @@ export default function Timeline_Components() {
                   </p>
                 </Link>
                 <Link to={item.link}>
-                  <img
-                    src={item.image}
-                    alt={`stamp-${index}`}
-                    className="w-full max-w-[300px] mt-2 object-contain rounded-xl shadow-2xl "
-                  />
+                    <TimelineImageLink
+                      link={item.link}
+                      image={item.image}
+                      index={index}
+                      name={item.name}
+                      location={item.location}
+                    />
                 </Link>
               </div>
             </div>
