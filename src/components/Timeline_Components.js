@@ -1,14 +1,40 @@
 import React, { useRef, useEffect, useState } from "react";
-import stamp from "../assets/stamp.png";
+import stamp from "../assets/h-Subtract.png";
+import event1 from "../assets/PWM01219-min.jpg";
 import { useTheme } from "../contexts/Theme";
 import { Link } from "react-router-dom";
-
+import TimelineImageLink from "./TimelineImageLink";
 const timelineData = [
-  { date: "14/05/2024", image: stamp, link: "/event" },
-  { date: "18/05/2024", image: stamp, link: "/event" },
-  { date: "22/05/2024", image: stamp, link: "/event" },
-  { date: "28/05/2024", image: stamp, link: "/event" },
+  {
+    date: "14/05/2024",
+    name: "Covershow CCPCLK?",
+    location: "Hà Nội",
+    image: event1,
+    link: "/event",
+  },
+  {
+    date: "18/05/2024",
+    name: "Trưng bày GẤP GAP",
+    location: "Hà Nội",
+    image: event1,
+    link: "/event",
+  },
+  {
+    date: "18/05/2024",
+    name: "Covershow CCPCLK?",
+    location: "TP.HCM",
+    image: event1,
+    link: "/event",
+  },
+    {
+    date: "18/05/2024",
+    name: "Trưng bày GẤP GAP",
+    location: "TP.HCM",
+    image: event1,
+    link: "/event",
+  },
 ];
+
 
 export default function Timeline_Components() {
   const desktopRef = useRef(null);
@@ -53,20 +79,21 @@ export default function Timeline_Components() {
             <div key={index} className="grid grid-cols-5 items-center gap-6">
               {/* Left */}
               <div className="col-span-2 flex justify-end pr-4">
-                {index % 2 === 0 ? (
+                {index % 2 === 1 ? (
                   <Link to={item.link}>
-                    <p className="text-white text-5xl font-bold text-right leading-tight max-w-[500px] hover:underline">
+                    <p className="text-white text-5xl font-bold text-right leading-tight max-w-[500px] ">
                       {item.date}
                     </p>
                   </Link>
                 ) : (
-                  <Link to={item.link}>
-                    <img
-                      src={item.image}
-                      alt={`stamp-${index}`}
-                      className="w-full max-w-[520px] object-contain rounded-xl shadow-2xl hover:scale-105 transition"
-                    />
-                  </Link>
+              <TimelineImageLink
+                link={item.link}
+                image={item.image}
+                index={index}
+                name={item.name}
+                location={item.location}
+              />
+
                 )}
               </div>
 
@@ -77,17 +104,17 @@ export default function Timeline_Components() {
 
               {/* Right */}
               <div className="col-span-2 flex justify-start pl-4">
-                {index % 2 === 0 ? (
-                  <Link to={item.link}>
-                    <img
-                      src={item.image}
-                      alt={`stamp-${index}`}
-                      className="w-full max-w-[520px] object-contain rounded-xl shadow-2xl hover:scale-105 transition"
-                    />
-                  </Link>
+                {index % 2 === 1 ? (
+              <TimelineImageLink
+                link={item.link}
+                image={item.image}
+                index={index}
+                name={item.name}
+                location={item.location}
+              />
                 ) : (
                   <Link to={item.link}>
-                    <p className="text-white text-5xl font-bold text-left leading-tight max-w-[500px] hover:underline">
+                    <p className="text-white text-5xl font-bold text-left leading-tight max-w-[500px]">
                       {item.date}
                     </p>
                   </Link>
@@ -118,7 +145,7 @@ export default function Timeline_Components() {
               {/* Date & Image */}
               <div className="flex flex-col items-start">
                 <Link to={item.link}>
-                  <p className="text-white text-lg font-semibold hover:underline">
+                  <p className="text-white text-lg font-semibold ">
                     {item.date}
                   </p>
                 </Link>
@@ -126,7 +153,7 @@ export default function Timeline_Components() {
                   <img
                     src={item.image}
                     alt={`stamp-${index}`}
-                    className="w-full max-w-[300px] mt-2 object-contain rounded-xl shadow-2xl hover:scale-105 transition"
+                    className="w-full max-w-[300px] mt-2 object-contain rounded-xl shadow-2xl "
                   />
                 </Link>
               </div>

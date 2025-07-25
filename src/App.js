@@ -3,7 +3,7 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import { ThemeProvider } from './contexts/Theme';
 import { Routes, Route } from 'react-router-dom';
-
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/home';
 import About from './pages/About';
 import Merch from './pages/merch';
@@ -11,26 +11,31 @@ import Upcoming from './pages/upcoming';
 import Cart from './pages/cart';
 import Event from './pages/Events';
 import BuyTicket from './pages/BuyTicket';
+
 function App() {
   return (
     <div className="App">
       <ThemeProvider>
         <Navbar />
+
+        {/* ScrollToTop đặt ngoài Routes */}
+        <ScrollToTop />
+
         <Routes>
           <Route path="/hoangshitposting" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/merch" element={<Merch />} />
-          <Route path="/upcoming" element={<Upcoming/>}/>
-          <Route path="/cart" element={<Cart/>}/>
+          <Route path="/upcoming" element={<Upcoming />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/event" element={<Event />} />
+          <Route path="/buyticket" element={<BuyTicket />} />
           <Route path="*" element={<h1>404 - Không tìm thấy trang</h1>} />
-          <Route path="/event" element={<Event/>}/>
-          <Route path="/buyticket" element={<BuyTicket/>}/>
         </Routes>
+
         <Footer />
       </ThemeProvider>
     </div>
   );
-  
 }
 
 export default App;

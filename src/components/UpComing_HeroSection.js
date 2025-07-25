@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from '../contexts/Theme';
 import upcoming_bg from '../assets/upcoming_bg.png';
-import TimelineSection from './TimelineComponent';
+import TimelineSection from './UpComing_TimelineComponent';
 
 export default function Upcoming_HeroSection_HeroSection() {
   const { theme } = useTheme();
@@ -30,13 +30,12 @@ export default function Upcoming_HeroSection_HeroSection() {
       ></div>
 
       {/* Nội dung phía trên */}
-<div className="relative z-20 text-white text-left mb-12 mt-24 w-full max-w-7xl">
-  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center md:text-left">
-  Sự kiện sắp tới
-</h1>
-
-  <TimelineSection />
-</div>
+      <div className="relative z-20 text-white text-left mb-12 mt-24 w-full max-w-7xl">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center md:text-left">
+        Sự kiện sắp tới
+      </h1>
+        <TimelineSection />
+      </div>
 
 
     </div>

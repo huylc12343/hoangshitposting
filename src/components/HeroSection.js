@@ -2,7 +2,7 @@ import React from 'react';
 import arrowDownIcon from '../assets/down-arrow-svgrepo-com.svg';
 import gapgap from '../assets/gapgap-min.png';
 import { useTheme } from '../contexts/Theme';
-
+import chuoisukien from '../assets/chuoi_su_kien.png'
 const HeroSection = ({ onScrollToTimeline }) => {
   const { theme } = useTheme();
 

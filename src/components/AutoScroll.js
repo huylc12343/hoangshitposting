@@ -11,7 +11,7 @@ const AutoScrollBanner = () => {
             key={index}
             src={imgSrc}
             alt={`scroll-img-${index}`}
-            className="w-full h-auto object-contain flex-shrink-0"
+            className="w-auto h-[425px] object-contain flex-shrink-0"
             style={{ maxWidth: 'none' }} // để ngăn Tailwind giới hạn chiều rộng tối đa
           />
         ))}
