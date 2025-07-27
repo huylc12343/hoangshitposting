@@ -33,9 +33,9 @@ const Navbar = () => {
           <li className="hover:text-blue-300 cursor-pointer">
             <Link to="/upcoming">Sự kiện sắp tới</Link>
           </li>
-          <li className="hover:text-blue-300 cursor-pointer">
+          {/* <li className="hover:text-blue-300 cursor-pointer">
             <Link to="/merch">Merch</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
 
@@ -64,20 +64,20 @@ const Navbar = () => {
         </div>
 
         {/* Cart - desktop */}
-        <button
+        {/* <button
           className="hidden md:flex items-center gap-2 px-4 py-2 text-white rounded-md hover:opacity-90 transition duration-300"
           style={{ backgroundColor: theme.color }}
         >
           <i className="fas fa-shopping-cart"></i>
           <span><Link to="/cart">Giỏ hàng</Link></span>
           <span className="ml-2 bg-white text-red-500 text-xs font-bold px-2 py-0.5 rounded-full">3</span>
-        </button>
+        </button> */}
 
         {/* Cart - mobile */}
-        <Link to="/cart" className="md:hidden relative text-white text-xl">
+        {/* <Link to="/cart" className="md:hidden relative text-white text-xl">
           <i className="fas fa-shopping-cart"></i>
           <span className="absolute -top-2 -right-2 bg-white text-red-500 text-xs font-bold px-1.5 py-0.5 rounded-full">3</span>
-        </Link>
+        </Link> */}
 
         {/* Hamburger - mobile */}
         <button

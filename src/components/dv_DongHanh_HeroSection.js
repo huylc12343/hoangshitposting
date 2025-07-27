@@ -48,20 +48,22 @@ export default function DvDongHanhHeroSection() {
       />
 
 <h2
-  style={{
-    fontWeight: "bold",
-    fontSize: isMobile ? "2.5rem" : "3.5rem",
-    marginBottom: "2rem",
-    position: "relative",
-    zIndex: 1,
-    whiteSpace: isMobile ? "normal" : "nowrap",  // Mobile cho xuống dòng
-    overflow: "visible",  // Mobile cho hiển thị đầy đủ
-    textOverflow: isMobile ? "unset" : "ellipsis",  // Bỏ dấu ... khi mobile
-    padding: "0 1rem"
-  }}
+  className={`
+    font-imbue font-bold
+    mb-8
+    relative
+    z-[1]
+    px-4
+    ${isMobile
+      ? "text-[3rem] whitespace-normal overflow-visible text-clip"
+      : "text-[4rem] whitespace-nowrap overflow-hidden text-ellipsis"}
+  `}
 >
   Đơn vị đồng hành
 </h2>
+
+
+
 
 
       {/* Logo container */}

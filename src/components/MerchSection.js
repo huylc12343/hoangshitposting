@@ -17,7 +17,7 @@ export default function Merch() {
       <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
       <div className="relative z-10">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-center mb-16 font-AvertaCY tracking-wide">
+        <h1 className="text-5xl md:text-7xl font-extrabold text-center mb-16 font-imbue font-bold tracking-wide">
           Merch
         </h1>
 
@@ -55,8 +55,8 @@ export default function Merch() {
                 className="w-full h-auto object-cover transform transition duration-300 hover:scale-105"
               />
             </div>
-            <div className="flex justify-center items-center overflow-hidden bg-white/5 hover:bg-white/10 transition duration-300 cursor-pointer">
-              <span className="text-lg md:text-xl font-semibold text-white">Tìm hiểu thêm</span>
+            <div className="group flex justify-center items-center overflow-hidden bg-[#EEE1D8]  transition duration-300 cursor-pointer">
+              <div className="text-lg md:text-xl  font-semibold text-[#BC4535] group-hover:scale-105 font-Averta-CY">Tìm hiểu thêm</div>
             </div>
           </div>
         </div>

@@ -62,9 +62,9 @@ export default function HeroSection2() {
           className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed opacity-90 px-2 sm:px-4 max-w-xl"
           style={{ fontFamily: 'Courier New' }}
         >
-          Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023, nhưng với chúng mình,
-          âm nhạc ấy vẫn luôn tồn tại – là ký ức, là nguồn cảm hứng, là nơi chữa lành,
-          và sẽ luôn là một điều gì đó mãi mãi.
+          Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023, 
+          nhưng với người hâm mộ, âm nhạc ấy vẫn luôn tồn tại – là ký ức, 
+          là nguồn cảm hứng, là nơi chữa lành, và sẽ luôn là một điều gì đó mãi mãi ~
         </p>
       </div>
     </div>

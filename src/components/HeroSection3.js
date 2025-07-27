@@ -46,7 +46,7 @@ export default function HeroSection3() {
       </div>
 
       {/* Text Block */}
-      <div
+      {/* <div
         className="relative z-10 mt-8 text-center text-sm sm:text-base md:text-lg leading-relaxed px-4 sm:px-6 md:px-0 max-w-3xl"
         style={{
           fontFamily: 'Averta CY',
@@ -55,16 +55,15 @@ export default function HeroSection3() {
       >
         Chúng mình tôn trọng quyết định của các thành viên Band nhưng cũng mong rằng những giai điệu đã gắn bó suốt bao năm vẫn tiếp tục đồng hành cùng những người yêu nhạc Cá Hồi Hoang, từ fan lâu năm đến khán giả mới.
         Các hoạt động trên Fanpage, trong cộng đồng fan, các chương trình Offline Hội Hoang được tổ chức với mục tiêu kết nối những trái tim yêu nhạc Cá Hồi Hoang, cùng nhau cất lên những giai điệu đã chạm đến tâm hồn mỗi người, để “Âm nhạc Cá Hồi Hoang sẽ luôn là cái gì đó mãi mãi”.
-      </div>
+      </div> */}
 
       {/* Heading */}
       <div className="relative z-10 w-full max-w-7xl mt-12 px-4 text-center md:text-left">
         <h2
-          className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight tracking-wide"
-          style={{ fontFamily: 'Imbue' }}
+          className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight tracking-wide font-Imbue font-semibold"
         >
           CHUỖI SỰ KIỆN<br />
-          GẤP GÁP CÓ CẦN PHẢI CÓ LÝ KHÔNG?
+          GẤP GAP "CÓ CẦN PHẢI CÓ LÝ KHÔNG?"
         </h2>
       </div>
 
@@ -78,18 +77,22 @@ export default function HeroSection3() {
         {/* Stack content on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* Text + Button */}
-          <div className="text-sm sm:text-base md:text-lg leading-relaxed space-y-4 text-left">
-            <p>
+          <div className="flex flex-col justify-between text-sm sm:text-base md:text-lg leading-relaxed text-left h-full">
+            {/* <p>
               Chúng mình cũng mong muốn tạo một sân chơi dành cho các band cover, giúp band có cơ hội thử sức, xây dựng tệp khán giả và mang đến những sân khấu đáng nhớ.
-            </p>
+            </p> */}
             <p>
-              Cover Show “Có cần phải có lý không?” và triển lãm “Gấp Gáp” – dự kiến tổ chức vào tháng 5 tới tại HRC – là một trong những dự án lớn mà team Offline Hội Hoang đã ấp ủ suốt một năm qua.
-              Chương trình này không chỉ là cơ hội để nhìn lại hành trình của Cá Hồi Hoang mà còn là lời khẳng định rằng âm nhạc của band vẫn tiếp tục vang lên,
-              chữa lành những tổn thương, kết nối những trái tim yêu âm nhạc, những tâm hồn đồng điệu,...
+              Cover Show “Có Cần Phải Có Lý Không?” và 
+              Triển Lãm “Gấp Gap” là dự án lớn mà Team Offline Hội Hoang 
+              đã ấp ủ suốt một năm qua. Chương trình này không chỉ là cơ hội 
+              để nhìn lại hành trình của Cá Hồi Hoang mà còn là lời khẳng định 
+              rằng âm nhạc của Band vẫn tiếp tục vang lên, chữa lành những tổn thương,
+               gắn kết những tâm hồn đồng điệu,... 
+               <br/>
+               <br/>
+               Và trên hành trình đó, chúng mình hy vọng có sự đồng hành của bạn!
             </p>
-            <p>
-              Và trên hành trình đó, chúng mình hy vọng có sự đồng hành của bạn!
-            </p>
+
             <div className="w-full flex justify-center md:justify-start">
               <button
                 className="mt-4 px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"

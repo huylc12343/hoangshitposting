@@ -1,33 +1,33 @@
 import React, { useRef, useEffect, useState } from "react";
-import stamp from "../assets/h-Subtract.png";
+
 import event1 from "../assets/PWM01219-min.jpg";
 import { useTheme } from "../contexts/Theme";
 import { Link } from "react-router-dom";
 import TimelineImageLink from "./TimelineImageLink";
 const timelineData = [
   {
-    date: "14/05/2024",
+    date: "17/05/2024",
     name: "Covershow CCPCLK?",
     location: "Hà Nội",
     image: event1,
     link: "/event",
   },
   {
-    date: "18/05/2024",
-    name: "Trưng bày GẤP GAP",
+    date: "23-26/05/2025",
+    name: "Triển lãm GẤP GAP",
     location: "Hà Nội",
     image: event1,
     link: "/event",
   },
   {
-    date: "18/05/2024",
+    date: "13/09/2025",
     name: "Covershow CCPCLK?",
     location: "TP.HCM",
     image: event1,
     link: "/event",
   },
     {
-    date: "18/05/2024",
+    date: "12-14/09/2025",
     name: "Trưng bày GẤP GAP",
     location: "TP.HCM",
     image: event1,
@@ -81,9 +81,10 @@ export default function Timeline_Components() {
               <div className="col-span-2 flex justify-end pr-4">
                 {index % 2 === 1 ? (
                   <Link to={item.link}>
-                    <p className="text-white text-5xl font-bold text-right leading-tight max-w-[500px] ">
+                    <p className="text-white text-6xl font-light text-left leading-tight max-w-[500px] font-imbue">
                       {item.date}
                     </p>
+
                   </Link>
                 ) : (
               <TimelineImageLink
@@ -99,7 +100,7 @@ export default function Timeline_Components() {
 
               {/* Dot */}
               <div className="col-span-1 flex items-center justify-center timeline-item-dot relative z-10">
-                <div className="w-12 h-12 rounded-full bg-blue-500 border-4 border-white" />
+                <div className="w-12 h-12 rounded-full bg-white border-4 border-white" />
               </div>
 
               {/* Right */}
@@ -114,9 +115,10 @@ export default function Timeline_Components() {
               />
                 ) : (
                   <Link to={item.link}>
-                    <p className="text-white text-5xl font-bold text-left leading-tight max-w-[500px]">
+                    <p className="text-white text-6xl font-light text-left leading-tight max-w-[500px] font-imbue">
                       {item.date}
                     </p>
+
                   </Link>
                 )}
               </div>
@@ -130,7 +132,7 @@ export default function Timeline_Components() {
         {/* Vertical line for mobile */}
         {/* Nếu muốn vertical line trên mobile, có thể làm riêng */}
         <div
-          className="absolute w-[2px] bg-white/40 z-0 left-9 top-0 bottom-0"
+          className="absolute w-[4px] bg-white/40 z-0 left-9 top-0 bottom-0"
           // Bạn có thể fix chiều cao 100% ở mobile nếu muốn
         />
 
@@ -139,7 +141,7 @@ export default function Timeline_Components() {
             <div key={index} className="grid grid-cols-[40px_1fr] gap-4 items-start">
               {/* Dot */}
               <div className="timeline-item-dot relative flex justify-center">
-                <div className="w-6 h-6 rounded-full bg-blue-500 border-4 border-white" />
+                <div className="w-6 h-6 rounded-full bg-white border-4 border-white" />
               </div>
 
               {/* Date & Image */}

@@ -6,7 +6,9 @@ import AutoScrollBanner from '../components/AutoScroll';
 import Merch from '../components/MerchSection';
 import TimelineHeroSection from '../components/Timeline_Herosection'; // ✅ đã dùng đúng tên file
 import DonViDongHanh from '../components/dv_DongHanh_HeroSection';
-
+import AutoScroll2 from '../components/AutoScroll2';
+import imgf from '../assets/join_us-min.jpg';
+import HoverImageWithButton from '../components/HoverImage';
 const Home = () => {
   const timelineRef = useRef(null);
 
@@ -20,9 +22,11 @@ const Home = () => {
       <HeroSection2 />
       <AutoScrollBanner />
       <HeroSection3 />
+      <AutoScroll2/>
       <TimelineHeroSection ref={timelineRef} />
       <Merch />
       <DonViDongHanh/>
+      <HoverImageWithButton/>
     </div>
   );
 };

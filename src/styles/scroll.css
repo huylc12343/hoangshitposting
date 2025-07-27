@@ -1,14 +1,19 @@
-/* scroll.css */
 .scroll-container {
   animation: scroll-left 40s linear infinite;
 }
 
 @keyframes scroll-left {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
-
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* Tăng tốc scroll + responsive ảnh trên mobile */
+@media (max-width: 768px) {
+  .scroll-container {
+    animation-duration: 5s;
   }
 }

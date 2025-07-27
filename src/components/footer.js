@@ -2,6 +2,7 @@ import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import CasIcon from '../assets/Cas.svg';
 import { useTheme } from '../contexts/Theme';
+import { Link } from 'react-router-dom'; // bạn đã dùng nhưng chưa đúng cú pháp
 
 export default function Footer() {
   const { theme } = useTheme();
@@ -21,10 +22,18 @@ export default function Footer() {
               Điều hướng
             </h1>
             <ul className="space-y-2 mt-2">
-              <li className="hover:text-gray-200 cursor-pointer">GẤP GÁP</li>
-              <li className="hover:text-gray-200 cursor-pointer">Sự kiện sắp tới</li>
-              <li className="hover:text-gray-200 cursor-pointer">Về chúng tôi</li>
-              <li className="hover:text-gray-200 cursor-pointer">Merch</li>
+              <ul className="space-y-2 mt-2">
+                <li className="hover:text-gray-200 cursor-pointer">GẤP GAP</li>
+                <li>
+                  <Link to="/about" className="hover:text-gray-200">Về chúng mình</Link>
+                </li>
+                <li>
+                  <Link to="/upcoming" className="hover:text-gray-200">Sự kiện</Link>
+                </li>
+                {/* <li>
+                  <Link to="/merch" className="hover:text-gray-200">Merch</Link>
+                </li> */}
+              </ul>
             </ul>
           </div>
 
