@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hoangshitposting/static/css/main.01384e92.css",
-    "main.js": "/hoangshitposting/static/js/main.8e062a52.js",
+    "main.js": "/hoangshitposting/static/js/main.64232996.js",
     "static/js/453.a4d90313.chunk.js": "/hoangshitposting/static/js/453.a4d90313.chunk.js",
     "static/media/03171102.mp4": "/hoangshitposting/static/media/03171102.b0c8e980c65f65037047.mp4",
     "static/media/bg-TuDo-min.jpg": "/hoangshitposting/static/media/bg-TuDo-min.f9f83797bfe77e1cc02d.jpg",
@@ -63,11 +63,11 @@
     "static/media/trash-delete-bin-svgrepo-com.svg": "/hoangshitposting/static/media/trash-delete-bin-svgrepo-com.fccf53961ec0c0e5d07fa4e546281928.svg",
     "static/media/arrow-up-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-up-svgrepo-com.105962570a84ea14fe61103d7f4aeb21.svg",
     "main.01384e92.css.map": "/hoangshitposting/static/css/main.01384e92.css.map",
-    "main.8e062a52.js.map": "/hoangshitposting/static/js/main.8e062a52.js.map",
+    "main.64232996.js.map": "/hoangshitposting/static/js/main.64232996.js.map",
     "453.a4d90313.chunk.js.map": "/hoangshitposting/static/js/453.a4d90313.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.01384e92.css",
-    "static/js/main.8e062a52.js"
+    "static/js/main.64232996.js"
   ]
 }
