@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hoangshitposting/static/css/main.c0a8d7d1.css",
-    "main.js": "/hoangshitposting/static/js/main.099015bf.js",
+    "main.css": "/hoangshitposting/static/css/main.01384e92.css",
+    "main.js": "/hoangshitposting/static/js/main.8e062a52.js",
     "static/js/453.a4d90313.chunk.js": "/hoangshitposting/static/js/453.a4d90313.chunk.js",
     "static/media/03171102.mp4": "/hoangshitposting/static/media/03171102.b0c8e980c65f65037047.mp4",
     "static/media/bg-TuDo-min.jpg": "/hoangshitposting/static/media/bg-TuDo-min.f9f83797bfe77e1cc02d.jpg",
@@ -10,6 +10,7 @@
     "static/media/g3-min.png": "/hoangshitposting/static/media/g3-min.c9be7772ba4f22029148.png",
     "static/media/upcoming_bg.png": "/hoangshitposting/static/media/upcoming_bg.19c3e1811ae077db4bcf.png",
     "static/media/g1-min.png": "/hoangshitposting/static/media/g1-min.4337e04c7f0f238902cc.png",
+    "static/media/bg_timeline_home_min.jpg": "/hoangshitposting/static/media/bg_timeline_home_min.22e10562ed786eb584f3.jpg",
     "static/media/event_bg_min.jpg": "/hoangshitposting/static/media/event_bg_min.aecaa334cb8cf5d39804.jpg",
     "static/media/g2-min.png": "/hoangshitposting/static/media/g2-min.b2d1597ab14d4904c5dd.png",
     "static/media/g5-min.png": "/hoangshitposting/static/media/g5-min.e607446da6e9126ac7b4.png",
@@ -61,12 +62,12 @@
     "static/media/arrow-down-angle-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-down-angle-svgrepo-com.b8434f126a8dbfe1baabe2b03c588c9c.svg",
     "static/media/trash-delete-bin-svgrepo-com.svg": "/hoangshitposting/static/media/trash-delete-bin-svgrepo-com.fccf53961ec0c0e5d07fa4e546281928.svg",
     "static/media/arrow-up-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-up-svgrepo-com.105962570a84ea14fe61103d7f4aeb21.svg",
-    "main.c0a8d7d1.css.map": "/hoangshitposting/static/css/main.c0a8d7d1.css.map",
-    "main.099015bf.js.map": "/hoangshitposting/static/js/main.099015bf.js.map",
+    "main.01384e92.css.map": "/hoangshitposting/static/css/main.01384e92.css.map",
+    "main.8e062a52.js.map": "/hoangshitposting/static/js/main.8e062a52.js.map",
     "453.a4d90313.chunk.js.map": "/hoangshitposting/static/js/453.a4d90313.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0a8d7d1.css",
-    "static/js/main.099015bf.js"
+    "static/css/main.01384e92.css",
+    "static/js/main.8e062a52.js"
   ]
 }
