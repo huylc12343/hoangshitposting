@@ -10,14 +10,17 @@ const timelineData = [
     name: "Covershow CCPCLK?",
     location: "Hà Nội",
     image: event1,
-    link: "/event",
+    link: "/CCPCLKHN",
+    buttonText: "Nhìn lại",
+
   },
   {
     date: "23-26/05/2025",
     name: "Triển lãm GẤP GAP",
     location: "Hà Nội",
     image: event1,
-    link: "/event",
+    link: "/GapGapHN",
+    buttonText: "Nhìn lại",
   },
   {
     date: "13/09/2025",
@@ -25,6 +28,7 @@ const timelineData = [
     location: "TP.HCM",
     image: event1,
     link: "/event",
+    buttonText: "Mua vé",
   },
     {
     date: "12-14/09/2025",
@@ -32,6 +36,7 @@ const timelineData = [
     location: "TP.HCM",
     image: event1,
     link: "/event",
+    buttonText: "Xem thêm",
   },
 ];
 
@@ -70,7 +75,7 @@ export default function Timeline_Components() {
       >
         {/* Vertical line */}
         <div
-          className="absolute w-[4px] bg-white/40 z-0 left-1/2 transform -translate-x-1/2"
+          className="absolute w-[6px] bg-white z-0 left-1/2 transform -translate-x-1/2"
           style={{ top: lineStyle.top, height: lineStyle.height }}
         />
 
@@ -93,6 +98,7 @@ export default function Timeline_Components() {
                 index={index}
                 name={item.name}
                 location={item.location}
+                buttonText={item.buttonText}
               />
 
                 )}
@@ -112,6 +118,7 @@ export default function Timeline_Components() {
                 index={index}
                 name={item.name}
                 location={item.location}
+                buttonText={item.buttonText}
               />
                 ) : (
                   <Link to={item.link}>
