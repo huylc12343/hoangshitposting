@@ -25,7 +25,7 @@ export default function TimelineImageLink({
         style={{
           maxWidth: `${maxWidth}px`,
           backgroundImage: `url(${theme.color === '#1A56DB' ? blue_bg : bg})`,
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
@@ -38,7 +38,7 @@ export default function TimelineImageLink({
           }}
         />
 
-        <div className="z-5 flex flex-row items-center h-full w-full px-2 py-3 sm:px-4 sm:py-5 md:px-6 md:py-6 gap-4">
+        <div className="z-5 flex flex-row items-center h-full w-full px-2 py-2 sm:px-4 sm:py-5 md:px-6 md:py-6 gap-4">
           <div className="w-2/5 text-white text-left px-2 sm:px-3 md:px-4 lg:px-4" >
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold font-imbue underline decoration-[1px] decoration-white">
               {name}

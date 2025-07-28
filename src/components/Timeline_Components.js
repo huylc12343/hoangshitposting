@@ -147,9 +147,10 @@ export default function Timeline_Components() {
           {timelineData.map((item, index) => (
             <div key={index} className="grid grid-cols-[40px_1fr] gap-4 items-start">
               {/* Dot */}
-              <div className="timeline-item-dot relative flex justify-center translate-x-1">
+              <div className="timeline-item-dot relative flex justify-center">
                 <div className="w-6 h-6 rounded-full bg-white border-4 border-white" />
               </div>
+
               {/* Date & Image */}
               <div className="flex flex-col items-start">
                 <Link to={item.link}>

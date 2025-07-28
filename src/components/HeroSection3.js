@@ -81,7 +81,7 @@ export default function HeroSection3() {
             {/* <p>
               Chúng mình cũng mong muốn tạo một sân chơi dành cho các band cover, giúp band có cơ hội thử sức, xây dựng tệp khán giả và mang đến những sân khấu đáng nhớ.
             </p> */}
-            <p>
+            <p className='text-justify'>
               Cover Show “Có Cần Phải Có Lý Không?” và 
               Triển Lãm “Gấp Gap” là dự án lớn mà Team Offline Hội Hoang 
               đã ấp ủ suốt một năm qua. Chương trình này không chỉ là cơ hội 

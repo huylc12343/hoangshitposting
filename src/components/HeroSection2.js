@@ -20,10 +20,10 @@ export default function HeroSection2() {
       <div className="relative z-10 text-white text-center max-w-5xl flex flex-col items-center">
 
         {/* Cụm dấu ngoặc kép và tiêu đề */}
-        <div className="flex items-start justify-center mb-2 w-full flex-wrap px-4">
+        <div className="flex items-start justify-center mb-2 w-full flex-wrap px-2">
           {/* Dấu ngoặc trái */}
           <span
-            className="text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] text-white opacity-80 mr-2 md:mr-4"
+            className="text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] text-white mr-2 md:mr-4"
             style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
           >
             “
@@ -47,15 +47,16 @@ export default function HeroSection2() {
 
           {/* Dấu ngoặc phải */}
           <span
-            className="text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] text-white opacity-80 ml-2 md:ml-4"
+            className="text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] text-white ml-2 md:ml-4"
             style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
           >
-            “
+            ”
           </span>
         </div>
 
         {/* Đường kẻ dưới */}
-        <hr className="w-[160px] sm:w-[200px] md:w-[240px] border-t-[1.5px] border-white my-6" />
+        <hr className="w-[160px] sm:w-[200px] md:w-[240px] border-t-[1.5px] border-white mt-2 mb-4" />
+
 
         {/* Mô tả */}
         <p
