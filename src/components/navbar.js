@@ -31,7 +31,7 @@ const Navbar = () => {
             <Link to="/about">Về chúng tôi</Link>
           </li>
           <li className="hover:text-blue-300 cursor-pointer">
-            <Link to="/upcoming">Sự kiện sắp tới</Link>
+            <Link to="/upcoming">Sự kiện</Link>
           </li>
           {/* <li className="hover:text-blue-300 cursor-pointer">
             <Link to="/merch">Merch</Link>
