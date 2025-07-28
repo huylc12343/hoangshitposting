@@ -8,7 +8,7 @@ export default function Event_HeroSection3() {
 
       <p className="mb-4 text-lg md:text-xl font-Averta-CY">
         🐟 Cover Show "CÓ CẦN PHẢI CÓ LÝ KHÔNG?"
-        <br />► Thời gian: 19h - 22h 13/09//2025
+        <br />► Thời gian: 19h - 22h 13/09/2025
         <br />► Địa điểm: Golden Bird's Event Space - 142 Đường Trần Não, Phường Bình An, Quận 2, Thành phố Thủ Đức, Hồ Chí Minh
       </p>
 

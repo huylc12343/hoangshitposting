@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 
 import event1 from "../assets/PWM01219-min.jpg";
+import event2 from "../assets/g6-min.png";
 import { useTheme } from "../contexts/Theme";
 import { Link } from "react-router-dom";
 import TimelineImageLink from "./TimelineImageLink";
@@ -18,7 +19,7 @@ const timelineData = [
     date: "23-26/05/2025",
     name: "Triển lãm GẤP GAP",
     location: "Hà Nội",
-    image: event1,
+    image: event2,
     link: "/GapGapHN",
     buttonText: "Nhìn lại",
   },

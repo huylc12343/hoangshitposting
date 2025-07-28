@@ -11,7 +11,7 @@ export default function Event_HeroSection3() {
         <br />► Địa điểm: MONTAUK BY LP CLUB - 174 Kim Mã, Ba Đình, Hà Nội
       </p>
 
-<div className="w-full mt-6 p-4 rounded-xl bg-white/10 shadow-xl">
+<div className="w-full mt-14 p-4 rounded-xl bg-white/10 shadow-xl">
   <p className="text-4xl font-bold font-imbue mb-2">Địa điểm: MONTAUK BY LP CLUB</p>
     <div className="w-full h-[300px] md:h-[400px] overflow-hidden">
       <iframe
@@ -28,11 +28,12 @@ export default function Event_HeroSection3() {
   </div>
 
         <p className="font-Averta-CY text-base">
+          <br/>
           <b>Hoang Shitposting</b> xin chân thành cảm ơn!
         </p>
         <br/>
-        <p>Special thank to</p>
-        <p>MONTAUK BY LP CLUB</p>
+        <p>Special Thanks to</p>
+        <strong><p>MONTAUK BY LP CLUB</p></strong>
         
           <div className="w-[325px] h-[100px] mx-auto mt-10">
             <img

@@ -25,7 +25,7 @@ export default function Event_HeroSection2() {
       <img
         src={tlgg1}
         alt="Sự kiện Cá Hồi Hoang"
-        className="w-full h-auto object-cover mb-10 shadow-lg"
+        className="w-full h-auto object-cover mt-12 mb-10 shadow-lg"
       />   
       <h1 className="text-3xl md:text-4xl font-bold mb-4 font-imbue">
         Nhìn lại hành trình 10 năm của Cá Hồi Hoang
@@ -36,7 +36,7 @@ export default function Event_HeroSection2() {
       <img
         src={tlgg6}
         alt="Sự kiện Cá Hồi Hoang"
-        className="w-full h-auto object-cover mb-10 shadow-lg"
+        className="w-full h-auto object-cover mt-12 mb-10 shadow-lg"
       />  
       <h1 className="text-3xl md:text-4xl font-bold mb-4 font-imbue">
         Không gian FANART
@@ -47,18 +47,18 @@ export default function Event_HeroSection2() {
       <img
         src={tlgg2}
         alt="Sự kiện Cá Hồi Hoang"
-        className="w-full h-auto object-cover mb-10 shadow-lg"
+        className="w-full h-auto object-cover mt-12 mb-10 shadow-lg"
       />  
       <h1 className="text-3xl md:text-4xl font-bold mb-4 font-imbue">
         Không gian lấy cảm hứng từ các bài hát Cá Hồi Hoang
       </h1>
       <p className="text-lg mb-4 text-justify">
-        Không gian lấy cảm hứng từ các bài hát Cá Hồi Hoang - nơi cảm xúc được tái hiện lại từ các bài hát của Cá Hồi Hoang. Lấy cảm hứng từ lời ca, giai điệu và không khí âm nhạc, mỗi góc nhỏ là một bài hát được chuyển thành chất liệu, ánh sáng, màu sắc. 
+        Đây là nơi cảm xúc được tái hiện lại từ các bài hát của Cá Hồi Hoang. Lấy cảm hứng từ lời ca, giai điệu và không khí âm nhạc, mỗi góc nhỏ là một bài hát được chuyển thành chất liệu, ánh sáng, màu sắc tạo nên không gian triển lãm vô cùng ấm áp. 
       </p>
       <img
         src={tlgg3}
         alt="Sự kiện Cá Hồi Hoang"
-        className="w-full h-auto object-cover mb-10 shadow-lg"
+        className="w-full h-auto object-cover mt-12 mb-10 shadow-lg"
       />  
       <h1 className="text-3xl md:text-4xl font-bold mb-4 font-imbue">
         OPEN MIC
@@ -69,7 +69,7 @@ export default function Event_HeroSection2() {
       <img
         src={tlgg4}
         alt="Sự kiện Cá Hồi Hoang"
-        className="w-full h-auto object-cover mb-10 shadow-lg"
+        className="w-full h-auto object-cover mt-12 mb-10 shadow-lg"
       />  
       <p className="text-lg mb-4 text-justify">
         Tại đây, bất kỳ ai cũng có thể ngồi xuống, cầm đàn hoặc chỉ đơn giản là hát lên những ca khúc đã từng đồng hành cùng mình. Những bản nhạc quen thuộc sẽ sống lại qua giọng hát và cảm xúc rất riêng – khi lời ca không chỉ được thể hiện lại, mà còn được “ở lại” trong từng hơi thở, từng ánh nhìn. Open Mic là nơi người nghe trở thành người kể, là một phần mở dịu dàng giữa triển lãm – cho những cảm xúc từng lắng sâu được lên tiếng, chân thành và trọn vẹn.
@@ -77,21 +77,22 @@ export default function Event_HeroSection2() {
       <img
         src={tlgg5}
         alt="Sự kiện Cá Hồi Hoang"
-        className="w-full h-auto object-cover mb-10 shadow-lg"
+        className="w-full h-auto object-cover mt-12 mb-10 shadow-lg"
       />  
       <p className="text-lg mb-4 text-justify">
         Chúng mình hy vọng rằng “GẤP GAP” không chỉ đơn thuần là một không gian trưng bày, mà còn trở thành một mảnh kí ức đẹp và đong đầy cảm xúc đối với tất cả những ai đã ghé thăm. Đồng thời đây cũng là cách chúng mình đồng hành cùng các Cá gửi đến Cá Hồi Hoang lời chào, một lời tri ân và cảm ơn thân thương.
       </p>      
-      <div className="w-full aspect-video mb-10 shadow-lg overflow-hidden">
-        <iframe
-          className="w-full h-full"
-          src="https://www.youtube.com/embed/t_XZ6ee_abY?autoplay=1&mute=1"
-          title="Sự kiện Cá Hồi Hoang"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
+      <div className="w-full aspect-video mt-12 mb-10 shadow-lg overflow-hidden rounded-xl">
+              <iframe
+              autoPlay
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/FVbJXW2ZhAk?si=A4T6VwkdVrONYMQ8"
+                title="Sự kiện Cá Hồi Hoang"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
     </section>
   );
 }

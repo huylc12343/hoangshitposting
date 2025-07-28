@@ -4,7 +4,7 @@ import g3 from '../assets/g3-min.png';
 import g5 from '../assets/g5-min.png';
 import joinus from '../assets/join_us-min.jpg';
 import { useTheme } from '../contexts/Theme';
-
+import { Link } from 'react-router-dom';
 export default function HeroSection3() {
   const { theme } = useTheme();
 
@@ -94,7 +94,7 @@ export default function HeroSection3() {
             </p>
 
             <div className="w-full flex justify-center md:justify-start">
-              <button
+              <Link to="/event"><button
                 className="mt-4 px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"
                 style={{
                   backgroundColor: theme.color === "#B9400C" ? "#B9400C" : "#125172",
@@ -102,7 +102,7 @@ export default function HeroSection3() {
                 }}
               >
                 Đồng hành cùng chúng mình
-              </button>
+              </button></Link>
             </div>
           </div>
 

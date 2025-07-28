@@ -13,7 +13,7 @@ export default function Event_HeroSection3() {
         <br />► Địa điểm: Hanoi Rock City – 27/52 Đ. Tô Ngọc Vân, Quảng An, Tây Hồ, Hà Nội
       </p>
 
-      <div className="w-full mt-6 p-4 rounded-xl bg-white/10 shadow-xl">
+      <div className="w-full mt-14 p-4 rounded-xl bg-white/10 shadow-xl">
           <p className="text-4xl font-bold font-imbue mb-2">Địa điểm: HANOI ROCK CITY</p>
         <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg">
           <iframe
@@ -29,12 +29,13 @@ export default function Event_HeroSection3() {
         </div>
       </div>
         <p className="font-Averta-CY text-base">
+          <br/>
           <b>Hoang Shitposting</b> xin chân thành cảm ơn!
         </p>
         <br/>
-        <p>Special thank to</p>
-        <p>Hanoi Rock City</p>
-        <p>PixelWave Multimedia</p>
+        <p>Special Thanks to</p>
+        <strong><p>Hanoi Rock City</p>
+        <p>PixelWave Multimedia</p></strong>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-1 mt-6 justify-center">
           <div className="w-[225px] h-[100px] mx-auto">
             <img

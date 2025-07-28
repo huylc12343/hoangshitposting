@@ -44,7 +44,7 @@ const HoverImageWithButton = () => {
               <path d="M22 12.07C22 6.52 17.52 2 12 2S2 6.52 2 12.07c0 5 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.25c-1.23 0-1.61.77-1.61 1.56v1.87h2.74l-.44 2.89h-2.3v6.99C18.34 21.2 22 17.07 22 12.07z" />
             </svg>
 
-            khám phá thêm trên Fanpage của chúng tôi
+            Khám phá Fanpage của chúng tôi
           </a>
         </div>
       </div>

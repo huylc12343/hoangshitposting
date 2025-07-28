@@ -36,7 +36,7 @@ return (
         
         <Event_HeroSection3/>
         
-        <div className="mt-20">
+        <div className="mt-10">
         <Event_HeroSection4/>
         </div>
         </div>

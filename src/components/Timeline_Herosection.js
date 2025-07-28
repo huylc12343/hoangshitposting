@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import Timeline_Components from './Timeline_Components';
 import bg from '../assets/bg_timeline_home_min.jpg';
 import { useTheme } from '../contexts/Theme';
-
+import { Link } from 'react-router-dom';
 const TimelineHeroSection = forwardRef((props, ref) => {
   const { theme } = useTheme();
   return (
@@ -28,7 +28,7 @@ const TimelineHeroSection = forwardRef((props, ref) => {
         </h1>
         <Timeline_Components />
         <div className="w-full flex justify-center md:justify-center py-10">
-              <button
+              <Link to="/event"><button
                 className="mt-4 px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"
                 style={{
                   backgroundColor: theme.color === "#B9400C" ? "#B9400C" : "#125172",
@@ -36,7 +36,7 @@ const TimelineHeroSection = forwardRef((props, ref) => {
                 }}
               >
                 Đồng hành cùng chúng mình
-              </button>
+              </button></Link>
             </div>
       </div>
     </section>

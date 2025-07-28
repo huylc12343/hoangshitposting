@@ -29,7 +29,7 @@ const timelineData = [
   {
     date: "13/09/2025",
     title: "[TPHCM] Covershow “Có Cần Phải Có Lý Không?” ",
-    time: "09:00 – 18:00",
+    time: "19:00 – 22:00",
     description:
       ["Với sứ mệnh giữ gìn, lan toả tình yêu dành cho âm nhạc Cá Hồi Hoang, Cover Show tại Sài Gòn là nơi ký ức ùa về, cảm xúc vỡ oà và kết nối được thắp sáng - để hành trình sống cùng âm nhạc Cá “sẽ luôn là cái gì đó mãi mãi”.","FULL LINEUP: upcoming..."],
     image: timeline3,
@@ -38,8 +38,8 @@ const timelineData = [
   },
   {
     date: "12 - 14/09/2025",
-    title: "[TP.HCM] Triển lãm “Gấp Gáp”",
-    time: "14:00 PM - 21:00 PM",
+    title: "[TP.HCM] Triển lãm “Gấp Gap”",
+    time: "09:00 - 21:00 ",
     description:
       ["Không gian triển lãm nhỏ xinh ấm cúng sẽ trở thành mảnh ký ức đẹp và đong đầy cảm xúc đối với tất cả những ai ghé thăm, đồng thời tái hiện hành trình “bơi ngược dòng” đầy rực rỡ suốt 10 năm qua."],
     image: timeline4,

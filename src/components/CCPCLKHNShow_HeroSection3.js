@@ -38,7 +38,7 @@ export default function CCPCLKHNShow_HeroSection3() {
 
   return (
     <section className="w-full">
-      <h2 className="text-3xl md:text-4xl font-bold text-left mb-10 font-imbue text-white">
+      <h2 className="text-3xl md:text-4xl mt-2 font-semibold text-left mb-10 font-imbue text-white">
         FULL LINEUP
       </h2>
 

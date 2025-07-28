@@ -18,7 +18,7 @@ export default function Event_HeroSection2() {
       </p>
 
       <p className="text-lg text-justify ">
-        Với sứ mệnh giữ gìn, lan toả tình yêu dành cho âm nhạc Cá Hồi Hoang, Cover Show tại Sài Gòn sẽ không chỉ là một buổi diễn, mà là nơi ký ức ùa về, cảm xúc vỡ oà và kết nối được thắp sáng - để hành trình sống cùng âm nhạc Cá <strong><i>“sẽ luôn là cái gì đó mãi mãi”</i></strong>.
+        Với sứ mệnh giữ gìn, lan toả tình yêu dành cho âm nhạc Cá Hồi Hoang, Cover Show tại Sài Gòn sẽ không chỉ là một buổi diễn, mà là nơi ký ức ùa về, cảm xúc vỡ oà và kết nối được thắp sáng để hành trình sống cùng âm nhạc Cá <strong><i>“sẽ luôn là cái gì đó mãi mãi”</i></strong>.
       </p>
     </section>
   );
