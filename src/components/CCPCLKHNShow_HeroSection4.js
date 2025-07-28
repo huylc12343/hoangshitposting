@@ -3,18 +3,18 @@ import pwm from "../assets/pwm.png";
 export default function Event_HeroSection3() {
   return (
     <section className="w-full text-white">
-      <h2 className="text-3xl md:text-4xl font-bold text-left mb-6">
+      <h2 className="text-4xl md:text-4xl font-bold text-left mb-6 font-imbue">
         THỜI GIAN & ĐỊA ĐIỂM
       </h2>
 
       <p className="mb-4 text-lg md:text-xl">
-        Cover Show "CÓ CẦN PHẢI CÓ LÝ KHÔNG":
-        <br />► <strong>Thời gian:</strong> 19H - 22H 17/05/2025
-        <br />► <strong>Địa điểm:</strong> Hanoi Rock City – 27/52 Đ. Tô Ngọc Vân, Quảng An, Tây Hồ, Hà Nội
+        Cover Show "CÓ CẦN PHẢI CÓ LÝ KHÔNG?":
+        <br />► Thời gian: 19H - 22H 17/05/2025
+        <br />► Địa điểm: Hanoi Rock City – 27/52 Đ. Tô Ngọc Vân, Quảng An, Tây Hồ, Hà Nội
       </p>
 
       <div className="w-full mt-6 p-4 rounded-xl bg-white/10 shadow-xl">
-        <p className="text-lg font-semibold mb-2">📍 Địa điểm: HANOI ROCK CITY</p>
+          <p className="text-4xl font-bold font-imbue mb-2">Địa điểm: HANOI ROCK CITY</p>
         <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg">
           <iframe
             title="Google Maps - Hanoi Rock City"

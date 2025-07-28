@@ -24,19 +24,15 @@ return (
 
         <div className="col-span-10 text-left">
         <h1 className="text-3xl md:text-5xl font-imbue mb-4 whitespace-normal md:whitespace-nowrap">
-        COVER SHOW<br/> "CÓ CẦN PHẢI CÓ LÝ KHÔNG"
+        COVER SHOW "CÓ CẦN PHẢI CÓ LÝ KHÔNG?"
         </h1>
-
-
-        <p className="text-base md:text-lg text-gray-200 mb-6">
+        <p className="text-base md:text-lg text-gray-200 mb-4">
             17/05/2025 - Hà Nội
         </p>
 
         {/* Ticket Section hiển thị bên dưới */}
-        
-        <div className="mt-10">
         <Event_HeroSection2 />
-        </div>
+    
         
         <Event_HeroSection3/>
         

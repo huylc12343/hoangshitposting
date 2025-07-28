@@ -59,7 +59,7 @@ export default function Event_HeroSection2() {
 
   return (
     <section className="w-full">
-      <h2 className="text-3xl md:text-4xl font-bold text-left mb-10 text-white">
+      <h2 className="text-3xl md:text-4xl font-bold text-left mb-10 font-imbue text-white">
         FULL LINEUP
       </h2>
       <h3>Coming soon...</h3>

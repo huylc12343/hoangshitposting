@@ -24,7 +24,7 @@ export default function Event_HeroSection2() {
         Mang âm nhạc Cá quay lại nơi lần đầu Band diễn tại Hà Nội - Hanoi Rock City, với số lượng khán giả lên tới 300+, họ đã tới và hát thật vang những giai điệu để âm nhạc Cá Hồi Hoang luôn sống trong tim những người yêu nhạc - như một phần ký ức không thể thay thế.
       </p>
       <img src={banner} className='w-full h-full'/>
-      <p className="text-lg italic mt-10">
+      <p className="text-lg font-Averta-CY mt-10">
         Sẽ không có lời tạm biệt nào cả, bởi “Cá Hồi Hoang là cái gì đó mãi mãi”.
       </p>
     </section>

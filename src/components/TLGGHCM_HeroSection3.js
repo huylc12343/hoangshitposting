@@ -8,9 +8,9 @@ export default function Event_HeroSection3() {
 
       <p className="mb-4 text-lg md:text-xl">
         🐟 Triển lãm "GẤP GAP"
-        <br />► <strong>Thời gian:</strong> 12-14/09/2025
-        <br />► <strong>Giờ mở cửa:</strong> 9h - 21h
-        <br />► <strong>Địa điểm:</strong> Hội Tụ Hội – 31/40C Ung Văn Khiêm, P.25, Bình Thạnh, TP.HCM
+        <br />► Thời gian: 12-14/09/2025
+        <br />► Giờ mở cửa: 9h - 21h
+        <br />► Địa điểm: Hội Tụ Hội – 31/40C Ung Văn Khiêm, P.25, Bình Thạnh, TP.HCM
       </p>
 
       <div className="w-full mt-6 p-4 rounded-xl bg-white/10 shadow-xl">

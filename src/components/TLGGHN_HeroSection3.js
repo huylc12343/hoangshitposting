@@ -2,15 +2,13 @@ import montauk from "../assets/montauk.png"
 export default function Event_HeroSection3() {
   return (
     <section className="w-full text-white">
-      <h2 className="text-3xl md:text-4xl font-bold text-left mb-6">
+      <h2 className="text-4xl md:text-4xl font-bold text-left mb-6 font-imbue">
         THỜI GIAN & ĐỊA ĐIỂM
       </h2>
-
       <p className="mb-4 text-lg md:text-xl">
         Trưng bày "GẤP GAP":
-        <br />► <strong>Thời gian:</strong> 23 - 26/05/2025
-        <br />► <strong>Địa điểm:</strong>  MONTAUK BY LP CLUB - 174 Kim Mã, Ba Đình, Hà Nội
-
+        <br />► Thời gian: 23 - 26/05/2025
+        <br />► Địa điểm: MONTAUK BY LP CLUB - 174 Kim Mã, Ba Đình, Hà Nội
       </p>
 
 <div className="w-full mt-6 p-4 rounded-xl bg-white/10 shadow-xl">
@@ -29,7 +27,7 @@ export default function Event_HeroSection3() {
     </div>
   </div>
 
-              <p className="font-Averta-CY text-base">
+        <p className="font-Averta-CY text-base">
           <b>Hoang Shitposting</b> xin chân thành cảm ơn!
         </p>
         <br/>
