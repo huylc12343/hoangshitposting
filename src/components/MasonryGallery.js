@@ -21,7 +21,7 @@ const MasonryGallery = () => {
       {/* Hàng 1: 2 hình, 1 to 1 nhỏ */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
         <img src={g1} alt="g1" className="w-full object-cover md:col-span-8" />
-        <img src={g2} alt="g2" className="h-full object-cover md:col-span-4" />
+        <img src={g2} alt="g2" className="h-full object-cover md:col-span-4 hidden md:block" />
       </div>
 
       {/* Hàng 2: 3 hình bằng nhau */}

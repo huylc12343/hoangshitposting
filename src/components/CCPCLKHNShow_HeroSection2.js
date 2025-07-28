@@ -17,7 +17,7 @@ export default function Event_HeroSection2() {
 
 
       <p className="text-lg mb-4 text-justify">
-        Cover Show “CÓ CẦN PHẢI CÓ LÝ KHÔNG” nằm trong chuỗi sự kiện Trưng bày “GẤP GAP” & Cover Show “CÓ CẦN PHẢI CÓ LÝ KHÔNG” là dịp để chúng ta nhìn lại hành trình bơi ngược dòng đầy rực rỡ của Cá Hồi Hoang. “Di sản” âm nhạc mà Band để lại không chỉ là những giai điệu độc đáo mà người nghe còn tìm thấy chính mình giữa những chênh vênh, cô đơn và cả hy vọng.
+        Cover Show “CÓ CẦN PHẢI CÓ LÝ KHÔNG?” nằm trong chuỗi sự kiện Trưng bày “GẤP GAP” & Cover Show “CÓ CẦN PHẢI CÓ LÝ KHÔNG?” là dịp để chúng ta nhìn lại hành trình bơi ngược dòng đầy rực rỡ của Cá Hồi Hoang. “Di sản” âm nhạc mà Band để lại không chỉ là những giai điệu độc đáo mà người nghe còn tìm thấy chính mình giữa những chênh vênh, cô đơn và cả hy vọng.
       </p>
 
       <p className="text-lg mb-4 text-justify">

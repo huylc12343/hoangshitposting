@@ -28,7 +28,7 @@ const timelineData = [
   },
   {
     date: "13/09/2025",
-    title: "[TPHCM] Covershow “Có Cần Phải Có Lý Không?” ",
+    title: "[TP.HCM] Covershow “Có Cần Phải Có Lý Không?” ",
     time: "19:00 – 22:00",
     description:
       ["Với sứ mệnh giữ gìn, lan toả tình yêu dành cho âm nhạc Cá Hồi Hoang, Cover Show tại Sài Gòn là nơi ký ức ùa về, cảm xúc vỡ oà và kết nối được thắp sáng - để hành trình sống cùng âm nhạc Cá “sẽ luôn là cái gì đó mãi mãi”.","FULL LINEUP: upcoming..."],

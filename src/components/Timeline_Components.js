@@ -2,6 +2,8 @@ import React, { useRef, useEffect, useState } from "react";
 
 import event1 from "../assets/PWM01219-min.jpg";
 import event2 from "../assets/g6-min.png";
+import event3 from "../assets/covershow_sg.png";
+import event4 from "../assets/trienlam_sg.png";
 import { useTheme } from "../contexts/Theme";
 import { Link } from "react-router-dom";
 import TimelineImageLink from "./TimelineImageLink";
@@ -27,7 +29,7 @@ const timelineData = [
     date: "13/09/2025",
     name: "Covershow CCPCLK?",
     location: "TP.HCM",
-    image: event1,
+    image: event3,
     link: "/event",
     buttonText: "Mua vé",
   },
@@ -35,7 +37,7 @@ const timelineData = [
     date: "12-14/09/2025",
     name: "Trưng bày GẤP GAP",
     location: "TP.HCM",
-    image: event1,
+    image: event4,
     link: "/GapGapHCM",
     buttonText: "Xem thêm",
   },

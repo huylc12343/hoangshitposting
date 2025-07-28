@@ -4,7 +4,7 @@ import tui from '../assets/tui_chh.jpg';
 
 export default function Event_HeroSection2() {
   return (
-    <section className="w-full text-white px-4 md:px-8 py-8 space-y-6">
+    <section className="w-full text-white  py-8 space-y-6">
       {/* Ảnh background sự kiện */}
       <div className="w-full overflow-hidden shadow-md">
         <img

@@ -30,7 +30,7 @@ export default function Event_HeroSection3() {
           <b>Hoang Shitposting</b> xin chân thành cảm ơn!
         </p>
         <br/>
-        <p>Special thank to</p>
+        <p>Special Thanks to</p>
         
           <div className="w-[325px] h-[100px] mx-auto mt-10">
             <img

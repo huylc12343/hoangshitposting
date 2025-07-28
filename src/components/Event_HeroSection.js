@@ -29,7 +29,7 @@ return (
 
 
         <p className="text-base md:text-lg text-gray-200 mb-6">
-            13/09/2025 - TP.Hồ Chí Minh
+            13/09/2025 - TP.HCM
         </p>
 
         {/* Ticket Section hiển thị bên dưới */}

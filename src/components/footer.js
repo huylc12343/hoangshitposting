@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Địa chỉ hỗ trợ */}
           <div className="text-center lg:text-left">
-            <h1 className="text-2xl font-bold font-imbue">
+            <h1 className="text-3xl font-bold font-imbue">
               Địa chỉ hỗ trợ
             </h1>
             <ul className="space-y-2 mt-2 font-Averta-CY">
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Theo dõi */}
           <div className="text-center lg:text-left">
-            <h1 className="text-2xl font-bold font-imbue">
+            <h1 className="text-3xl font-bold font-imbue">
               Theo dõi chúng tôi
             </h1>
             <ul className="space-y-2 mt-2 font-Averta-CY">
@@ -77,6 +77,17 @@ export default function Footer() {
                   Instagram
                 </a>
               </li>
+                <li>
+                <i className="fab fa-threads mr-2"></i>
+                <a
+                  href="https://www.threads.com/@hoangshitposting"
+                  className="hover:text-gray-200"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Threads
+                </a>
+              </li>
               <li>
                 <i className="fab fa-youtube mr-2"></i>
                 <a
@@ -88,6 +99,7 @@ export default function Footer() {
                   YouTube
                 </a>
               </li>
+
             </ul>
           </div>
         </div>

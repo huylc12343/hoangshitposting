@@ -27,7 +27,7 @@ return (
         TRIỂN LÃM "GẤP GAP" 
         </h1>
         <p className="text-base md:text-lg text-gray-200 mb-6 font-Averta-CY">
-            12 - 14/09/2025 - Hồ Chí Minh
+            12 - 14/09/2025 - TP.HCM
         </p>
 
         <div className="mt-10">

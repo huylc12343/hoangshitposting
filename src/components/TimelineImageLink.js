@@ -25,7 +25,7 @@ export default function TimelineImageLink({
         style={{
           maxWidth: `${maxWidth}px`,
           backgroundImage: `url(${theme.color === '#1A56DB' ? blue_bg : bg})`,
-          backgroundSize: 'contain',
+          backgroundSize: '100% 100%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
@@ -52,7 +52,7 @@ export default function TimelineImageLink({
             <img
               src={image}
               alt={`stamp-${index}`}
-              className="w-full h-auto object-contain"
+              className="w-full object-contain py-2"
             />
 
             {/* Overlay gradient */}
