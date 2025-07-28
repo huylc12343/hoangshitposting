@@ -8,7 +8,7 @@ export default function Footer() {
   const { theme } = useTheme();
 
   return (
-    <div className="text-white py-6" style={{ backgroundColor: theme.color }}>
+    <div className="text-white py-6" style={{ backgroundColor: theme.color==="#1A56DB"?"#125172":"#B9400C" }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Logo */}

@@ -32,13 +32,13 @@ export default function HeroSection2() {
           {/* Tiêu đề */}
           <div className="flex flex-col items-center leading-tight">
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-wide"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-wide"
               style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
             >
               CÁ HỒI HOANG
             </h1>
             <h1
-              className="text-4xl sm:text-5xl md:text-5xl lg:text-7xl xl:text-8xl mt-2 tracking-wide"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-2 tracking-wide"
               style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
             >
               LÀ MỘT CÁI GÌ ĐÓ MÃI MÃI
@@ -60,7 +60,7 @@ export default function HeroSection2() {
 
         {/* Mô tả */}
         <p
-          className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed opacity-90 px-2 sm:px-4"
+          className="text-xs sm:text-base md:text-lg lg:text-xl leading-relaxed opacity-90 px-2 sm:px-4"
           style={{ fontFamily: 'Averta-CY' }}
         >
           Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023,<br/> 

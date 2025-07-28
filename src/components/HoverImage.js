@@ -31,7 +31,7 @@ const HoverImageWithButton = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 mt-4 px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"
             style={{
-              backgroundColor: theme.color,
+              backgroundColor: theme.color==="#1A56DB"?"#125172":"#B9400C",
               fontFamily: "Averta CY",
             }}
           >
