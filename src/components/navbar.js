@@ -25,7 +25,7 @@ const Navbar = () => {
         <img src={CasIcon} alt="cas" className="w-20 h-20 flex-shrink-0" />
         <ul className="hidden md:flex items-center gap-8 text-white font-medium">
           <li className="hover:text-blue-300 cursor-pointer">
-            <Link to="/hoangshitposting">Trang chủ</Link>
+            <Link to="/">Trang chủ</Link>
           </li>
           <li className="hover:text-blue-300 cursor-pointer">
             <Link to="/about">Về chúng tôi</Link>
@@ -91,7 +91,7 @@ const Navbar = () => {
       {/* Mobile menu dropdown */}
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-[#000000cc] text-white py-4 px-6 flex flex-col gap-4 md:hidden">
-          <Link to="/hoangshitposting" onClick={() => setMenuOpen(false)}>Trang chủ</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Trang chủ</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>Về chúng tôi</Link>
           <Link to="/upcoming" onClick={() => setMenuOpen(false)}>Sự kiện sắp tới</Link>
           <Link to="/merch" onClick={() => setMenuOpen(false)}>Merch</Link>

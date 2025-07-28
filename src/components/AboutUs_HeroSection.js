@@ -29,19 +29,19 @@ const AboutUs_HeroSection = () => {
         {/* Trái: Nội dung */}
         <div className="flex justify-end">
           <div className="text-white text-left max-w-lg">
-            <h2 className="text-5xl font-bold mb-6 text-[#BC4535] flex items-center gap-3">
-              VỀ CHÚNG TÔI
+            <h2 className="text-6xl font-imbue mb-6 text-[#BC4535] flex items-center gap-3"
+                        style={{ color: theme.color }}>
+              VỀ CHÚNG MÌNH
               <img src={Cas} alt="Cas Icon" className="h-[1.2em] w-auto" />
             </h2>
             <p className="text-base leading-relaxed mb-4 text-justify">
-              Chương trình Offline Hội Hoang được thực hiện bởi những fan đã gắn bó với Cá Hồi Hoang,
-              những người đã trưởng thành cùng âm nhạc của band.
+              Chương trình Offline Hội Hoang được thực hiện bởi những fan yêu thích âm nhạc Cá Hồi Hoang - những người đã cùng đồng hành, trưởng thành cùng âm nhạc của Band. Những người đã đồng hành, trưởng thành cùng âm nhạc của Band, và cùng nhau viết tiếp câu chuyện "Cá Hồi Hoang là cái gì đó mãi mãi".
             </p>
-            <p className="text-base leading-relaxed text-justify">
+            {/* <p className="text-base leading-relaxed text-justify">
               Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023,
               nhưng với chúng mình, âm nhạc ấy vẫn luôn tồn tại – là ký ức, là nguồn cảm hứng,
               là nơi chữa lành, và sẽ luôn là một điều gì đó mãi mãi.
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -63,7 +63,13 @@ const AboutUs_HeroSection = () => {
         {/* Logo + Tiêu đề */}
         <div className="flex flex-col items-center space-y-2">
           <img src={Cas} alt="Cas Icon" className="h-10 w-auto" />
-          <h2 className="text-3xl font-bold text-[#BC4535]">VỀ CHÚNG TÔI</h2>
+          <h2
+            className="text-5xl font-bold font-imbue text-center mb-6"
+            style={{ color: theme.color }}
+          >
+            VỀ CHÚNG MÌNH
+          </h2>
+
         </div>
 
         {/* Hình ảnh */}
@@ -78,13 +84,10 @@ const AboutUs_HeroSection = () => {
         {/* Nội dung */}
         <div className="text-sm leading-relaxed text-justify max-w-md">
           <p className="mb-3">
-            Chương trình Offline Hội Hoang được thực hiện bởi những fan đã gắn bó với Cá Hồi Hoang,
-            những người đã trưởng thành cùng âm nhạc của band.
+            Chương trình Offline Hội Hoang được thực hiện bởi những fan đã gắn bó với Cá Hồi Hoang, những người đã trưởng thành cùng âm nhạc của band.
           </p>
           <p>
-            Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023, nhưng với chúng mình,
-            âm nhạc ấy vẫn luôn tồn tại – là ký ức, là nguồn cảm hứng, là nơi chữa lành,
-            và sẽ luôn là một điều gì đó mãi mãi.
+            Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023, nhưng với chúng mình, âm nhạc ấy vẫn luôn tồn tại – là ký ức, là nguồn cảm hứng, là nơi chữa lành, và sẽ luôn là một điều gì đó mãi mãi.
           </p>
         </div>
       </div>

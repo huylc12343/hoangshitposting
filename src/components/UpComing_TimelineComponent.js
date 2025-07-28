@@ -1,38 +1,52 @@
 import React from 'react';
 import sampleImage from '../assets/g8-min.png';
 import { Link } from 'react-router-dom';
-
+import timeline1 from "../assets/bg_timeline_home_min.jpg";
+import timeline2 from "../assets/upcoming_banner2_min.jpg";
+import timeline3 from "../assets/upcoming_banner3_min.jpg";
+import timeline4 from "../assets/merch_bg_min.jpg";
 const timelineData = [
-    {
-        date: "14/05/2024",
-        title: "[Hà Nội] Covershow Có Cần Phải Có Lý Không? ",
-        time: "13:00 PM - 22:30 PM",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five",
-        image: sampleImage,
-    },
-    {
-        date: "23-25/05/2025",
-        title: "[Hà Nội] Trưng bày Gấp Gáp",
-        time: "10:00 AM – 17:00 PM",
-        description: "Buổi hội thảo về công nghệ mới nhất trong ngành thiết kế và phát triển sản phẩm. Các diễn giả hàng đầu sẽ chia sẻ kiến thức và kinh nghiệm thực tiễn.",
-        image: sampleImage,
-    },
-    {
-        date: "01/01/2025",
-        title: "[TPHCM] Covershow Có Cần Phải Có Lý Không?",
-        time: "09:00 AM – 18:00 PM",
-        description: "Chương trình đào tạo kỹ năng mềm dành cho các nhà lãnh đạo trẻ, tập trung vào giao tiếp hiệu quả và quản lý đội nhóm.",
-        image: sampleImage,
-    },
-    {
-        date: "15/01/2025",
-        title: "[TPHCM] Trưng bày Gấp Gáp",
-        time: "14:00 PM – 21:00 PM",
-        description: "Triển lãm nghệ thuật với sự tham gia của các nghệ sĩ nổi tiếng trong khu vực, mang đến những tác phẩm độc đáo và sáng tạo.",
-        image: sampleImage,
-    },
-];
+  {
+    date: "17/05/2025",
+    title: "[Hà Nội] Covershow: Có Cần Phải Có Lý Không?",
+    time: "19:00 – 22:00",
+    description:
+      "Mang âm nhạc Cá trở lại HRC – nơi band lần đầu diễn tại Hà Nội, cùng 300+ khán giả hát vang những giai điệu không thể quên. FULL LINEUP: Lý Bực, Bùi Xuân Lộc, Góp Thong Thả, dETrong, Fuzes, Fishymeow, Trần Hoàn.",
+    image: timeline1,
+    link: "/CCPCLKHN",  // ✅ Link riêng
 
+  },
+  {
+    date: "23–26/05/2025",
+    title: "[Hà Nội] Triển lãm “Gấp Gap”",
+    time: "09:00 - 21:00",
+    description:
+      "Hơn 500+ người đã ghé thăm, cùng nhau sống lại những mảnh ký ức gắn với hành trình âm nhạc của Cá Hồi Hoang thông qua hình ảnh, kỷ vật lưu niệm và âm nhạc thân thuộc của các buổi Open Mic. ",
+    image: timeline2,
+    link: "/GapGapHN",  // ✅ Link riêng
+
+  },
+  {
+    date: "13/09/2025",
+    title: "[TPHCM] Covershow “Có Cần Phải Có Lý Không?” ",
+    time: "09:00 – 18:00",
+    description:
+      "Với sứ mệnh giữ gìn, lan toả tình yêu dành cho âm nhạc Cá Hồi Hoang, Cover Show tại Sài Gòn là nơi ký ức ùa về, cảm xúc vỡ oà và kết nối được thắp sáng - để hành trình sống cùng âm nhạc Cá “sẽ luôn là cái gì đó mãi mãi”. FULL LINEUP: upcoming...",
+    image: timeline3,
+    link: "/event",  // ✅ Link riêng
+
+  },
+  {
+    date: "12 - 14/09/2025",
+    title: "[TP.HCM] Triển lãm “Gấp Gáp”",
+    time: "14:00 PM - 21:00 PM",
+    description:
+      "Không gian triển lãm nhỏ xinh ấm cúng sẽ trở thành mảnh ký ức đẹp và đong đầy cảm xúc đối với tất cả những ai ghé thăm, đồng thời tái hiện hành trình “bơi ngược dòng” đầy rực rỡ suốt 10 năm qua.",
+    image: timeline4,
+    link: "/GapGapHCM",  // ✅ Link riêng
+
+  },
+];
 export default function TimelineComponent() {
     return (
         <div className="relative w-full max-w-7xl mx-auto z-10">
@@ -48,46 +62,51 @@ export default function TimelineComponent() {
                         <div className="relative flex w-full md:w-auto md:justify-end items-center">
                             {/* Dot and Line Segment for Mobile */}
                             <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 flex md:hidden">
-                                <div className="w-4 h-4 rounded-full bg-[#BC4535] border-2 border-white flex-shrink-0" />
+                                <div className="w-4 h-4 rounded-full bg-white border-2 border-white flex-shrink-0" />
                             </div>
 
                             <div className="p-4 text-white w-full md:min-w-[200px] md:max-w-[200px] flex-shrink-0 pl-12 md:pl-4">
-                                <p className="text-sm text-white/60 font-light md:text-right">{item.date}</p>
+                            <p className="text-2xl md:text-3xl text-white/90 font-semibold md:text-right font-imbue">
+                            {item.date}
+                            </p>
+
                             </div>
 
                             {/* Dot and Line Segment for Desktop */}
                             <div className="hidden md:flex absolute left-[calc(100%+1.5rem)] top-1/2 -translate-y-1/2 z-10 flex-col items-center">
-                                <div className="w-4 h-4 rounded-full bg-[#BC4535] border-2 border-white" />
+                                <div className="w-4 h-4 rounded-full bg-white border-2 border-white" />
                                 {index < timelineData.length - 1 && (
-                                    <div className="absolute top-full w-0.5 bg-white/30" style={{ height: '260px' }} />
+                                    <div className="absolute top-full w-0.5 bg-white" style={{ height: '400px' }} />
                                 )}
                             </div>
                         </div>
 
                         {/* RIGHT: Content */}
-                        <div className="md:w-3/4 w-full">
-                            <div className="h-full p-3 md:ml-10 text-white">
-                                <Link to="/event">
-                                <div className="flex flex-col md:flex-row items-start gap-6 h-full hover:bg-white/30 transition duration-300 rounded-lg p-4">
-                                    {/* Text */}
-                                    <div className="w-full md:w-2/3 text-left">
-                                        <h3 className="text-lg md:text-xl font-bold mb-2">{item.title}</h3>
-                                        <p className="text-sm text-orange-300 font-medium">{item.time}</p>
-                                        <p className="text-sm text-gray-300">{item.description}</p>
-                                    </div>
+                        <div className="md:w-full w-full">
+                        <div className="h-full p-3 md:ml-10 text-white">
+                            <Link to={item.link}>
+                            <div className="flex flex-col md:flex-row items-start md:items-start gap-6 hover:bg-white/30 transition duration-300 rounded-lg p-4">
 
-                                    {/* Image */}
-                                    <div className="w-full h-auto md:w-1/3">
-                                        <img
-                                            src={item.image}
-                                            alt="event"
-                                            className=" object-cover w-full h-[10px] md:h-36 rounded-lg"
-                                        />
-                                    </div>
+                                {/* Text */}
+                                <div className="w-full md:flex-1 text-left">
+                                <h3 className="text-lg md:text-xl font-bold mb-2">{item.title}</h3>
+                                <p className="text-sm text-orange-300 font-medium">{item.time}</p>
+                                <p className="text-sm text-gray-300">{item.description}</p>
                                 </div>
-                                </Link>
+
+                                {/* Image */}
+                                <div className="w-full md:w-[400px] h-[270px] flex-shrink-0">
+                                <img
+                                    src={item.image}
+                                    alt="event"
+                                    className="w-full h-full object-cover rounded-lg"
+                                />
+                                </div>
                             </div>
+                            </Link>
                         </div>
+                        </div>
+
                     </div>
                 ))}
             </div>

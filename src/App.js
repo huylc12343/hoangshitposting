@@ -13,7 +13,7 @@ import Event from './pages/Events';
 import BuyTicket from './pages/BuyTicket';
 import PageCCPCLKHN from './pages/PageCCPCLKHN';
 import TrienLam_GapGapHN from './pages/TrienLam_GapGapHN';
-
+import TrienLam_GapGapHCM from './pages/TrienLam_GapGapHCM';
 function App() {
   return (
     <div className="App">
@@ -33,6 +33,7 @@ function App() {
           <Route path="/buyticket" element={<BuyTicket />} />
           <Route path="/CCPCLKHN" element={<PageCCPCLKHN/>}/>
           <Route path="/GapGapHN" element={<TrienLam_GapGapHN/>}/>
+          <Route path="/GapGapHCM" element={<TrienLam_GapGapHCM/>}/>
           <Route path="*" element={<h1>404 - Không tìm thấy trang</h1>} />
         </Routes>
 

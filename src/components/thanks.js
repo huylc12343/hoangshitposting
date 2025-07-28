@@ -1,18 +1,20 @@
 import React from 'react';
-
+import { useTheme } from '../contexts/Theme';
 export default function Thanks() {
+  const { theme } = useTheme();
   return (
     <div className="relative w-full min-h-[600px] px-12 py-20 bg-[#0F0F0F]">
       {/* Tiêu đề */}
 <div className="flex justify-center mb-10">
-  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-orange-500 whitespace-nowrap">
+  <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold font-imbue text-orange-500 whitespace-nowrap"
+              style={{ color: theme.color }}>
     Lời cảm ơn
   </h1>
 </div>
 
 
       {/* Nội dung căn giữa */}
-      <div className="space-y-6 text-justify text-white max-w-3xl mx-auto">
+      <div className="space-y-6 text-justify text-white font-Averta-CY max-w-3xl mx-auto">
         <p className="text-lg ">
           BTC Offline Hội Hoang xin gửi lời cảm ơn chân thành đến các ban nhạc,
           các cá nhân và tổ chức đã dành thời gian quan tâm đến hồ sơ chương trình.

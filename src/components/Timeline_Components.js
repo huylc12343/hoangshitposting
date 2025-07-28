@@ -35,7 +35,7 @@ const timelineData = [
     name: "Trưng bày GẤP GAP",
     location: "TP.HCM",
     image: event1,
-    link: "/event",
+    link: "/GapGapHCM",
     buttonText: "Xem thêm",
   },
 ];

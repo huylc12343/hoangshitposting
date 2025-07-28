@@ -31,7 +31,7 @@ const TimelineHeroSection = forwardRef((props, ref) => {
               <button
                 className="mt-4 px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"
                 style={{
-                  backgroundColor: theme.color,
+                  backgroundColor: theme.color === "#B9400C" ? "#B9400C" : "#125172",
                   fontFamily: 'Averta CY',
                 }}
               >
