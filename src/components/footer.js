@@ -18,10 +18,10 @@ export default function Footer() {
 
           {/* Điều hướng */}
           <div className="text-center lg:text-left">
-            <h1 className="text-2xl font-extrabold" style={{ fontFamily: 'Times New Roman' }}>
+            <h1 className="text-3xl font-bold font-imbue">
               Điều hướng
             </h1>
-            <ul className="space-y-2 mt-2">
+            <ul className="space-y-2 mt-2 font-Averta-CY">
               <ul className="space-y-2 mt-2">
                 <li className="hover:text-gray-200 cursor-pointer">GẤP GAP</li>
                 <li>
@@ -39,10 +39,10 @@ export default function Footer() {
 
           {/* Địa chỉ hỗ trợ */}
           <div className="text-center lg:text-left">
-            <h1 className="text-2xl font-extrabold" style={{ fontFamily: 'Times New Roman' }}>
+            <h1 className="text-2xl font-bold font-imbue">
               Địa chỉ hỗ trợ
             </h1>
-            <ul className="space-y-2 mt-2">
+            <ul className="space-y-2 mt-2 font-Averta-CY">
               <li>hoangshitposting@gmail.com</li>
               <li>SĐT: 0968023065 (Hải Yến)</li>
             </ul>
@@ -50,10 +50,10 @@ export default function Footer() {
 
           {/* Theo dõi */}
           <div className="text-center lg:text-left">
-            <h1 className="text-2xl font-extrabold" style={{ fontFamily: 'Times New Roman' }}>
+            <h1 className="text-2xl font-bold font-imbue">
               Theo dõi chúng tôi
             </h1>
-            <ul className="space-y-2 mt-2">
+            <ul className="space-y-2 mt-2 font-Averta-CY">
               <li>
                 <i className="fab fa-facebook mr-2"></i>
                 <a

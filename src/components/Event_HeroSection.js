@@ -23,13 +23,13 @@ return (
         <div className="col-span-1"></div>
 
         <div className="col-span-10 text-left">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 whitespace-normal md:whitespace-nowrap">
-        CHUỖI SỰ KIỆN "CÓ CẦN PHẢI CÓ LÝ KHÔNG"
+        <h1 className="text-5xl md:text-5xl font-bold font-imbue mb-4 whitespace-normal md:whitespace-nowrap">
+        COVER SHOW "CÓ CẦN PHẢI CÓ LÝ KHÔNG?"
         </h1>
 
 
         <p className="text-base md:text-lg text-gray-200 mb-6">
-            14/06/2025 · 13:00PM – 22:30PM
+            13/09/2025 - TP.Hồ Chí Minh
         </p>
 
         {/* Ticket Section hiển thị bên dưới */}
@@ -37,10 +37,10 @@ return (
         <div className="mt-40">
         <Event_HeroSection2 />
         </div>
-        <div className="mt-20">
+        <div className="mt-10">
         <Event_HeroSection3/>
         </div>
-        <div className="mt-20">
+        <div className="mt-10">
         <Event_HeroSection4/>
         </div>
         </div>

@@ -62,8 +62,8 @@ export default function Event_HeroSection2() {
       <h2 className="text-3xl md:text-4xl font-bold text-left mb-10 text-white">
         FULL LINEUP
       </h2>
-
-      <div
+      <h3>Coming soon...</h3>
+      {/* <div
         ref={scrollContainerRef}
         className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide cursor-grab active:cursor-grabbing"
         style={{
@@ -98,7 +98,7 @@ export default function Event_HeroSection2() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

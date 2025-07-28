@@ -10,8 +10,9 @@ const timelineData = [
     date: "17/05/2025",
     title: "[Hà Nội] Covershow: Có Cần Phải Có Lý Không?",
     time: "19:00 – 22:00",
-    description:
-      "Mang âm nhạc Cá trở lại HRC – nơi band lần đầu diễn tại Hà Nội, cùng 300+ khán giả hát vang những giai điệu không thể quên. FULL LINEUP: Lý Bực, Bùi Xuân Lộc, Góp Thong Thả, dETrong, Fuzes, Fishymeow, Trần Hoàn.",
+    description:["Mang âm nhạc Cá trở lại HRC – nơi band lần đầu diễn tại Hà Nội, cùng 300+ khán giả hát vang những giai điệu không thể quên."," ",
+      "FULL LINEUP:","Lý Bực • Bùi Xuân Lộc • Góp Thong Thả", "dETrong • Fuzes • Fishymeow • Trần Hoàn"],
+      
     image: timeline1,
     link: "/CCPCLKHN",  // ✅ Link riêng
 
@@ -20,8 +21,7 @@ const timelineData = [
     date: "23–26/05/2025",
     title: "[Hà Nội] Triển lãm “Gấp Gap”",
     time: "09:00 - 21:00",
-    description:
-      "Hơn 500+ người đã ghé thăm, cùng nhau sống lại những mảnh ký ức gắn với hành trình âm nhạc của Cá Hồi Hoang thông qua hình ảnh, kỷ vật lưu niệm và âm nhạc thân thuộc của các buổi Open Mic. ",
+    description:["Hơn 500+ người đã ghé thăm, cùng nhau sống lại những mảnh ký ức gắn với hành trình âm nhạc của Cá Hồi Hoang thông qua hình ảnh, kỷ vật lưu niệm và âm nhạc thân thuộc của các buổi Open Mic. "],
     image: timeline2,
     link: "/GapGapHN",  // ✅ Link riêng
 
@@ -31,7 +31,7 @@ const timelineData = [
     title: "[TPHCM] Covershow “Có Cần Phải Có Lý Không?” ",
     time: "09:00 – 18:00",
     description:
-      "Với sứ mệnh giữ gìn, lan toả tình yêu dành cho âm nhạc Cá Hồi Hoang, Cover Show tại Sài Gòn là nơi ký ức ùa về, cảm xúc vỡ oà và kết nối được thắp sáng - để hành trình sống cùng âm nhạc Cá “sẽ luôn là cái gì đó mãi mãi”. FULL LINEUP: upcoming...",
+      ["Với sứ mệnh giữ gìn, lan toả tình yêu dành cho âm nhạc Cá Hồi Hoang, Cover Show tại Sài Gòn là nơi ký ức ùa về, cảm xúc vỡ oà và kết nối được thắp sáng - để hành trình sống cùng âm nhạc Cá “sẽ luôn là cái gì đó mãi mãi”.","FULL LINEUP: upcoming..."],
     image: timeline3,
     link: "/event",  // ✅ Link riêng
 
@@ -41,7 +41,7 @@ const timelineData = [
     title: "[TP.HCM] Triển lãm “Gấp Gáp”",
     time: "14:00 PM - 21:00 PM",
     description:
-      "Không gian triển lãm nhỏ xinh ấm cúng sẽ trở thành mảnh ký ức đẹp và đong đầy cảm xúc đối với tất cả những ai ghé thăm, đồng thời tái hiện hành trình “bơi ngược dòng” đầy rực rỡ suốt 10 năm qua.",
+      ["Không gian triển lãm nhỏ xinh ấm cúng sẽ trở thành mảnh ký ức đẹp và đong đầy cảm xúc đối với tất cả những ai ghé thăm, đồng thời tái hiện hành trình “bơi ngược dòng” đầy rực rỡ suốt 10 năm qua."],
     image: timeline4,
     link: "/GapGapHCM",  // ✅ Link riêng
 
@@ -91,7 +91,12 @@ export default function TimelineComponent() {
                                 <div className="w-full md:flex-1 text-left">
                                 <h3 className="text-lg md:text-xl font-bold mb-2">{item.title}</h3>
                                 <p className="text-sm text-orange-300 font-medium">{item.time}</p>
-                                <p className="text-sm text-gray-300">{item.description}</p>
+                                {item.description.map((line, i) => (
+                                <p key={i} className="text-sm text-gray-300">
+                                  {line}
+                                </p>
+                              ))}
+
                                 </div>
 
                                 {/* Image */}

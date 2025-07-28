@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import TimelineImageLink from "./TimelineImageLink";
 const timelineData = [
   {
-    date: "17/05/2024",
+    date: "17/05/2025",
     name: "Covershow CCPCLK?",
     location: "Hà Nội",
     image: event1,
