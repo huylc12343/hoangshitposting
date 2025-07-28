@@ -6,16 +6,15 @@ export default function Thanks() {
     <div className="relative w-full min-h-[600px] px-12 py-20 bg-[#0F0F0F]">
       {/* Tiêu đề */}
 <div className="flex justify-center mb-10">
-  <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold font-imbue text-orange-500 whitespace-nowrap"
-              style={{ color: theme.color }}>
+  <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold font-imbue text-[#FFFFFF] whitespace-nowrap">
     Lời cảm ơn
   </h1>
 </div>
 
 
       {/* Nội dung căn giữa */}
-      <div className="space-y-6 text-justify text-white font-Averta-CY max-w-3xl mx-auto">
-        <p className="text-lg ">
+      <div className="space-y-6 text-justify  text-white font-Averta-CY max-w-3xl mx-auto">
+        <p className="text-lg pt-10">
           BTC Offline Hội Hoang xin gửi lời cảm ơn chân thành đến các ban nhạc,
           các cá nhân và tổ chức đã dành thời gian quan tâm đến hồ sơ chương trình.
           Mặc dù Cá Hồi Hoang đã dừng hoạt động, nhưng hành trình của âm nhạc của Cá Hồi Hoang

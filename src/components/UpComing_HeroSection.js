@@ -32,8 +32,7 @@ export default function Upcoming_HeroSection_HeroSection() {
       {/* Nội dung phía trên */}
       <div className="relative z-20 text-white text-left mb-12 mt-24 w-full max-w-7xl">
       <h1
-        className="text-8xl font-imbue font-bold mb-4 text-center md:text-left"
-        style={{ color: theme.color ==="#1A56DB"? "#125172":"#FFFFFF"}}>
+        className="text-8xl font-imbue font-bold mb-4 text-center text-[#FFFFFF] md:text-left">
       
         Sự kiện
       </h1>

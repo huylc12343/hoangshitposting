@@ -29,8 +29,8 @@ const AboutUs_HeroSection = () => {
         {/* Trái: Nội dung */}
         <div className="flex justify-end">
           <div className="text-white text-left max-w-lg">
-            <h2 className="text-6xl font-imbue mb-6 text-[#BC4535] flex items-center gap-3"
-              style={{ color: theme.color ==="#1A56DB"? "#125172":"#FFFFFF"}}>
+            <h2 className="text-6xl font-imbue mb-6 text-[#FFFFFF] flex items-center gap-3"
+              >
               VỀ CHÚNG MÌNH
               <img src={Cas} alt="Cas Icon" className="h-[1.2em] w-auto" />
             </h2>
@@ -65,7 +65,7 @@ const AboutUs_HeroSection = () => {
           <img src={Cas} alt="Cas Icon" className="h-10 w-auto" />
           <h2
             className="text-5xl font-bold font-imbue text-center mb-6"
-            style={{ color: theme.color }}
+            style={{ color: "#FFFFFF" }}
           >
             VỀ CHÚNG MÌNH
           </h2>

@@ -14,10 +14,9 @@ const AboutUs_HeroSection2 = () => {
       }}
     >
       {/* Tiêu đề giữa */}
-<h2 className="text-5xl sm:text-4xl md:text-4xl font-extrabold tracking-wide font-imbue text-[#BC4535] text-center mb-6 whitespace-nowrap"
-style={{ color: theme.color ==="#1A56DB"? "#125172":"#FFFFFF"}}>
-  OFFLINE HỘI HOANG
-</h2>
+      <h2 className="text-5xl font-bold font-imbue text-center mb-20 text-[#FFFFFF]">
+        OFFLINE HỘI HOANG
+      </h2>
 
 
 
@@ -26,8 +25,7 @@ style={{ color: theme.color ==="#1A56DB"? "#125172":"#FFFFFF"}}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
           {/* Cột trái */}
           {/* Thêm md:pr-8 để tạo khoảng đệm bên phải, giúp chữ lệch trái một chút trên màn hình lớn */}
-          <div className="text-[#BC4535] text-3xl font-imbue font-extrabold flex justify-start md:items-center text-center md:text-left md:pr-8"
-          style={{ color: theme.color ==="#1A56DB"? "#125172":"#FFFFFF"}}>
+          <div className="text-[#FFFFFF] text-5xl font-imbue font-extrabold flex justify-start md:items-center text-center md:text-left md:pr-8">
             TẦM NHÌN
           </div>
 
@@ -45,8 +43,8 @@ style={{ color: theme.color ==="#1A56DB"? "#125172":"#FFFFFF"}}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
           {/* Cột trái */}
           {/* Thêm md:pr-8 để tạo khoảng đệm bên phải, giúp chữ lệch trái một chút trên màn hình lớn */}
-          <div className="text-[#BC4535] text-3xl font-imbue font-extrabold flex justify-start md:items-center text-center md:text-left md:pr-8" 
-          style={{ color: theme.color ==="#1A56DB"? "#125172":"#FFFFFF"}}>
+          <div className="text-[#FFFFFF] text-5xl font-imbue font-extrabold flex justify-start md:items-center text-center md:text-left md:pr-8" 
+          >
             SỨ MỆNH
           </div>
 
