@@ -1,52 +1,36 @@
-import React, { useRef, useState } from 'react';
-import Ticket_Popup from './Ticket_Popup'; // ✅ Import popup
-
-const ticketData = [
-  {
-    title: '[STANDARD] CÓ CẦN PHẢI CÓ LÝ KHÔNG? 2025',
-    price: 'Từ 150.000đ',
-    description: 'Vé tiêu chuẩn cho sự kiện năm 2025.',
-    isSoldOut: false,
-  },
-  {
-    title: '[EARLY BIRD] CÓ CẦN PHẢI CÓ LÝ KHÔNG? 2026',
-    price: 'Từ 175.000đ',
-    description: 'Vé ưu đãi cho những người đăng ký sớm nhất năm 2026.',
-    isSoldOut: true,
-  },
-  {
-    title: 'CÓ CẦN PHẢI CÓ LÝ KHÔNG? 2027',
-    price: '500.000 VND',
-    description: 'Vé thông thường cho sự kiện năm 2027.',
-    isSoldOut: false,
-  },
-  {
-    title: 'CÓ CẦN PHẢI CÓ LÝ KHÔNG? 2028',
-    price: '600.000 VND',
-    description: 'Một loại vé khác cho năm 2028.',
-    isSoldOut: false,
-  },
-  {
-    title: 'CÓ CẦN PHẢI CÓ LÝ KHÔNG? 2029',
-    price: '700.000 VND',
-    description: 'Vé cao cấp cho năm 2029.',
-    isSoldOut: true,
-  },
-  {
-    title: 'CÓ CẦN PHẢI CÓ LÝ KHÔNG? 2030',
-    price: '800.000 VND',
-    description: 'Phiên bản đặc biệt năm 2030.',
-    isSoldOut: false,
-  },
-];
+import React, { useEffect, useRef, useState } from "react";
+import Ticket_Popup from "./Ticket_Popup"; // ✅ Import popup
+import TicketService from "../services/TicketService";
+import { formatToVND } from "../utils/NumberFormat";
+import { useTheme } from "../contexts/Theme";
 
 export default function Ticket_Selection() {
+  const { theme } = useTheme();
+
   const scrollContainerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [selectedTicketIndex, setSelectedTicketIndex] = useState(null);
   const [showPopup, setShowPopup] = useState(false); // ✅ Thêm state hiển thị popup
+
+  const [tickets, setTickets] = useState(null);
+  const [selectedTicket, setSelectedTicket] = useState(null);
+
+  useEffect(() => {
+    if (tickets != null) return;
+    const fetchTickets = async () => {
+      TicketService.getAllTickets()
+        .then((data) => {
+          setTickets(data);
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    };
+
+    fetchTickets();
+  });
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -71,28 +55,40 @@ export default function Ticket_Selection() {
   };
 
   const handleSelect = (index) => {
-    if (!ticketData[index].isSoldOut) {
+    if (!tickets[index].isSoldOut) {
       setSelectedTicketIndex(index);
-      setShowPopup(true); // ✅ Mở popup khi chọn vé
+      setSelectedTicket(tickets[index]);
+      setShowPopup(true);
     }
   };
 
   const handleClosePopup = () => {
     setShowPopup(false); // ✅ Đóng popup
+    setSelectedTicket(null);
+    setSelectedTicketIndex(null);
   };
+
+  if (!tickets) return <p>Loading...</p>;
 
   return (
     <div className="px-4 md:px-8 lg:px-16 py-12 bg-white/10 backdrop-blur-sm rounded-xl">
-      <h2 className="text-3xl md:text-4xl font-bold text-left mb-10">
+      <p
+        className="text-3xl md:text-4xl font-bold text-left mb-10"
+        style={{
+          fontFamily: "Imbue, serif",
+          fontSize: "64px",
+          fontWeight: 500,
+        }}
+      >
         TICKET
-      </h2>
+      </p>
 
       <div
         ref={scrollContainerRef}
         className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide cursor-grab active:cursor-grabbing"
         style={{
-          MsOverflowStyle: 'none',
-          scrollbarWidth: 'none',
+          MsOverflowStyle: "none",
+          scrollbarWidth: "none",
         }}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
@@ -102,37 +98,38 @@ export default function Ticket_Selection() {
         onTouchEnd={handleMouseUp}
         onTouchMove={handleMouseMove}
       >
-        {ticketData.map((ticket, index) => (
+        {tickets.map((ticket, index) => (
           <div
             key={index}
-            className="flex-none w-[280px] md:w-[calc(33.33%-16px)] lg:w-[calc(33.33%-16px)]"
+            className="flex-none w-[280px] md:w-[calc(50%-16px)] lg:w-[calc(50%-16px)]"
           >
-            <div className="flex flex-col justify-between bg-white/40 backdrop-blur-md rounded-2xl shadow-md p-5 hover:shadow-lg transition duration-300 min-h-[220px] max-h-[260px]">
-              <div className="flex-1">
-                <h3 className="text-lg mb-2">{ticket.title}</h3>
-                <p className="text-base text-red-600 mb-3">{ticket.price}</p>
+            <div className="flex flex-col justify-between bg-white/5 backdrop-blur-md rounded-2xl shadow-md p-5 hover:shadow-lg transition duration-300">
+              <div className="mb-4">
+                <h3 className="text-lg mb-2 font-semibold">
+                  [{ticket.name.toUpperCase()}]<br /> CÓ CẦN PHẢI CÓ LÝ KHÔNG?
+                  SG 2025
+                </h3>
+                <p className="text-base text-white">
+                  {formatToVND(ticket.price)}
+                </p>
               </div>
 
-              {ticket.isSoldOut ? (
+              {ticket.soldOut ? (
                 <button
-                  className="mt-5 bg-gray-400 text-white text-sm px-4 py-2 rounded cursor-not-allowed"
+                  className="bg-gray-400 text-white text-sm px-4 py-4 rounded cursor-not-allowed"
                   disabled
                 >
                   Hết Vé
                 </button>
-              ) : selectedTicketIndex === index && showPopup ? (
-                <button
-                  className="mt-5 bg-green-600 text-white text-sm px-4 py-2 rounded cursor-not-allowed"
-                  disabled
-                >
-                  Đã Chọn
-                </button>
               ) : (
                 <button
-                  className="mt-5 bg-black text-white text-sm px-4 py-2 rounded hover:bg-gray-800 transition"
+                  className={` text-white text-sm px-4 py-4 rounded cursor-pointer transition`}
+                  style={{
+                    backgroundColor: theme.color,
+                  }}
                   onClick={() => handleSelect(index)}
                 >
-                  Chọn Vé
+                  Mua Vé
                 </button>
               )}
             </div>
@@ -142,9 +139,7 @@ export default function Ticket_Selection() {
 
       {/* ✅ Hiển thị Popup nếu được chọn */}
       {showPopup && (
-        <Ticket_Popup
-          onClose={handleClosePopup}
-        />
+        <Ticket_Popup ticket={selectedTicket} onClose={handleClosePopup} />
       )}
     </div>
   );

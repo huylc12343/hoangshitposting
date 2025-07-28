@@ -1,18 +1,19 @@
-import React from 'react';
-import demoImg from '../assets/TicketCard.png';
-import { Link } from 'react-router-dom';
+import React from "react";
+import demoImg from "../assets/ticket_popup_banner.png";
+import { Link, useNavigate } from "react-router-dom";
+import TicketService from "../services/TicketService";
+import { formatToVND } from "../utils/NumberFormat";
+import { useTheme } from "../contexts/Theme";
 
-export default function Ticket_Popup({ onClose }) {
-  const theme = {
-    primary: '#FF4C4C',
-  };
+export default function Ticket_Popup({ ticket, onClose }) {
+  const navigate = useNavigate();
 
-  // Hàm xử lý click ra ngoài
+  const { theme } = useTheme();
+
   const handleOverlayClick = (e) => {
     onClose(); // gọi onClose khi click vào nền
   };
 
-  // Ngăn sự kiện click nổi bọt khi click vào nội dung
   const stopPropagation = (e) => {
     e.stopPropagation();
   };
@@ -23,7 +24,7 @@ export default function Ticket_Popup({ onClose }) {
       onClick={handleOverlayClick} // click ra ngoài thì đóng
     >
       <div
-        className="bg-white text-black p-6 rounded-lg w-full max-w-2xl relative shadow-2xl"
+        className="bg-[#323232] text-white p-6 rounded-lg w-full max-w-2xl relative shadow-2xl"
         onClick={stopPropagation} // ngăn click vào nội dung bị bubbled lên overlay
       >
         {/* Nút đóng */}
@@ -42,47 +43,60 @@ export default function Ticket_Popup({ onClose }) {
 
         {/* Tiêu đề + Giá */}
         <div className="flex justify-between items-center mb-2">
-          <h2 className="text-lg md:text-xl font-semibold truncate pr-4">
-            [STANDARD] CÓ CẦN PHẢI CÓ LÝ KHÔNG? 2025
+          <h2
+            className="text-lg md:text-3xl font-semibold truncate pr-4"
+            style={{
+              fontFamily: "Imbue, serif",
+            }}
+          >
+            [{ticket.name.toUpperCase()}] CÓ CẦN PHẢI CÓ LÝ KHÔNG? 2025
           </h2>
-          <span className="text-base md:text-lg font-bold text-red-600 flex-shrink-0">
-            Từ 150.000đ
+          <span
+            className="text-lg md:text-3xl font-bold flex-shrink-0"
+            style={{
+              fontFamily: "Imbue, serif",
+            }}
+          >
+            {formatToVND(ticket.price)}
           </span>
         </div>
 
         {/* Mô tả sự kiện */}
-        <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-2 mb-6">
+        <div className="flex flex-col gap-4 mt-6 mb-12 text-sm md:text-base text-white leading-relaxed space-y-2">
           <p>
-            Một đêm nhạc đắm chìm trong cảm xúc, hoài niệm và những câu hỏi không lời giải.
-            <br />
-            “Có Cần Phải Có Lý Không?” là cover show được dàn dựng công phu bởi Gấp Gáp Band –
-            nơi những bản hit cũ được thổi làn gió mới đầy cảm xúc.
+            Với sứ mệnh giữ gìn, lan toả tình yêu dành cho âm nhạc Cá Hồi Hoang,
+            Cover Show tại Sài Gòn sẽ không chỉ là một buổi diễn đơn thuần mà là
+            nơi ký ức ùa về, cảm xúc vỡ oà và kết nối được thắp sáng - để hành
+            trình sống cùng âm nhạc Cá “sẽ luôn là cái gì đó mãi mãi”.
           </p>
           <p>
-            Từ acoustic mộc mạc đến rock cháy bỏng, từng tiết mục là một lát cắt ký ức và tâm trạng
-            của những kẻ từng "gấp gáp" trong yêu thương, lý trí và cả những hoang mang vô hình.
-          </p>
-          <p>
-            🎸 <strong>Thời gian:</strong> 9H–21H, ngày 12/12<br />
-            📍 <strong>Địa điểm:</strong> LP Club – 174 Kim Mã, Ba Đình, Hà Nội
-          </p>
-          <p>
-            Vé STANDARD – chỗ ngồi tự do, không giới hạn cảm xúc.<br />
-            Sẵn sàng chưa? Gấp gáp là để không bỏ lỡ.
+            🐟 Cover Show "CÓ CẦN PHẢI CÓ LÝ KHÔNG?" Sài Gòn <br />
+            ► Thời gian: 19h - 22h 13/09//2025 <br />
+            ► Địa điểm: Golden Bird's Event Space - 142 Đường Trần Não, Phường
+            Bình An, Quận 2, Thành phố Thủ Đức, Hồ Chí Minh <br />
           </p>
         </div>
 
         {/* Nút đặt vé */}
-        
-        <Link to="/buyticket" onClick={onClose}>
-        <button
-            className="w-full py-3 rounded-md text-white font-semibold hover:opacity-50 transition"
-            style={{ backgroundColor: theme.primary }}
-        >
-            Mua vé ngay
-        </button>
-        </Link>
 
+        <div
+          className="w-full py-3 rounded-md text-white font-semibold hover:opacity-50 transition flex justify-center"
+          style={{ backgroundColor: theme.color }}
+          onClick={() => {
+            TicketService.holdTicket(ticket.id, 1)
+              .then((data) => {
+                localStorage.setItem("holdId", data);
+                onClose();
+
+                navigate("/buyticket/" + ticket.id);
+              })
+              .catch((error) => {
+                alert(error.message);
+              });
+          }}
+        >
+          <p>Mua vé ngay</p>
+        </div>
       </div>
     </div>
   );
