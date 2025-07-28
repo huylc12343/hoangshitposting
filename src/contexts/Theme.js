@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 import TuDobg from '../assets/bg-TuDo-min.jpg';
-import TuDoIcon from '../assets/TuDoBird.svg';
+import TuDoIcon from '../assets/twitter-bird-logo-svgrepo-com.svg';
 import NguoiTimVangbg from '../assets/bg-NguoiTimVang-min.jpg';
 import NguoiTimVangIcon from '../assets/pickaxe-svgrepo-com.svg';
 // Theme context

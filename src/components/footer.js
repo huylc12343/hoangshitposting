@@ -23,7 +23,8 @@ export default function Footer() {
             </h1>
             <ul className="space-y-2 mt-2 font-Averta-CY">
               <ul className="space-y-2 mt-2">
-                <li className="hover:text-gray-200 cursor-pointer">GẤP GAP</li>
+                <li className="hover:text-gray-200 cursor-pointer">
+                  <Link to="/" className="hover:text-gray-200">GẤP GAP</Link></li>
                 <li>
                   <Link to="/about" className="hover:text-gray-200">Về chúng mình</Link>
                 </li>
@@ -79,7 +80,7 @@ export default function Footer() {
               <li>
                 <i className="fab fa-youtube mr-2"></i>
                 <a
-                  href="https://www.youtube.com/hoangshitposting"
+                  href="https://www.youtube.com/@Hoangshitposting"
                   className="hover:text-gray-200"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -139,7 +139,7 @@ export default function Timeline_Components() {
         {/* Vertical line for mobile */}
         {/* Nếu muốn vertical line trên mobile, có thể làm riêng */}
         <div
-          className="absolute w-[4px] bg-white/40 z-0 left-9 top-0 bottom-0"
+          className="absolute w-[4px] bg-white z-0 left-9 top-0 bottom-0"
           // Bạn có thể fix chiều cao 100% ở mobile nếu muốn
         />
 
@@ -147,10 +147,9 @@ export default function Timeline_Components() {
           {timelineData.map((item, index) => (
             <div key={index} className="grid grid-cols-[40px_1fr] gap-4 items-start">
               {/* Dot */}
-              <div className="timeline-item-dot relative flex justify-center">
+              <div className="timeline-item-dot relative flex justify-center translate-x-1">
                 <div className="w-6 h-6 rounded-full bg-white border-4 border-white" />
               </div>
-
               {/* Date & Image */}
               <div className="flex flex-col items-start">
                 <Link to={item.link}>

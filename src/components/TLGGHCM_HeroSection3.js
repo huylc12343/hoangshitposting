@@ -2,7 +2,7 @@ import hoi from "../assets/logo_hoi.png"
 export default function Event_HeroSection3() {
   return (
     <section className="w-full text-white">
-      <h2 className="text-3xl md:text-4xl font-bold text-left mb-6">
+      <h2 className="text-4xl md:text-4xl font-bold text-left mb-6 font-imbue">
         THỜI GIAN & ĐỊA ĐIỂM
       </h2>
 
@@ -14,7 +14,7 @@ export default function Event_HeroSection3() {
       </p>
 
       <div className="w-full mt-6 p-4 rounded-xl bg-white/10 shadow-xl">
-        <p className="text-lg font-semibold mb-2">Địa điểm: HỘI TỤ HỘI</p>
+          <p className="text-4xl font-bold font-imbue mb-2">Địa điểm: HỘI TỤ HỘI</p>
         <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg">
           <iframe
             className="w-full h-full border-0"
