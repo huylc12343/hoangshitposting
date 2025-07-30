@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import TuDobg from '../assets/compressed_gif_example_1.gif';
+import TuDobg from '../assets/bg-TuDo-min.jpg';
 import TuDoIcon from '../assets/icons8-twitter-bird-50.png';
 import NguoiTimVangbg from '../assets/bg_NgTimVang_new_min.jpg';
 import NguoiTimVangIcon from '../assets/Shovel.png';
