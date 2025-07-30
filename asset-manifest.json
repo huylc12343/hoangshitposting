@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.5abb577d.css",
-    "main.js": "/static/js/main.e18cefef.js",
+    "main.js": "/static/js/main.fae6bd77.js",
     "static/js/453.648ce41d.chunk.js": "/static/js/453.648ce41d.chunk.js",
-    "static/media/compressed_gif_example_1.gif": "/static/media/compressed_gif_example_1.59e7491dd8f72084415a.gif",
     "static/media/tui_chh.jpg": "/static/media/tui_chh.058d38b4d37d06824258.jpg",
     "static/media/03171102.mp4": "/static/media/03171102.b0c8e980c65f65037047.mp4",
+    "static/media/bg-TuDo-min.jpg": "/static/media/bg-TuDo-min.f9f83797bfe77e1cc02d.jpg",
     "static/media/g4-min.png": "/static/media/g4-min.092eddf59c6d863d0143.png",
     "static/media/bg_NgTimVang_new_min.jpg": "/static/media/bg_NgTimVang_new_min.6ea55b855aca6edc4ae3.jpg",
     "static/media/g3-min.png": "/static/media/g3-min.c9be7772ba4f22029148.png",
@@ -81,11 +81,11 @@
     "static/media/arrow-down-angle-svgrepo-com.svg": "/static/media/arrow-down-angle-svgrepo-com.b8434f126a8dbfe1baabe2b03c588c9c.svg",
     "static/media/arrow-up-svgrepo-com.svg": "/static/media/arrow-up-svgrepo-com.105962570a84ea14fe61103d7f4aeb21.svg",
     "main.5abb577d.css.map": "/static/css/main.5abb577d.css.map",
-    "main.e18cefef.js.map": "/static/js/main.e18cefef.js.map",
+    "main.fae6bd77.js.map": "/static/js/main.fae6bd77.js.map",
     "453.648ce41d.chunk.js.map": "/static/js/453.648ce41d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5abb577d.css",
-    "static/js/main.e18cefef.js"
+    "static/js/main.fae6bd77.js"
   ]
 }
