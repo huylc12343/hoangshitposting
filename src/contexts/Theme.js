@@ -1,19 +1,21 @@
 import React, { createContext, useContext, useState } from "react";
-import TuDobg from '../assets/bg-TuDo-min.jpg';
+import TuDobg from '../assets/compressed_gif_example_1.gif';
 import TuDoIcon from '../assets/icons8-twitter-bird-50.png';
-import NguoiTimVangbg from '../assets/bg-NguoiTimVang-min.jpg';
+import NguoiTimVangbg from '../assets/bg_NgTimVang_new_min.jpg';
 import NguoiTimVangIcon from '../assets/Shovel.png';
 // Theme context
 const ThemeContext = createContext();
 
 // Default themes
 const TuDoTheme = {
-    color: "#1A56DB",
+    name:"TuDo",
+    color: "#125172",
     background: `url(${TuDobg})`,
     icon: TuDoIcon,
 };
 
 const NguoiTimVangTheme = {
+    name:"NgTimVang",
     color: "#B9400C",
     background: `url(${NguoiTimVangbg})`,
     icon: NguoiTimVangIcon,

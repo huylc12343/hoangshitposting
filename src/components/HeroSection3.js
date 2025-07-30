@@ -97,7 +97,7 @@ export default function HeroSection3() {
               <Link to="/event"><button
                 className="mt-4 px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"
                 style={{
-                  backgroundColor: theme.color === "#B9400C" ? "#B9400C" : "#125172",
+                  backgroundColor: theme.color,
                   fontFamily: 'Averta CY',
                 }}
               >

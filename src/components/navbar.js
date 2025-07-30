@@ -9,7 +9,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleToggle = () => {
-    if (theme.color === "#1A56DB") {
+    if (theme.color === "#125172") {
       setThemeNguoiTimVang();
     } else {
       setThemeTuDo();
@@ -22,7 +22,7 @@ const Navbar = () => {
       
       {/* LEFT: Logo + Menu */}
       <div className="flex items-center gap-10">
-        <img src={CasIcon} alt="cas" className="w-20 h-20 flex-shrink-0" />
+        <Link to="/"><img src={CasIcon} alt="cas" className="w-20 h-20 flex-shrink-0" /></Link>
         <ul className="hidden md:flex items-center gap-8 text-white font-medium">
           <li className="hover:text-blue-300 cursor-pointer">
             <Link to="/">Trang chủ</Link>
@@ -33,9 +33,9 @@ const Navbar = () => {
           <li className="hover:text-blue-300 cursor-pointer">
             <Link to="/upcoming">Sự kiện</Link>
           </li>
-          {/* <li className="hover:text-blue-300 cursor-pointer">
+          <li className="hover:text-blue-300 cursor-pointer">
             <Link to="/merch">Merch</Link>
-          </li> */}
+          </li>
         </ul>
       </div>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
         >
           <div
             className={`w-6 h-6 rounded-full shadow-md transform transition-all duration-300 relative
-              ${theme.color === "#1A56DB" ? 'translate-x-0' : 'translate-x-6'}`}
+              ${theme.color === "#125172" ? 'translate-x-0' : 'translate-x-6'}`}
             style={{
               backgroundImage: theme.background,
               backgroundSize: 'cover',
@@ -94,7 +94,7 @@ const Navbar = () => {
           <Link to="/" onClick={() => setMenuOpen(false)}>Trang chủ</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>Về chúng mình</Link>
           <Link to="/upcoming" onClick={() => setMenuOpen(false)}>Sự kiện</Link>
-          {/* <Link to="/merch" onClick={() => setMenuOpen(false)}>Merch</Link> */}
+          <Link to="/merch" onClick={() => setMenuOpen(false)}>Merch</Link>
         </div>
       )}
     </nav>

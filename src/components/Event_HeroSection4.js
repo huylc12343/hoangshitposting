@@ -31,7 +31,7 @@ export default function Event_HeroSection3() {
         <p>Special Thanks to</p>
         <p>Golden Bird's Event Space</p>
         
-        <div className="w-[325px] h-[180px] mx-auto mt-10">
+        <div className="w-[325px] h-[180px] items-start mt-4">
           <img
             src={golden_bird}
             alt="Ảnh 1"

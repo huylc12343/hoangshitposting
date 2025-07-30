@@ -35,7 +35,7 @@ export default function Event_HeroSection3() {
         <p>Special Thanks to</p>
         <strong><p>MONTAUK BY LP CLUB</p></strong>
         
-          <div className="w-[325px] h-[100px] mx-auto mt-10">
+          <div className="w-[325px] h-[100px] mt-10 items-start">
             <img
               src={montauk}
               alt="Ảnh 1"

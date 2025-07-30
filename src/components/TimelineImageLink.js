@@ -24,7 +24,7 @@ export default function TimelineImageLink({
         className="group w-full rounded-xl shadow-2xl transition relative overflow-hidden"
         style={{
           maxWidth: `${maxWidth}px`,
-          backgroundImage: `url(${theme.color === '#1A56DB' ? blue_bg : bg})`,
+          backgroundImage: `url(${theme.name === 'TuDo' ? blue_bg : bg})`,
           backgroundSize: '100% 100%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

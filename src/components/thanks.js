@@ -7,7 +7,7 @@ export default function Thanks() {
       {/* Tiêu đề */}
 <div className="flex justify-center mb-10">
   <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold font-imbue text-[#FFFFFF] whitespace-nowrap">
-    Lời cảm ơn
+    LỜI CẢM ƠN
   </h1>
 </div>
 

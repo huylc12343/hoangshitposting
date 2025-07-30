@@ -52,7 +52,7 @@ export default function TimelineComponent() {
         <div className="relative w-full max-w-7xl mx-auto z-10">
             <div className="space-y-20 relative">
                 {/* Vertical line for mobile timeline */}
-                <div className="md:hidden absolute left-[7px] top-0 bottom-0 w-0.5 bg-white/30 z-0" />
+                <div className="md:hidden absolute left-[7px] top-0 bottom-0 w-0.5 bg-white z-0" />
 
 
                 {timelineData.map((item, index) => (

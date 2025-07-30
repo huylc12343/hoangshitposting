@@ -36,15 +36,15 @@ export default function Event_HeroSection3() {
         <p>Special Thanks to</p>
         <strong><p>Hanoi Rock City</p>
         <p>PixelWave Multimedia</p></strong>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-1 mt-6 justify-center">
-          <div className="w-[225px] h-[100px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-6 max-w-fit ">
+          <div className="w-[225px] h-[100px] ">
             <img
               src={hrc}
               alt="Ảnh 1"
               className="w-full h-full shadow-lg object-contain"
             />
           </div>
-          <div className="w-[225px] h-[100px] mx-auto">
+          <div className="w-[225px] h-[100px] ">
             <img
               src={pwm}
               alt="Ảnh 2"

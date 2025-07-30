@@ -26,13 +26,13 @@ export default function Event_HeroSection3() {
         </div>
 
       </div>
-              <p className="font-Averta-CY text-base">
-          <b>Hoang Shitposting</b> xin chân thành cảm ơn!
+          <p className="font-Averta-CY text-base">
+          <br/><b>Hoang Shitposting</b> xin chân thành cảm ơn!
         </p>
         <br/>
         <p>Special Thanks to</p>
         
-          <div className="w-[325px] h-[100px] mx-auto mt-10">
+          <div className="w-[150px] h-[150px] items-start mt-10">
             <img
               src={hoi}
               alt="Ảnh 1"
