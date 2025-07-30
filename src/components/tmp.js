@@ -64,9 +64,9 @@ export default function Cart_HeroSection() {
 
             {/* Chi tiết sản phẩm - Luôn là một khối có thể thu gọn/mở rộng trên mobile
                 và luôn hiển thị trên desktop */}
-            <div className="bg-[#323232] text-white p-6 md:p-0 md:bg-transparent shadow-lg text-left  rounded-lg mb-4">
-              <div className="flex justify-between items-center mb-4 md:mb-0">
-                <h2 className="text-xl font-semibold md:hidden">Chi tiết sản phẩm (4)</h2>
+            <div className="bg-[#323232] text-white p-6 shadow-lg text-left rounded-lg mb-4">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-semibold">Chi tiết sản phẩm (4)</h2>
                 {/* Nút toggle chỉ hiển thị trên mobile */}
                 <button
                   onClick={toggleProductList}
@@ -86,7 +86,7 @@ export default function Cart_HeroSection() {
                   ${showProductList ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
                   md:max-h-full md:opacity-100 md:overflow-visible`} /* Luôn hiển thị trên desktop */
               >
-                <div className="space-y-4 text-sm  w-full">
+                <div className="space-y-4 text-sm w-full">
                   <ProductItem
                     Image={Product1}
                     title="combo muối nhỏ dịu dàng, cái này của lốp đốp dài ra"

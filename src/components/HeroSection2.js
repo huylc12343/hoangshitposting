@@ -32,14 +32,13 @@ export default function HeroSection2() {
           {/* Tiêu đề */}
           <div className="flex flex-col items-center leading-tight">
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-wide"
-              style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-imbue font-semibold xl:text-7xl tracking-wide"
+              
             >
               CÁ HỒI HOANG
             </h1>
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-2 tracking-wide"
-              style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-2 font-imbue font-semibold tracking-wide"
             >
               LÀ MỘT CÁI GÌ ĐÓ MÃI MÃI
             </h1>
@@ -47,8 +46,8 @@ export default function HeroSection2() {
 
           {/* Dấu ngoặc phải */}
           <span
-            className="text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] text-white ml-2 md:ml-4"
-            style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
+            className="text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] font-imbue font-semibold xl:text-[10rem] text-white ml-2 md:ml-4"
+            
           >
             ”
           </span>
@@ -60,8 +59,8 @@ export default function HeroSection2() {
 
         {/* Mô tả */}
         <p
-          className="text-xs sm:text-base md:text-lg lg:text-xl leading-relaxed opacity-90 px-2 sm:px-4"
-          style={{ fontFamily: 'Averta-CY' }}
+          className="text-xs sm:text-base md:text-lg lg:text-xl leading-relaxed opacity-90 font-Averta-CY px-2 sm:px-4"
+          
         >
           Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023,<br/> 
           nhưng với người hâm mộ, âm nhạc ấy vẫn luôn tồn tại là ký ức, <br/>

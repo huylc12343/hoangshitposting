@@ -64,20 +64,20 @@ const Navbar = () => {
         </div>
 
         {/* Cart - desktop */}
-        {/* <button
+        <Link to="/cart"><button
           className="hidden md:flex items-center gap-2 px-4 py-2 text-white rounded-md hover:opacity-90 transition duration-300"
           style={{ backgroundColor: theme.color }}
         >
           <i className="fas fa-shopping-cart"></i>
-          <span><Link to="/cart">Giỏ hàng</Link></span>
+          <span>Giỏ hàng</span>
           <span className="ml-2 bg-white text-red-500 text-xs font-bold px-2 py-0.5 rounded-full">3</span>
-        </button> */}
+        </button></Link>
 
         {/* Cart - mobile */}
-        {/* <Link to="/cart" className="md:hidden relative text-white text-xl">
+        <Link to="/cart" className="md:hidden relative text-white text-xl">
           <i className="fas fa-shopping-cart"></i>
           <span className="absolute -top-2 -right-2 bg-white text-red-500 text-xs font-bold px-1.5 py-0.5 rounded-full">3</span>
-        </Link> */}
+        </Link>
 
         {/* Hamburger - mobile */}
         <button

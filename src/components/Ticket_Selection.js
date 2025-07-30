@@ -1,21 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
-import Ticket_Popup from "./Ticket_Popup"; // ✅ Import popup
 import TicketService from "../services/TicketService";
 import { formatToVND } from "../utils/NumberFormat";
 import { useTheme } from "../contexts/Theme";
 
-export default function Ticket_Selection() {
+export default function Ticket_Selection({ onTicketSelect }) {
   const { theme } = useTheme();
-
   const scrollContainerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [selectedTicketIndex, setSelectedTicketIndex] = useState(null);
-  const [showPopup, setShowPopup] = useState(false); // ✅ Thêm state hiển thị popup
-
   const [tickets, setTickets] = useState(null);
-  const [selectedTicket, setSelectedTicket] = useState(null);
 
   useEffect(() => {
     if (tickets != null) return;
@@ -30,7 +25,7 @@ export default function Ticket_Selection() {
     };
 
     fetchTickets();
-  });
+  }, [tickets]);
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -57,15 +52,8 @@ export default function Ticket_Selection() {
   const handleSelect = (index) => {
     if (!tickets[index].isSoldOut) {
       setSelectedTicketIndex(index);
-      setSelectedTicket(tickets[index]);
-      setShowPopup(true);
+      onTicketSelect(tickets[index]); // 👈 Gọi callback gửi dữ liệu ra ngoài
     }
-  };
-
-  const handleClosePopup = () => {
-    setShowPopup(false); // ✅ Đóng popup
-    setSelectedTicket(null);
-    setSelectedTicketIndex(null);
   };
 
   if (!tickets) return <p>Loading...</p>;
@@ -83,31 +71,31 @@ export default function Ticket_Selection() {
         TICKET
       </p>
 
-      <div
-        ref={scrollContainerRef}
-        className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide cursor-grab active:cursor-grabbing"
-        style={{
-          MsOverflowStyle: "none",
-          scrollbarWidth: "none",
-        }}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        onTouchStart={handleMouseDown}
-        onTouchEnd={handleMouseUp}
-        onTouchMove={handleMouseMove}
-      >
+<div
+  ref={scrollContainerRef}
+  className="flex flex-col md:flex-row gap-6 pb-4 md:overflow-x-auto scrollbar-hide md:cursor-grab md:active:cursor-grabbing"
+  style={{
+    MsOverflowStyle: "none",
+    scrollbarWidth: "none",
+  }}
+  onMouseDown={handleMouseDown}
+  onMouseLeave={handleMouseLeave}
+  onMouseUp={handleMouseUp}
+  onMouseMove={handleMouseMove}
+  onTouchStart={handleMouseDown}
+  onTouchEnd={handleMouseUp}
+  onTouchMove={handleMouseMove}
+>
+
         {tickets.map((ticket, index) => (
           <div
             key={index}
-            className="flex-none w-[280px] md:w-[calc(50%-16px)] lg:w-[calc(50%-16px)]"
+            className="flex-none w-auto md:w-[calc(50%-16px)] lg:w-[calc(50%-16px)]"
           >
             <div className="flex flex-col justify-between bg-white/5 backdrop-blur-md rounded-2xl shadow-md p-5 hover:shadow-lg transition duration-300">
               <div className="mb-4">
                 <h3 className="text-lg mb-2 font-semibold">
-                  [{ticket.name.toUpperCase()}]<br /> CÓ CẦN PHẢI CÓ LÝ KHÔNG?
-                  SG 2025
+                  [{ticket.name.toUpperCase()}]<br /> CÓ CẦN PHẢI CÓ LÝ KHÔNG? SG 2025
                 </h3>
                 <p className="text-base text-white">
                   {formatToVND(ticket.price)}
@@ -136,11 +124,6 @@ export default function Ticket_Selection() {
           </div>
         ))}
       </div>
-
-      {/* ✅ Hiển thị Popup nếu được chọn */}
-      {showPopup && (
-        <Ticket_Popup ticket={selectedTicket} onClose={handleClosePopup} />
-      )}
     </div>
   );
 }

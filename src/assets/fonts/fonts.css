@@ -36,7 +36,7 @@
   font-weight: 700; /* Ví dụ: Bold */
   font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imbue:ital,wght@0,400;0,600;0,700&display=swap');
 
 .font-Imbue {
   font-family: 'Imbue', serif;
