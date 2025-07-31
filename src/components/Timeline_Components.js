@@ -35,7 +35,7 @@ const timelineData = [
   },
     {
     date: "12-14/09/2025",
-    name: "Trưng bày GẤP GAP",
+    name: "Triển lãm GẤP GAP",
     location: "TP.HCM",
     image: event4,
     link: "/GapGapHCM",
@@ -157,7 +157,7 @@ export default function Timeline_Components() {
               {/* Date & Image */}
               <div className="flex flex-col items-start">
                 <Link to={item.link}>
-                  <p className="text-white text-lg font-semibold ">
+                  <p className="text-white font-imbue text-2xl font-semibold ">
                     {item.date}
                   </p>
                 </Link>
@@ -168,6 +168,7 @@ export default function Timeline_Components() {
                       index={index}
                       name={item.name}
                       location={item.location}
+                      buttonText={item.buttonText}
                     />
                 </Link>
               </div>

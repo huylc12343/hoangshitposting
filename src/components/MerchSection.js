@@ -17,8 +17,8 @@ export default function Merch() {
       <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
       <div className="relative z-10">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-center mb-16 font-imbue font-bold tracking-wide">
-          Merch
+        <h1 className="text-5xl md:text-7xl text-center mb-16 font-imbue tracking-wide">
+          MERCH
         </h1>
 
         {/* Desktop layout */}

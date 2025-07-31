@@ -1,91 +1,55 @@
-import React, { useState, useEffect } from 'react'; // Import useState and useEffect
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '../contexts/Theme';
-import merchCombos from '../data/MerchCombos'; // Import merchCombos tại đây
-import trash from '../assets/Trash.png'; // Assuming you still need this for other parts, though not used in the provided snippet
+import trash from '../assets/Trash.png';
 
-export default function Merch_Popup({ selectedIndex, onClose, onChangeCombo }) {
+export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCombo }) {
   const { theme } = useTheme();
 
-  // --- Move state declarations and useEffect to the top ---
-  // State for selected color, size, and quantity
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
-  // Effect to reset options when the selectedCombo changes
+  const selectedCombo = allCombos.find(combo => combo.id === selectedId);
+  const currentComboIndex = selectedCombo ? allCombos.indexOf(selectedCombo) : -1;
+
   useEffect(() => {
-    // Only run if selectedIndex is valid, to prevent errors on initial null state
-    if (selectedIndex !== null && selectedIndex >= 0 && selectedIndex < merchCombos.length) {
-      const currentCombo = merchCombos[selectedIndex];
-
-      // Set default color if hasShirt is true and colors are available
-      if (currentCombo.hasShirt && currentCombo.colors && currentCombo.colors.length > 0) {
-        // Assuming colors are simple strings for now, as per your provided data
-        setSelectedColor(currentCombo.colors[0]); // Set the first color as default
-      } else {
-        setSelectedColor(null);
-      }
-
-      // Set default size if hasShirt is true and sizes are available
-      if (currentCombo.hasShirt && currentCombo.sizes && currentCombo.sizes.length > 0) {
-        setSelectedSize(currentCombo.sizes[0]); // Set the first size as default
-      } else {
-        setSelectedSize(null);
-      }
-      setQuantity(1); // Reset quantity to 1 for new combo
+    if (selectedCombo) {
+      setSelectedColor(selectedCombo.colors?.[0] || null);
+      setSelectedSize(selectedCombo.sizes?.[0] || null);
+      setQuantity(1);
     }
-  }, [selectedIndex, merchCombos]); // Re-run when selectedIndex or merchCombos changes
+  }, [selectedId]);
 
-  // --- End of moved section ---
-
-
-  // This check now comes AFTER the hooks are called
-  if (selectedIndex === null || selectedIndex < 0 || selectedIndex >= merchCombos.length) {
-    return null; // Đảm bảo popup không hiển thị nếu index không hợp lệ
-  }
-
-  const selectedCombo = merchCombos[selectedIndex];
+  if (!selectedCombo) return null;
 
   const handleQuantityChange = (type) => {
-    setQuantity(prevQuantity => {
-      if (type === 'increment') {
-        return prevQuantity + 1;
-      } else if (type === 'decrement' && prevQuantity > 1) {
-        return prevQuantity - 1;
-      }
-      return prevQuantity;
+    setQuantity(prev => {
+      if (type === 'increment') return prev + 1;
+      if (type === 'decrement' && prev > 1) return prev - 1;
+      return prev;
     });
   };
 
-  // Helper function to get hex code for colors (if not in data)
-  // This function is fine to be defined here, or even outside the component if it's generic
   const getColorHex = (colorName) => {
     switch (colorName) {
-      case 'Trắng':
-        return '#FFFFFF';
-      case 'Đen':
-        return '#000000';
-      case 'Đỏ': // Example for other colors
-        return '#FF0000';
-      // Add more cases for other colors if needed
-      default:
-        return '#CCCCCC'; // Default grey for unknown colors
+      case 'Trắng': return '#FFFFFF';
+      case 'Đen': return '#000000';
+      case 'Đỏ': return '#FF0000';
+      default: return '#CCCCCC';
     }
   };
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center px-2">
-      {/* Overlay */}
-      <div
-        className="absolute inset-0 bg-black opacity-70"
-        onClick={onClose}
-      ></div>
+  // Show max 4 thumbnails
+  const visibleCombos = allCombos.slice(0, 4);
 
-      {/* Popup content */}
-      <div
-        className="relative bg-[#323232] w-full max-w-5xl shadow-xl z-50 flex flex-col md:flex-row overflow-y-auto max-h-[95vh] rounded-lg"
-      >
-        {/* Close Button - Added for better UX */}
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black opacity-70" onClick={onClose}></div>
+
+      {/* Popup */}
+      <div className="relative bg-[#323232] w-full md:max-w-5xl shadow-xl z-50 flex flex-col md:flex-row overflow-y-auto max-h-[90vh] rounded-xl">
+        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-3 right-3 text-white text-2xl z-50 hover:text-gray-300 transition"
@@ -94,7 +58,7 @@ export default function Merch_Popup({ selectedIndex, onClose, onChangeCombo }) {
           &times;
         </button>
 
-        {/* Left: Image */}
+        {/* Left: Image & Thumbnails */}
         <div className="w-full md:w-1/2 p-4 flex flex-col items-center">
           <img
             src={selectedCombo.image}
@@ -102,88 +66,100 @@ export default function Merch_Popup({ selectedIndex, onClose, onChangeCombo }) {
             className="w-full h-auto max-h-[300px] md:max-h-[400px] object-contain mb-4"
           />
 
-          {/* Thumbnails */}
+          {/* 4 Thumbnails */}
           <div className="grid grid-cols-4 gap-2">
-            {merchCombos.map((combo, idx) => (
+            {visibleCombos.map((combo) => (
               <img
-                key={idx}
+                key={combo.id}
                 src={combo.image}
-                alt={`Combo ${idx + 1}`}
+                alt={combo.name}
                 className={`w-16 h-16 object-cover cursor-pointer hover:opacity-80 transition ${
-                  idx === selectedIndex ? 'border-2 border-blue-500' : 'border-2 border-transparent'
+                  combo.id === selectedId ? 'border-2 border-blue-500' : 'border-2 border-transparent'
                 }`}
-                onClick={() => onChangeCombo(idx)}
+                onClick={() => onChangeCombo(combo.id)}
               />
             ))}
           </div>
         </div>
 
-        {/* Right: Info */}
+        {/* Right: Info & Options */}
         <div className="w-full md:w-1/2 p-4 sm:p-6 text-white text-left flex flex-col justify-between">
-          {/* Top: Info */}
+          {/* Info */}
           <div>
-            <span className="bg-yellow-400 text-black px-3 py-1 text-xs sm:text-sm font-bold uppercase rounded mb-2 inline-block">
-              Preorder
+            <span
+              className="text-[#EEE1D8] px-3 py-1 text-xs sm:text-sm font-medium rounded mb-2 inline-block"
+              style={{ backgroundColor: theme.color }}
+            >
+              Pre-order
             </span>
 
             <h2 className="text-2xl sm:text-3xl font-bold mb-2">{selectedCombo.name}</h2>
             <p className="text-lg sm:text-xl font-semibold mb-4">{selectedCombo.price}</p>
-            {/* Description: hiển thị nếu có */}
+
+            <h1 className="text-xl mb-4">Mô tả sản phẩm</h1>
             {selectedCombo.description && (
-              <p className="text-sm sm:text-base mb-4 whitespace-pre-wrap">{selectedCombo.description}</p>
+              <p className="text-sm sm:text-base mb-4 whitespace-pre-wrap">
+                {selectedCombo.description}
+              </p>
             )}
           </div>
 
-          {/* Bottom: Options & Buttons */}
-          <div className="mt-4">
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              {selectedCombo.hasShirt && (
-                <>
-                  {/* Color Radio Buttons */}
-                  <div className="flex-1">
-                    <label className="block text-sm mb-1">Màu sắc</label>
-                    <div className="flex space-x-2 items-center">
-                      {selectedCombo.colors.map((colorName, idx) => (
-                        <div
-                          key={idx}
-                          className={`w-8 h-8 rounded-full border-2 cursor-pointer flex items-center justify-center`}
-                          style={{ backgroundColor: getColorHex(colorName), borderColor: selectedColor === colorName ? theme.color : '#4D4D4D' }}
-                          onClick={() => setSelectedColor(colorName)}
-                        >
-                          {/* Checkmark for selected color, adjust color based on background */}
-                          {selectedColor === colorName && (
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                 style={{ color: colorName === 'Trắng' ? '#000000' : '#FFFFFF' }}> {/* Black check for white, white for others */}
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                          )}
-                        </div>
-                      ))}
-                    </div>
+          {/* Options */}
+          {/* Changed this parent div to be flex-col to better manage spacing with the fixed button */}
+          <div className="mt-4 flex flex-col">
+            <div className="flex flex-col sm:flex-row gap-6 mb-6">
+              {/* Colors */}
+              {selectedCombo.colors?.length > 0 && (
+                <div className="flex-none">
+                  <label className="block text-sm mb-1">Màu sắc</label>
+                  <div className="flex space-x-1 items-center">
+                    {selectedCombo.colors.slice(0, 4).map((color, idx) => (
+                      <div
+                        key={idx}
+                        className="w-7 h-7 rounded-full border-2 cursor-pointer flex items-center justify-center"
+                        style={{
+                          backgroundColor: getColorHex(color),
+                          borderColor: selectedColor === color ? theme.color : '#4D4D4D',
+                        }}
+                        onClick={() => setSelectedColor(color)}
+                      >
+                        {selectedColor === color && (
+                          <svg
+                            className="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style={{ color: color === 'Trắng' ? '#000000' : '#FFFFFF' }}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        )}
+                      </div>
+                    ))}
                   </div>
-                </>
+                </div>
               )}
+
               {/* Quantity */}
-              <div className="flex-1 ">
+              <div className="flex-none">
                 <label className="block text-sm mb-1">Số lượng</label>
                 <div className="inline-flex bg-[#3A3A3A] items-center border border-[#4D4D4D] rounded-lg overflow-hidden text-sm">
-                  {/* Minus */}
                   <button
-                    className="px-3 py-2 hover:bg-gray-700 focus:outline-none" // Adjusted padding here
+                    className="px-2 py-1 hover:bg-gray-700"
                     onClick={() => handleQuantityChange('decrement')}
                     disabled={quantity <= 1}
                   >
                     -
                   </button>
-
-                  {/* Quantity */}
-                  <span className="px-3 py-2 border-l border-r border-[#4D4D4D]"> {/* Adjusted padding here */}
-                    {quantity}
-                  </span>
-
-                  {/* Plus */}
+                  <span className="px-2 py-1 border-l border-r border-[#4D4D4D]">{quantity}</span>
                   <button
-                    className="px-3 py-2 hover:bg-gray-700 focus:outline-none" // Adjusted padding here
+                    className="px-2 py-1 hover:bg-gray-700"
                     onClick={() => handleQuantityChange('increment')}
                   >
                     +
@@ -191,36 +167,33 @@ export default function Merch_Popup({ selectedIndex, onClose, onChangeCombo }) {
                 </div>
               </div>
 
-              {/* Conditional Shirt Options */}
-              {selectedCombo.hasShirt && (
-                <>
-                  {/* Size Radio Buttons */}
-                  <div className="flex-1">
-                    <label className="block text-sm mb-1">Kích cỡ</label>
-                    <div className="flex space-x-2">
-                      {selectedCombo.sizes.map((sizeOption, idx) => (
-                        <button
-                          key={idx}
-                          className={`px-3 py-2 rounded text-sm ${
-                            selectedSize === sizeOption
-                              ? 'bg-gray-600 text-white' // Selected style
-                              : 'bg-[#3A3A3A] text-gray-300 border border-[#4D4D4D] hover:bg-gray-700' // Unselected style
-                          } transition`}
-                          onClick={() => setSelectedSize(sizeOption)}
-                        >
-                          {sizeOption}
-                        </button>
-                      ))}
-                    </div>
+              {/* Sizes */}
+              {selectedCombo.sizes?.length > 0 && (
+                <div className="flex-none">
+                  <label className="block text-sm mb-1">Kích cỡ</label>
+                  <div className="flex space-x-2">
+                    {selectedCombo.sizes.map((size, idx) => (
+                      <button
+                        key={idx}
+                        className={`px-2 py-1 rounded text-sm ${
+                          selectedSize === size
+                            ? 'bg-gray-600 text-white'
+                            : 'bg-[#3A3A3A] text-gray-300 border border-[#4D4D4D] hover:bg-gray-700'
+                        }`}
+                        onClick={() => setSelectedSize(size)}
+                      >
+                        {size}
+                      </button>
+                    ))}
                   </div>
-                </>
+                </div>
               )}
             </div>
 
-            {/* Buttons */}
-            <div className="flex flex-col md:flex-row gap-3">
+            {/* Add to cart button container - THIS IS THE KEY CHANGE */}
+            <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#323232] z-50 md:relative md:bg-transparent md:p-0 md:mt-4">
               <button
-                className="px-4 py-3 text-white font-semibold transition w-full text-sm rounded"
+                className="py-3 text-white font-semibold transition w-full text-sm rounded"
                 style={{ backgroundColor: theme.color }}
               >
                 Thêm vào giỏ hàng

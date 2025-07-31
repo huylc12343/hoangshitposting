@@ -36,8 +36,11 @@
   font-weight: 700; /* Ví dụ: Bold */
   font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Imbue:ital,wght@0,400;0,600;0,700&display=swap');
 
-.font-Imbue {
-  font-family: 'Imbue', serif;
+
+@font-face {
+  font-family: 'Imbue';
+  src: url('./Imbue_72pt-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
 }

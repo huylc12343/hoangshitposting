@@ -40,13 +40,9 @@ export default function DvDongHanhHeroSection() {
     >
       <div className="absolute inset-0 bg-black opacity-70"></div>
       <h2
-        className={`font-imbue font-bold mb-8 relative z-[1] px-4 ${
-          isMobile
-            ? "text-[2rem] whitespace-normal"
-            : "text-[3rem] whitespace-nowrap"
-        }`}
+        className={`font-imbue text-4xl md:text-7xl font-bold mb-8 relative z-[1] px-4`}
       >
-        Đơn vị đồng hành
+        ĐƠN VỊ ĐỒNG HÀNH
       </h2>
 
       <div

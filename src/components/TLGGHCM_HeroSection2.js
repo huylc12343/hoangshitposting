@@ -30,7 +30,7 @@ export default function Event_HeroSection2() {
 
       {/* Nội dung đoạn 2 */}
       <p className="text-lg font-Averta-CY text-justify">
-        Đồng thời đây cũng là cách chúng mình đồng hành cùng các Cá gửi đến Cá Hồi Hoang lời chào, một lời tri ân và cảm ơn thân thương. 
+        Đồng thời đây cũng là cách chúng mình đồng hành cùng các Cá gửi đến Cá Hồi Hoang lời chào, lời tri ân và cảm ơn thân thương, mong rằng sự gắn kết này sẽ lấp đầy phần nào chơi vơi, lạc lõng của mọi người ^^
       </p>
     </section>
   );

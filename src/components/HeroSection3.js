@@ -60,10 +60,10 @@ export default function HeroSection3() {
       {/* Heading */}
       <div className="relative z-10 w-full max-w-7xl mt-12 px-4 text-center md:text-left">
         <h2
-          className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight tracking-wide font-Imbue font-semibold"
+          className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-imbue"
         >
           CHUỖI SỰ KIỆN<br />
-          GẤP GAP "CÓ CẦN PHẢI CÓ LÝ KHÔNG?"
+          GẤP GAP CÓ CẦN PHẢI CÓ LÝ KHÔNG?
         </h2>
       </div>
 
@@ -77,7 +77,7 @@ export default function HeroSection3() {
         {/* Stack content on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* Text + Button */}
-          <div className="flex flex-col justify-between text-sm sm:text-base md:text-lg leading-relaxed text-left h-full">
+          <div className="flex flex-col justify-between text-sm sm:text-base text-[#EEE1D8] md:text-lg leading-relaxed text-left h-full">
             {/* <p>
               Chúng mình cũng mong muốn tạo một sân chơi dành cho các band cover, giúp band có cơ hội thử sức, xây dựng tệp khán giả và mang đến những sân khấu đáng nhớ.
             </p> */}
@@ -95,10 +95,9 @@ export default function HeroSection3() {
 
             <div className="w-full flex justify-center md:justify-start">
               <Link to="/event"><button
-                className="mt-4 px-6 py-3 rounded-md text-white font-semibold shadow-md transition duration-300 hover:opacity-90"
+                className="mt-4 px-6 py-3 rounded-md text-white font-Averta-CY shadow-md transition duration-300 hover:opacity-90"
                 style={{
                   backgroundColor: theme.color,
-                  fontFamily: 'Averta CY',
                 }}
               >
                 Đồng hành cùng chúng mình
