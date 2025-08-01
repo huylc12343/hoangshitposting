@@ -8,7 +8,7 @@ const HeroSection = ({ onScrollToTimeline }) => {
 
   return (
     <div
-      className="relative w-full h-screen font-imbue text-white overflow-hidden"
+      className="relative w-full h-screen font-imbue text-[#EEE1D8] overflow-hidden"
       style={{
         backgroundImage: theme.background,
         backgroundSize: 'cover',

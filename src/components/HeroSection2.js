@@ -17,20 +17,20 @@ export default function HeroSection2() {
       <div className="absolute inset-0 bg-black opacity-70"></div>
 
       {/* Nội dung chính */}
-      <div className="relative z-10 text-white text-center max-w-5xl flex flex-col items-center">
+      <div className="relative z-10 text-[#EEE1D8] text-center max-w-5xl flex flex-col items-center">
 
         {/* Cụm dấu ngoặc kép và tiêu đề */}
         <div className="flex items-start justify-center mb-2 w-full flex-wrap px-2">
           {/* Dấu ngoặc trái */}
           <span
-            className="text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] text-white mr-2 md:mr-4"
+            className="text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] text-[#EEE1D8] mr-2 md:mr-4"
             style={{ fontFamily: 'Imbue, serif', fontWeight: 600 }}
           >
             “
           </span>
 
           {/* Tiêu đề */}
-          <div className="flex flex-col items-center leading-tight mb-2">
+          <div className="flex flex-col items-center  leading-tight mb-2">
             <h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-imbue font-semibold xl:text-7xl tracking-wide"
               
@@ -46,7 +46,7 @@ export default function HeroSection2() {
 
           {/* Dấu ngoặc phải */}
           <span
-            className="text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] font-imbue font-semibold xl:text-[10rem] text-white ml-2 md:ml-4"
+            className="text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] font-imbue font-semibold xl:text-[10rem] text-[#EEE1D8] ml-2 md:ml-4"
             
           >
             ”

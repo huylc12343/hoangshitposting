@@ -53,7 +53,7 @@ export default function Success_Popup({
 
               navigate("/");
             }}
-            className="w-full py-4 rounded bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold"
+            className=" hover:opacity-80 w-full py-4 rounded text-white text-sm font-semibold"
           >
             ĐỢI CHÚNG MÌNH NHÉ
           </button>

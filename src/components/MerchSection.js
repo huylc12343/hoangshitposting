@@ -10,7 +10,7 @@ export default function Merch() {
 
   return (
     <section
-      className="relative w-full py-20 text-white px-4 md:px-8 lg:px-12 bg-cover bg-center bg-no-repeat"
+      className="relative w-full py-20 text-[#EEE1D8] px-4 md:px-8 lg:px-12 bg-cover bg-center bg-no-repeat"
       // style={{ backgroundImage: theme.background }}
     >
       {/* Overlay */}
@@ -22,7 +22,7 @@ export default function Merch() {
         </h1>
 
         {/* Desktop layout */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto p-6">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto p-2">
           {/* Left large image */}
           <div className="flex justify-center items-center p-2 overflow-hidden bg-white/5">
             <img
@@ -82,7 +82,7 @@ export default function Merch() {
               />
             </div>
             <div className="flex justify-center items-center overflow-hidden bg-white/5 hover:bg-white/10 transition duration-300 cursor-pointer">
-              <span className="text-base font-semibold text-white">Tìm hiểu thêm</span>
+              <span className="text-base font-semibold text-[#EEE1D8]">Tìm hiểu thêm</span>
             </div>
           </div>
         </div>

@@ -39,41 +39,39 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
     }
   };
 
-  // Show max 4 thumbnails
   const visibleCombos = allCombos.slice(0, 4);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-70" onClick={onClose}></div>
 
       {/* Popup */}
-      <div className="relative bg-[#323232] w-full md:max-w-5xl shadow-xl z-50 flex flex-col md:flex-row overflow-y-auto max-h-[90vh] rounded-xl">
+      <div className="relative bg-[#323232] px-2 sm:pb-4 w-full mb-10 md:max-w-5xl shadow-xl z-50 flex flex-col md:flex-row overflow-y-auto max-h-[90vh] md:rounded-xl rounded-t-xl">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-white text-2xl z-50 hover:text-gray-300 transition"
+          className="absolute top-0 right-3 text-[#EEE1D8] text-2xl z-50 hover:text-gray-300 transition"
           aria-label="Close popup"
         >
           &times;
         </button>
 
         {/* Left: Image & Thumbnails */}
-        <div className="w-full md:w-1/2 p-4 flex flex-col items-center">
+        <div className="w-full md:w-1/2 p-4 flex flex-col items-center ">
           <img
             src={selectedCombo.image}
             alt={selectedCombo.name}
-            className="w-full h-auto max-h-[300px] md:max-h-[400px] object-contain mb-4"
+            className="w-full h-auto max-h-[380px] max-w-[380px] md:max-h-[430px] md:max-w-[430px] object-contain mb-4 mt-4 sm:mt-6"
           />
 
-          {/* 4 Thumbnails */}
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-4 mt-6 gap-4">
             {visibleCombos.map((combo) => (
               <img
                 key={combo.id}
                 src={combo.image}
                 alt={combo.name}
-                className={`w-16 h-16 object-cover cursor-pointer hover:opacity-80 transition ${
+                className={`w-20 h-20 sm:w-24 sm:h-24 object-cover cursor-pointer hover:opacity-80 transition ${
                   combo.id === selectedId ? 'border-2 border-blue-500' : 'border-2 border-transparent'
                 }`}
                 onClick={() => onChangeCombo(combo.id)}
@@ -83,7 +81,7 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
         </div>
 
         {/* Right: Info & Options */}
-        <div className="w-full md:w-1/2 p-4 sm:p-6 text-white text-left flex flex-col justify-between">
+        <div className="w-full md:w-1/2 p-4 sm:mt-4 sm:p-6 text-white text-left flex flex-col justify-between">
           {/* Info */}
           <div>
             <span
@@ -94,9 +92,9 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
             </span>
 
             <h2 className="text-2xl sm:text-3xl font-bold mb-2">{selectedCombo.name}</h2>
-            <p className="text-lg sm:text-xl font-semibold mb-4">{selectedCombo.price}</p>
+            <p className="text-lg sm:text-xl font-semibold mb-2">{selectedCombo.price}</p>
 
-            <h1 className="text-xl mb-4">Mô tả sản phẩm</h1>
+            <h1 className="text-xl mb-2">Mô tả sản phẩm</h1>
             {selectedCombo.description && (
               <p className="text-sm sm:text-base mb-4 whitespace-pre-wrap">
                 {selectedCombo.description}
@@ -105,7 +103,6 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
           </div>
 
           {/* Options */}
-          {/* Changed this parent div to be flex-col to better manage spacing with the fixed button */}
           <div className="mt-4 flex flex-col">
             <div className="flex flex-col sm:flex-row gap-6 mb-6">
               {/* Colors */}
@@ -190,7 +187,7 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
               )}
             </div>
 
-            {/* Add to cart button container - THIS IS THE KEY CHANGE */}
+            {/* Add to cart button - Fixed bottom on mobile */}
             <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#323232] z-50 md:relative md:bg-transparent md:p-0 md:mt-4">
               <button
                 className="py-3 text-white font-semibold transition w-full text-sm rounded"

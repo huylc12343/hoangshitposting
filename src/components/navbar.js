@@ -45,7 +45,7 @@ const Navbar = () => {
       {/* LEFT: Logo + Menu */}
       <div className="flex items-center gap-10">
         <Link to="/"><img src={CasIcon} alt="cas" className="w-20 h-20 flex-shrink-0" /></Link>
-        <ul className="hidden md:flex items-center gap-8 text-white font-medium">
+        <ul className="hidden md:flex items-center gap-8 text-[#EEE1D8] font-medium">
           <li className="hover:text-blue-300 cursor-pointer"><Link to="/">Trang chủ</Link></li>
           <li className="hover:text-blue-300 cursor-pointer"><Link to="/about">Về chúng mình</Link></li>
           <li className="hover:text-blue-300 cursor-pointer"><Link to="/upcoming">Sự kiện</Link></li>
@@ -80,7 +80,7 @@ const Navbar = () => {
         {/* Cart - desktop */}
         <Link to="/cart">
           <button
-            className="hidden md:flex items-center gap-2 px-4 py-2 text-white rounded-md hover:opacity-90 transition duration-300"
+            className="hidden md:flex items-center gap-2 px-4 py-2 text-[#EEE1D8] rounded-md hover:opacity-90 transition duration-300"
             style={{ backgroundColor: theme.color }}
           >
             <i className="fas fa-shopping-cart"></i>
@@ -90,7 +90,7 @@ const Navbar = () => {
         </Link>
 
         {/* Cart - mobile */}
-        <Link to="/cart" className="md:hidden relative text-white text-xl">
+        <Link to="/cart" className="md:hidden relative text-[#EEE1D8] text-xl">
           <i className="fas fa-shopping-cart"></i>
           <span className="absolute -top-2 -right-2 bg-white text-red-500 text-xs font-bold px-1.5 py-0.5 rounded-full">3</span>
         </Link>
@@ -99,7 +99,7 @@ const Navbar = () => {
         <button
           ref={hamburgerRef}
           onClick={() => setMenuOpen(prev => !prev)}
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-[#EEE1D8] text-2xl"
         >
           <i className="fas fa-bars"></i>
         </button>
@@ -109,7 +109,7 @@ const Navbar = () => {
 {menuOpen && (
   <div
     ref={menuRef}
-        className="absolute top-full left-0 w-full bg-black/30 backdrop-blur-xl text-white py-4 px-6 flex flex-col gap-4 md:hidden z-50 border-t border-white/20 shadow-xl transition-all duration-300 ease-out"
+        className="absolute top-full left-0 w-full bg-black/30 backdrop-blur-xl text-[#EEE1D8] py-4 px-6 flex flex-col gap-4 md:hidden z-50 border-t border-white/20 shadow-xl transition-all duration-300 ease-out"
   >
     <Link to="/" onClick={() => setMenuOpen(false)}>Trang chủ</Link>
     <Link to="/about" onClick={() => setMenuOpen(false)}>Về chúng mình</Link>

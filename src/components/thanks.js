@@ -5,15 +5,15 @@ export default function Thanks() {
   return (
     <div className="relative w-full min-h-[600px] px-12 py-20 bg-[#0F0F0F]">
       {/* Tiêu đề */}
-<div className="flex justify-center mb-10">
-  <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold font-imbue text-[#FFFFFF] whitespace-nowrap">
-    LỜI CẢM ƠN
-  </h1>
-</div>
+      <div className="flex justify-center mb-4">
+        <h1 className="text-5xl sm:text-6xl md:text-6xl font-bold font-imbue text-[#EEE1D8] whitespace-nowrap">
+          LỜI CẢM ƠN
+        </h1>
+      </div>
 
 
       {/* Nội dung căn giữa */}
-      <div className="space-y-6 text-justify  text-white font-Averta-CY max-w-3xl mx-auto">
+      <div className="space-y-6 text-justify  text-[#EEE1D8] font-Averta-CY max-w-3xl mx-auto">
         <p className="text-lg pt-10">
           BTC Offline Hội Hoang xin gửi lời cảm ơn chân thành đến các ban nhạc,
           các cá nhân và tổ chức đã dành thời gian quan tâm đến hồ sơ chương trình.
@@ -24,8 +24,9 @@ export default function Thanks() {
         <p className="text-lg">
           Chúng mình tin rằng sự kiện sắp tới không chỉ là một buổi gặp gỡ,
           mà còn là nơi cảm xúc hòa cùng giai điệu, nơi những câu chuyện về
-          Cá Hồi Hoang tiếp tục được kể theo cách riêng của mỗi người. Hãy đồng hành cùng chúng mình nhé &lt;3
+          Cá Hồi Hoang tiếp tục được kể theo cách riêng của mỗi người. 
         </p>
+        <p className="text-lg">Hãy đồng hành cùng chúng mình nhé &lt;3</p>
       </div>
     </div>
   );

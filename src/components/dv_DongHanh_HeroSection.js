@@ -34,7 +34,7 @@ export default function DvDongHanhHeroSection() {
         position: "relative",
         textAlign: "center",
         padding: "2rem 1rem",
-        color: "#FFFFFF", // text màu đen
+        color: "#EEE1D8", // text màu đen
         overflow: "hidden",
       }}
     >

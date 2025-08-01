@@ -10,7 +10,7 @@ export default function HeroSection3() {
 
   return (
     <div
-      className="relative w-full min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden text-white"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden text-[#EEE1D8]"
       // style={{
       //   backgroundImage: theme.background,
       //   backgroundSize: 'cover',
@@ -95,7 +95,7 @@ export default function HeroSection3() {
 
             <div className="w-full flex justify-center md:justify-start">
               <Link to="/event"><button
-                className="mt-4 px-6 py-3 rounded-md text-white font-Averta-CY shadow-md transition duration-300 hover:opacity-90"
+                className="mt-4 px-6 py-3 rounded-md text-[#EEE1D8] font-Averta-CY shadow-md transition duration-300 hover:opacity-90"
                 style={{
                   backgroundColor: theme.color,
                 }}

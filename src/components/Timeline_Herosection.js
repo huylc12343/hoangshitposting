@@ -9,7 +9,7 @@ const TimelineHeroSection = forwardRef((props, ref) => {
     <section
       id="timeline"
       ref={ref}
-      className="relative w-full min-h-screen text-white py-10 px-4 overflow-hidden"
+      className="relative w-full min-h-screen text-[#EEE1D8] py-10 px-4 overflow-hidden"
       aria-label="Timeline sự kiện"
       style={{
         backgroundImage: `url(${bg})`,
@@ -29,7 +29,7 @@ const TimelineHeroSection = forwardRef((props, ref) => {
         <Timeline_Components />
         <div className="w-full flex justify-center md:justify-center py-10">
               <Link to="/event"><button
-                className="mt-4 px-6 py-3 rounded-md text-white font-Averta-CY shadow-md transition duration-300 hover:opacity-90"
+                className="mt-4 px-6 py-3 rounded-md text-[#EEE1D8] font-Averta-CY shadow-md transition duration-300 hover:opacity-90"
                 style={{
                   backgroundColor: theme.color,
                 }}

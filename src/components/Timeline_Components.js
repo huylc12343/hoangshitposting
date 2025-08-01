@@ -84,12 +84,12 @@ export default function Timeline_Components() {
 
         <div className="flex flex-col gap-24 relative z-10">
           {timelineData.map((item, index) => (
-            <div key={index} className="grid grid-cols-5 items-center gap-6">
+            <div key={index} className="grid grid-cols-5 items-center gap-0">
               {/* Left */}
-              <div className="col-span-2 flex justify-end pr-4">
+              <div className="col-span-2 flex justify-end pr-1 md:pr-0">
                 {index % 2 === 1 ? (
                   <Link to={item.link}>
-                    <p className="text-white text-6xl font-light text-left leading-tight max-w-[500px] font-imbue">
+                    <p className="text-[#EEE1D8] text-6xl font-light text-left leading-tight max-w-[500px] font-imbue">
                       {item.date}
                     </p>
 
@@ -113,7 +113,7 @@ export default function Timeline_Components() {
               </div>
 
               {/* Right */}
-              <div className="col-span-2 flex justify-start pl-4">
+              <div className="col-span-2 flex justify-start  pl-1 md:pl-0">
                 {index % 2 === 1 ? (
               <TimelineImageLink
                 link={item.link}
@@ -125,7 +125,7 @@ export default function Timeline_Components() {
               />
                 ) : (
                   <Link to={item.link}>
-                    <p className="text-white text-6xl font-light text-left leading-tight max-w-[500px] font-imbue">
+                    <p className="text-[#EEE1D8] text-6xl font-light text-left leading-tight max-w-[500px] font-imbue">
                       {item.date}
                     </p>
 
@@ -157,7 +157,7 @@ export default function Timeline_Components() {
               {/* Date & Image */}
               <div className="flex flex-col items-start">
                 <Link to={item.link}>
-                  <p className="text-white font-imbue text-2xl font-semibold ">
+                  <p className="text-[#EEE1D8] font-imbue text-2xl font-semibold ">
                     {item.date}
                   </p>
                 </Link>

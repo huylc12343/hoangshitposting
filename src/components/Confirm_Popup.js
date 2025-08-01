@@ -39,6 +39,7 @@ export default function Confirm_Popup({
         {/* 2 nút xếp thành 1 cột */}
         <div className="flex flex-col gap-4 pt-4">
           <button
+          style={{backgroundColor: theme.color}}
             onClick={async () => {
               if (!isLoading) {
                 setIsLoading(true);
@@ -48,7 +49,7 @@ export default function Confirm_Popup({
             disabled={isLoading}
             className={`w-full py-4 rounded text-sm font-semibold ${
               !isLoading
-                ? "bg-blue-600 hover:bg-blue-700 text-white"
+                ? "text-white hover:opacity-80"
                 : "bg-gray-300 text-gray-600"
             }`}
           >

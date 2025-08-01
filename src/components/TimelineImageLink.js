@@ -21,7 +21,7 @@ export default function TimelineImageLink({
   return (
     <Link to={link}>
       <div
-        className="group w-full rounded-xl shadow-2xl transition relative overflow-hidden"
+        className="group w-full  shadow-2xl transition relative overflow-hidden"
         style={{
           maxWidth: `${maxWidth}px`,
           backgroundImage: `url(${theme.name === 'TuDo' ? blue_bg : bg})`,
@@ -39,7 +39,7 @@ export default function TimelineImageLink({
         />
 
         <div className="z-5 flex flex-row items-center h-full w-full px-2 py-2 sm:px-4 sm:py-5 md:px-6 md:py-6 gap-4">
-          <div className="w-2/5 text-white text-left px-2 sm:px-3 md:px-4 lg:px-4" >
+          <div className="w-2/5 text-[#EEE1D8] text-left px-2 sm:px-3 md:px-4 lg:px-4" >
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold font-imbue underline decoration-[1px] decoration-white">
               {name}
             </h3>

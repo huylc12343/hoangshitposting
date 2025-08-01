@@ -25,16 +25,16 @@ const AboutUs_HeroSection = () => {
 
 
       {/* Nội dung desktop */}
-      <div className="relative z-10 hidden md:grid grid-cols-2 gap-12 items-center">
+      <div className="relative text-[#EEE1D8] z-10 hidden md:grid grid-cols-2 gap-20 mt-4 items-center">
         {/* Trái: Nội dung */}
-        <div className="flex justify-end">
-          <div className="text-white text-left max-w-lg">
-            <h2 className="text-6xl font-imbue mb-6 text-[#FFFFFF] flex items-center gap-3"
+        <div className="flex justify-start ml-28">
+          <div className=" text-left max-w-lg">
+            <h2 className="text-6xl font-imbue mb-6  flex items-center gap-3"
               >
               VỀ CHÚNG MÌNH
               <img src={Cas} alt="Cas Icon" className="h-[1.2em] w-auto" />
             </h2>
-            <p className="text-base leading-relaxed mb-4 text-justify">
+            <p className="text-base leading-relaxed mb-4 text-justify ">
               Chương trình Offline Hội Hoang được thực hiện bởi những fan yêu thích âm nhạc Cá Hồi Hoang, những người đã đồng hành, trưởng thành cùng âm nhạc của Band, và cùng nhau viết tiếp câu chuyện "Cá Hồi Hoang là cái gì đó mãi mãi".
             </p>
             {/* <p className="text-base leading-relaxed text-justify">
@@ -50,22 +50,19 @@ const AboutUs_HeroSection = () => {
           <img
             src={AboutUsImg}
             alt="Hình minh họa"
-            width={600}
-            height={400}
-            className="object-cover rounded-none"
+            className="object-cover rounded-none h-[360px] w-[550px]"
           />
         </div>
       </div>
 
       {/* Nội dung mobile */}
-      <div className="relative z-10 md:hidden flex flex-col items-center text-white text-center space-y-6 mt-8">
+      <div className="relative z-10 md:hidden flex flex-col items-center text-[#EEE1D8] text-center space-y-6 mt-8">
 
         {/* Logo + Tiêu đề */}
         <div className="flex flex-col items-center space-y-2">
           <img src={Cas} alt="Cas Icon" className="h-10 w-auto" />
           <h2
-            className="text-5xl font-bold font-imbue text-center mb-6"
-            style={{ color: "#FFFFFF" }}
+            className="text-5xl font-bold font-imbue text-center mb-6 text-[#EEE1D8]"
           >
             VỀ CHÚNG MÌNH
           </h2>
@@ -82,7 +79,7 @@ const AboutUs_HeroSection = () => {
         </div>
 
         {/* Nội dung */}
-        <div className="text-sm leading-relaxed text-justify max-w-md">
+        <div className="text-sm text-[#EEE1D8] leading-relaxed text-justify max-w-md">
           <p className="mb-3">
             Chương trình Offline Hội Hoang được thực hiện bởi những fan đã gắn bó với Cá Hồi Hoang, những người đã trưởng thành cùng âm nhạc của band.
           </p>
