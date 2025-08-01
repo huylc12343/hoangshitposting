@@ -32,13 +32,13 @@ export default function HeroSection2() {
           {/* Tiêu đề */}
           <div className="flex flex-col items-center  leading-tight mb-2">
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-imbue font-semibold xl:text-7xl tracking-wide"
+              className="text-3xl sm:text-7xl font-imbue font-semibold  tracking-wide"
               
             >
               CÁ HỒI HOANG
             </h1>
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-2 font-imbue font-semibold tracking-wide"
+              className="text-3xl sm:text-7xl  mt-2 font-imbue font-semibold tracking-wide"
             >
               LÀ MỘT CÁI GÌ ĐÓ MÃI MÃI
             </h1>
