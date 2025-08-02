@@ -34,7 +34,7 @@ const TLGGHCM_Popup = ({ onClose }) => {
     <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-end sm:items-center justify-center text-left sm:px-0">
       <div
         ref={popupRef}
-        className="bg-[#333] w-full sm:max-w-xl sm:rounded-lg max-h-[90vh] overflow-y-auto shadow-xl transform transition-all duration-300 animate-slide-up sm:animate-none"
+        className="bg-[#333] w-full sm:max-w-xl sm:rounded-lg max-h-[90vh] pb-16 overflow-y-auto shadow-xl transform transition-all duration-300 animate-slide-up sm:animate-none"
       >
         <h2 className="text-white text-center mt-8 sm:mt-6 mb-4 text-3xl sm:text-4xl font-imbue font-semibold tracking-wide px-4">
           Đăng ký tham gia triển lãm
@@ -103,13 +103,25 @@ const TLGGHCM_Popup = ({ onClose }) => {
             />
           </div>
 
+<button
+  type="submit"
+  className="hidden sm:block bg-[#cd4b3f] text-white py-4 px-8 rounded-md text-xl w-full transition-colors hover:bg-[#e05e50]"
+>
+  Tham gia miễn phí
+</button>
+
+        </form>
+        {/* Sticky button for mobile */}
+        <div className="sm:hidden fixed bottom-0 left-0 w-full px-6 pb-4 bg-[#333] z-50">
           <button
             type="submit"
+            onClick={handleSubmit}
             className="bg-[#cd4b3f] text-white py-4 px-8 rounded-md text-xl w-full transition-colors hover:bg-[#e05e50]"
           >
             Tham gia miễn phí
           </button>
-        </form>
+        </div>
+
       </div>
     </div>
   );

@@ -1,19 +1,16 @@
-.scroll-container {
-  animation: scroll-left 40s linear infinite;
-}
-
-@keyframes scroll-left {
+@keyframes scroll {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
   }
 }
 
-/* Tăng tốc scroll + responsive ảnh trên mobile */
-@media (max-width: 768px) {
-  .scroll-container {
-    animation-duration: 5s;
-  }
+.scroll-container {
+  width: max-content; /* Đảm bảo container đủ rộng */
+  animation: scroll 40s linear infinite;
+}
+.scroll-wrapper {
+  animation: scroll 40s linear infinite;
 }
