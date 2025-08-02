@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hoangshitposting/static/css/main.2470d7f2.css",
-    "main.js": "/hoangshitposting/static/js/main.909ecaf9.js",
+    "main.css": "/hoangshitposting/static/css/main.aa1b5717.css",
+    "main.js": "/hoangshitposting/static/js/main.ebdc9ceb.js",
     "static/js/453.648ce41d.chunk.js": "/hoangshitposting/static/js/453.648ce41d.chunk.js",
     "static/media/tui_chh.jpg": "/hoangshitposting/static/media/tui_chh.058d38b4d37d06824258.jpg",
     "static/media/03171102.mp4": "/hoangshitposting/static/media/03171102.b0c8e980c65f65037047.mp4",
@@ -25,11 +25,17 @@
     "static/media/g5-min.png": "/hoangshitposting/static/media/g5-min.e607446da6e9126ac7b4.png",
     "static/media/PWM01219-min.jpg": "/hoangshitposting/static/media/PWM01219-min.ea8fde21cafe99ccb066.jpg",
     "static/media/upcoming_banner2_min.jpg": "/hoangshitposting/static/media/upcoming_banner2_min.16ea7aef0c3e1a3a5736.jpg",
+    "static/media/6.1_min.png": "/hoangshitposting/static/media/6.1_min.b85d5fecfe695bd13ee8.png",
     "static/media/g6-min.png": "/hoangshitposting/static/media/g6-min.12913538938da57a8bf6.png",
     "static/media/join_us-min.jpg": "/hoangshitposting/static/media/join_us-min.dc83aa0beade3650896f.jpg",
     "static/media/confirm_popup_img.png": "/hoangshitposting/static/media/confirm_popup_img.e405f954fa876efc06a7.png",
+    "static/media/7.1_min.png": "/hoangshitposting/static/media/7.1_min.238c61ce3ee6123bb0cb.png",
+    "static/media/3.1_min.png": "/hoangshitposting/static/media/3.1_min.47d1b546b446fed14c47.png",
+    "static/media/2.1_min.png": "/hoangshitposting/static/media/2.1_min.9fb58381c63cf5e091b0.png",
+    "static/media/1.1_min.png": "/hoangshitposting/static/media/1.1_min.4ba3fcfd4b0480320fc3.png",
     "static/media/merch_bg_min.jpg": "/hoangshitposting/static/media/merch_bg_min.3304988fa65cb5640cd2.jpg",
     "static/media/g14-min.png": "/hoangshitposting/static/media/g14-min.2c8f5be91c1fc6f8e029.png",
+    "static/media/4.1_min.png": "/hoangshitposting/static/media/4.1_min.48f18d6c2b8002e46ffc.png",
     "static/media/lanyard_ccpclk_min.jpg": "/hoangshitposting/static/media/lanyard_ccpclk_min.a63fd0a89691101e862c.jpg",
     "static/media/fuzes_min.png": "/hoangshitposting/static/media/fuzes_min.c2d76a4b7dc573a470cf.png",
     "static/media/ca_hoi_hop_min.jpg": "/hoangshitposting/static/media/ca_hoi_hop_min.59f93b60bcd3728aeb64.jpg",
@@ -58,9 +64,8 @@
     "static/media/fa-solid-900.ttf": "/hoangshitposting/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/g11-min.png": "/hoangshitposting/static/media/g11-min.b813674028e71fd1f935.png",
     "static/media/golden_bird.png": "/hoangshitposting/static/media/golden_bird.3b858c977b7869043e96.png",
-    "static/media/auto_scroll-min.png": "/hoangshitposting/static/media/auto_scroll-min.027d568d0647d8737f89.png",
     "static/media/covershow_img_min.jpg": "/hoangshitposting/static/media/covershow_img_min.b77ae8c281da69f49c1e.jpg",
-    "static/media/Averta-Cyrillic-Regular.otf": "/hoangshitposting/static/media/Averta-Cyrillic-Regular.9cfd0bd43bdd4b9357ad.otf",
+    "static/media/Averta-Cyrillic-Thin.otf": "/hoangshitposting/static/media/Averta-Cyrillic-Thin.ded6e9e09ae018037749.otf",
     "static/media/fa-brands-400.ttf": "/hoangshitposting/static/media/fa-brands-400.1815e00441357e01619e.ttf",
     "static/media/fa-solid-900.woff2": "/hoangshitposting/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
     "static/media/g13-min.png": "/hoangshitposting/static/media/g13-min.0abf1d16256c935d2ccd.png",
@@ -85,12 +90,12 @@
     "index.html": "/hoangshitposting/index.html",
     "static/media/arrow-down-angle-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-down-angle-svgrepo-com.b8434f126a8dbfe1baabe2b03c588c9c.svg",
     "static/media/arrow-up-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-up-svgrepo-com.105962570a84ea14fe61103d7f4aeb21.svg",
-    "main.2470d7f2.css.map": "/hoangshitposting/static/css/main.2470d7f2.css.map",
-    "main.909ecaf9.js.map": "/hoangshitposting/static/js/main.909ecaf9.js.map",
+    "main.aa1b5717.css.map": "/hoangshitposting/static/css/main.aa1b5717.css.map",
+    "main.ebdc9ceb.js.map": "/hoangshitposting/static/js/main.ebdc9ceb.js.map",
     "453.648ce41d.chunk.js.map": "/hoangshitposting/static/js/453.648ce41d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2470d7f2.css",
-    "static/js/main.909ecaf9.js"
+    "static/css/main.aa1b5717.css",
+    "static/js/main.ebdc9ceb.js"
   ]
 }
