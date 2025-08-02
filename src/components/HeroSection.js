@@ -1,6 +1,7 @@
 import React from 'react';
 import arrowDownIcon from '../assets/down-arrow-svgrepo-com.svg';
-import gapgap from '../assets/gapgap-min.png';
+import gapgap from '../assets/gapgap_sg_logo_ngang.png';
+import gapgapdoc from '../assets/gapgap_sg_logo_doc.png';
 import { useTheme } from '../contexts/Theme';
 
 const HeroSection = ({ onScrollToTimeline }) => {
@@ -19,11 +20,18 @@ const HeroSection = ({ onScrollToTimeline }) => {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-20 md:pt-16">
         <div className="w-full max-w-6xl flex flex-col items-center">
-          <div className="w-full max-w-[800px] aspect-video overflow-hidden rounded-xl shadow-xl">
+          {/* Logo ngang cho màn hình md trở lên */}
+          <div className="w-full max-w-[800px] aspect-square sm:aspect-video overflow-hidden rounded-xl shadow-xl">
             <img
               src={gapgap}
               alt="GẤP GÁP"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-contain object-center hidden sm:block"
+            />
+            {/* Logo dọc cho màn hình nhỏ hơn sm */}
+            <img
+              src={gapgapdoc}
+              alt="GẤP GÁP"
+              className="w-full h-full object-contain object-center block sm:hidden"
             />
           </div>
 
