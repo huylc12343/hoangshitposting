@@ -1,7 +1,7 @@
 import React from 'react';
 import arrowDownIcon from '../assets/down-arrow-svgrepo-com.svg';
-import gapgap from '../assets/gapgap_sg_logo_ngang.png';
-import gapgapdoc from '../assets/gapgap_sg_logo_doc.png';
+import gapgap from '../assets/gapgap-min.png';
+import gapgapdoc from '../assets/gapgap-min.png';
 import { useTheme } from '../contexts/Theme';
 
 const HeroSection = ({ onScrollToTimeline }) => {
@@ -25,13 +25,13 @@ const HeroSection = ({ onScrollToTimeline }) => {
             <img
               src={gapgap}
               alt="GẤP GÁP"
-              className="w-full h-full object-contain object-center hidden sm:block"
+              className="w-full h-full object-cover object-center hidden sm:block"
             />
             {/* Logo dọc cho màn hình nhỏ hơn sm */}
             <img
               src={gapgapdoc}
               alt="GẤP GÁP"
-              className="w-full h-full object-contain object-center block sm:hidden"
+              className="w-full h-full object-cover object-center block sm:hidden"
             />
           </div>
 
