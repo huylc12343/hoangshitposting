@@ -1,16 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { useTheme } from '../contexts/Theme';
-import trash from '../assets/Trash.png';
+import React, { useState, useEffect } from "react";
+import { useTheme } from "../contexts/Theme";
+import trash from "../assets/Trash.png";
+import MerchService from "../services/MerchService";
 
-export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCombo }) {
+export default function Merch_Popup({
+  allCombos,
+  selectedId,
+  onClose,
+  onChangeCombo,
+}) {
   const { theme } = useTheme();
 
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
-  const selectedCombo = allCombos.find(combo => combo.id === selectedId);
-  const currentComboIndex = selectedCombo ? allCombos.indexOf(selectedCombo) : -1;
+  const selectedCombo = allCombos.find((combo) => combo.id === selectedId);
+  const currentComboIndex = selectedCombo
+    ? allCombos.indexOf(selectedCombo)
+    : -1;
 
   useEffect(() => {
     if (selectedCombo) {
@@ -23,19 +31,23 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
   if (!selectedCombo) return null;
 
   const handleQuantityChange = (type) => {
-    setQuantity(prev => {
-      if (type === 'increment') return prev + 1;
-      if (type === 'decrement' && prev > 1) return prev - 1;
+    setQuantity((prev) => {
+      if (type === "increment") return prev + 1;
+      if (type === "decrement" && prev > 1) return prev - 1;
       return prev;
     });
   };
 
   const getColorHex = (colorName) => {
     switch (colorName) {
-      case 'Trắng': return '#FFFFFF';
-      case 'Đen': return '#000000';
-      case 'Đỏ': return '#FF0000';
-      default: return '#CCCCCC';
+      case "Trắng":
+        return "#FFFFFF";
+      case "Đen":
+        return "#000000";
+      case "Đỏ":
+        return "#FF0000";
+      default:
+        return "#CCCCCC";
     }
   };
 
@@ -44,7 +56,10 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
   return (
     <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-70" onClick={onClose}></div>
+      <div
+        className="absolute inset-0 bg-black opacity-70"
+        onClick={onClose}
+      ></div>
 
       {/* Popup */}
       <div className="relative bg-[#323232] px-2 sm:pb-4 w-full mb-10 md:max-w-5xl shadow-xl z-50 flex flex-col md:flex-row overflow-y-auto max-h-[90vh] md:rounded-xl rounded-t-xl">
@@ -72,7 +87,9 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
                 src={combo.image}
                 alt={combo.name}
                 className={`w-20 h-20 sm:w-24 sm:h-24 object-cover cursor-pointer hover:opacity-80 transition ${
-                  combo.id === selectedId ? 'border-2 border-blue-500' : 'border-2 border-transparent'
+                  combo.id === selectedId
+                    ? "border-2 border-blue-500"
+                    : "border-2 border-transparent"
                 }`}
                 onClick={() => onChangeCombo(combo.id)}
               />
@@ -91,8 +108,12 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
               Pre-order
             </span>
 
-            <h2 className="text-2xl sm:text-3xl font-bold mb-2">{selectedCombo.name}</h2>
-            <p className="text-lg sm:text-xl font-semibold mb-2">{selectedCombo.price}</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">
+              {selectedCombo.name}
+            </h2>
+            <p className="text-lg sm:text-xl font-semibold mb-2">
+              {selectedCombo.price}
+            </p>
 
             <h1 className="text-xl mb-2">Mô tả sản phẩm</h1>
             {selectedCombo.description && (
@@ -116,7 +137,8 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
                         className="w-7 h-7 rounded-full border-2 cursor-pointer flex items-center justify-center"
                         style={{
                           backgroundColor: getColorHex(color),
-                          borderColor: selectedColor === color ? theme.color : '#4D4D4D',
+                          borderColor:
+                            selectedColor === color ? theme.color : "#4D4D4D",
                         }}
                         onClick={() => setSelectedColor(color)}
                       >
@@ -127,7 +149,9 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
-                            style={{ color: color === 'Trắng' ? '#000000' : '#FFFFFF' }}
+                            style={{
+                              color: color === "Trắng" ? "#000000" : "#FFFFFF",
+                            }}
                           >
                             <path
                               strokeLinecap="round"
@@ -149,15 +173,17 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
                 <div className="inline-flex bg-[#3A3A3A] items-center border border-[#4D4D4D] rounded-lg overflow-hidden text-sm">
                   <button
                     className="px-2 py-1 hover:bg-gray-700"
-                    onClick={() => handleQuantityChange('decrement')}
+                    onClick={() => handleQuantityChange("decrement")}
                     disabled={quantity <= 1}
                   >
                     -
                   </button>
-                  <span className="px-2 py-1 border-l border-r border-[#4D4D4D]">{quantity}</span>
+                  <span className="px-2 py-1 border-l border-r border-[#4D4D4D]">
+                    {quantity}
+                  </span>
                   <button
                     className="px-2 py-1 hover:bg-gray-700"
-                    onClick={() => handleQuantityChange('increment')}
+                    onClick={() => handleQuantityChange("increment")}
                   >
                     +
                   </button>
@@ -174,8 +200,8 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
                         key={idx}
                         className={`px-2 py-1 rounded text-sm ${
                           selectedSize === size
-                            ? 'bg-gray-600 text-white'
-                            : 'bg-[#3A3A3A] text-gray-300 border border-[#4D4D4D] hover:bg-gray-700'
+                            ? "bg-gray-600 text-white"
+                            : "bg-[#3A3A3A] text-gray-300 border border-[#4D4D4D] hover:bg-gray-700"
                         }`}
                         onClick={() => setSelectedSize(size)}
                       >
@@ -192,6 +218,15 @@ export default function Merch_Popup({ allCombos, selectedId, onClose, onChangeCo
               <button
                 className="py-3 text-white font-semibold transition w-full text-sm rounded"
                 style={{ backgroundColor: theme.color }}
+                onClick={() => {
+                  MerchService.addToCart({
+                    ...selectedCombo,
+                    color: selectedColor,
+                    size: selectedSize,
+                    amount: quantity,
+                  });
+                  alert("Thêm vào giỏ hàng thành công");
+                }}
               >
                 Thêm vào giỏ hàng
               </button>

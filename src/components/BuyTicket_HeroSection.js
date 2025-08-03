@@ -410,9 +410,7 @@ export default function Cart_HeroSection({ ticket }) {
                       </svg>
                       {!selectedProof ? (
                         <>
-                          <span className="font-medium">
-                            Nhấn để tải lên hoặc kéo thả tệp vào đây
-                          </span>
+                          <span className="font-medium">Nhấn để tải lên</span>
                           <span className="text-xs text-gray-400 mt-1">
                             Dung lượng tối đa: 2MB
                           </span>
