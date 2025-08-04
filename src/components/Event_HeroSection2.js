@@ -1,5 +1,4 @@
 import React from 'react';
-import event_video from '../assets/03171102.mp4';
 import bg from '../assets/ticket_popup_banner.png';
 export default function Event_HeroSection2() {
   return (

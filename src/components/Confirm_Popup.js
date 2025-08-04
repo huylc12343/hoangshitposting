@@ -30,7 +30,7 @@ export default function Confirm_Popup({
             fontFamily: "Imbue, serif",
           }}
         >
-          LƯU Ý
+          Lưu ý
         </h2>
 
         {/* Nội dung */}

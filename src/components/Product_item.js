@@ -17,6 +17,7 @@ export default function Product_item({
     item.amount++;
     setAmount(amount + 1);
     onItemUpdated(item);
+    window.dispatchEvent(new Event('storage'));
   };
 
   const handleDecrease = () => {
@@ -25,6 +26,8 @@ export default function Product_item({
     item.amount--;
     setAmount(amount - 1);
     onItemUpdated(item);
+    window.dispatchEvent(new Event('storage'));
+
   };
 
   const confirmDelete = () => {
@@ -34,6 +37,8 @@ export default function Product_item({
     if (result) {
       MerchService.removeFromCart(item.id);
       onItemRemoved();
+      window.dispatchEvent(new Event('storage'));
+
     }
   };
 

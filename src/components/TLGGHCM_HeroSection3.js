@@ -6,7 +6,7 @@ export default function Event_HeroSection3() {
         THỜI GIAN & ĐỊA ĐIỂM
       </h2>
 
-      <p className="mb-4 text-lg md:text-xl">
+      <p className="mb-4 text-lg">
         🐟 Triển lãm "GẤP GAP"
         <br />► Thời gian: 12-14/09/2025
         <br />► Giờ mở cửa: 9h - 21h

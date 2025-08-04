@@ -32,11 +32,9 @@ export default function Upcoming_HeroSection_HeroSection() {
       {/* Nội dung phía trên */}
       <div className="relative z-20 text-white text-left mb-12 mt-24 w-full max-w-7xl">
       <h1
-        className="text-8xl font-imbue font-bold mb-4 text-center text-[#FFFFFF] md:text-left">
-        Sự kiện
+        className="text-5xl sm:text-[80px] font-imbue font-bold text-center mt-2 text-[#FFFFFF] md:text-left">
+        SỰ KIỆN
       </h1>
-
-
         <TimelineSection />
       </div>
 

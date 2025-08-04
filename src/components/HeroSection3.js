@@ -60,7 +60,7 @@ export default function HeroSection3() {
       {/* Heading */}
       <div className="relative z-10 w-full max-w-7xl mt-12 px-4 text-center md:text-left">
         <h2
-          className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-imbue"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-imbue"
         >
           CHUỖI SỰ KIỆN<br />
           GẤP GAP CÓ CẦN PHẢI CÓ LÝ KHÔNG?
@@ -75,9 +75,9 @@ export default function HeroSection3() {
         }}
       >
         {/* Stack content on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           {/* Text + Button */}
-          <div className="flex flex-col justify-between text-sm sm:text-base text-[#EEE1D8] md:text-lg leading-relaxed text-left h-full">
+          <div className="flex flex-col justify-between sm:pr-10 text-lg sm:text-base text-[#EEE1D8] md:text-lg leading-relaxed text-left h-full">
             {/* <p>
               Chúng mình cũng mong muốn tạo một sân chơi dành cho các band cover, giúp band có cơ hội thử sức, xây dựng tệp khán giả và mang đến những sân khấu đáng nhớ.
             </p> */}
@@ -106,7 +106,7 @@ export default function HeroSection3() {
           </div>
 
           {/* Image moved below on mobile */}
-          <div className="w-full order-first md:order-none">
+          <div className="w-full sm:pl-10 order-first md:order-none">
             <img
               src={joinus}
               alt="Triển lãm Gấp Gáp"

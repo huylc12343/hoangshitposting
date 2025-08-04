@@ -3,8 +3,8 @@ import sampleImage from '../assets/g8-min.png';
 import { Link } from 'react-router-dom';
 import timeline1 from "../assets/bg_timeline_home_min.jpg";
 import timeline2 from "../assets/upcoming_banner2_min.jpg";
-import timeline3 from "../assets/upcoming_banner3_min.jpg";
-import timeline4 from "../assets/merch_bg_min.jpg";
+import timeline3 from "../assets/GAPGAP_Sai_gon_web-14.png";
+import timeline4 from "../assets/GAPGAP_Sai_gon_web-15.png";
 const timelineData = [
   {
     date: "17/05/2025",
@@ -17,7 +17,7 @@ const timelineData = [
   },
   {
     date: "23–26/05/2025",
-    title: "Hà Nội] Triển lãm “Gấp Gap”",
+    title: "[Hà Nội] Triển lãm “Gấp Gap”",
     time: "09:00 - 21:00",
     description: "Hơn 500+ người đã ghé thăm, cùng nhau sống lại những mảnh ký ức gắn với hành trình âm nhạc của Cá Hồi Hoang thông qua hình ảnh, kỷ vật lưu niệm và âm nhạc thân thuộc của các buổi Open Mic. ",
     image: timeline2,
@@ -46,7 +46,7 @@ const timelineData = [
 export default function TimelineComponent() {
     return (
         <div className="relative w-full max-w-7xl mx-auto z-10">
-            <div className="space-y-20 relative">
+            <div className="space-y-10 relative">
                 {/* Vertical line for mobile timeline */}
                 <div className="md:hidden absolute left-[7px] top-0 bottom-0 w-0.5 bg-white z-0" />
 
@@ -93,11 +93,11 @@ export default function TimelineComponent() {
                                 </div>
 
                                 {/* Image */}
-                                <div className="w-full md:w-[400px] h-[270px] flex-shrink-0">
+                                <div className="w-full md:w-[400px] sm:h-[270px] h-auto flex-shrink-0">
                                 <img
                                     src={item.image}
                                     alt="event"
-                                    className="w-full h-full object-cover rounded-lg"
+                                    className="w-full h-full object-contain rounded-lg"
                                 />
                                 </div>
                             </div>

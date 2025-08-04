@@ -29,7 +29,7 @@ export default function Success_Popup({
             fontFamily: "Imbue, serif",
           }}
         >
-          ĐẶT HÀNG THÀNH CÔNG
+          Đặt hàng thành công
         </h2>
 
         {/* Nội dung */}
@@ -55,7 +55,7 @@ export default function Success_Popup({
             }}
             className=" hover:opacity-80 w-full py-4 rounded text-white text-sm font-semibold"
           >
-            ĐỢI CHÚNG MÌNH NHÉ
+            Quay về trang chủ
           </button>
         </div>
       </div>

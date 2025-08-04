@@ -7,7 +7,7 @@ const AboutUs_HeroSection = () => {
   const { theme } = useTheme();
 
   return (
-<div className="relative w-full py-20 px-6 md:py-32 md:px-8 shadow-md transition-all duration-500 overflow-hidden">
+<div className="relative w-full py-20 px-6 md:py-32 md:px-4 shadow-md transition-all duration-500 overflow-hidden">
   {/* Layer nền blur + ảnh nền */}
   <div
     className="absolute inset-0 z-0"
@@ -25,15 +25,17 @@ const AboutUs_HeroSection = () => {
 
 
       {/* Nội dung desktop */}
-      <div className="relative text-[#EEE1D8] z-10 hidden md:grid grid-cols-2 gap-20 mt-4 items-center">
+      <div className="relative text-[#EEE1D8] z-10 hidden md:grid grid-cols-2 gap-16 mt-4 items-center">
         {/* Trái: Nội dung */}
         <div className="flex justify-start ml-28">
           <div className=" text-left max-w-lg">
-            <h2 className="text-6xl font-imbue mb-6  flex items-center gap-3"
-              >
+            <h2
+              className="text-3xl sm:text-[80px] font-imbue mb-6 flex items-center gap-2 whitespace-nowrap"
+            >
               VỀ CHÚNG MÌNH
-              <img src={Cas} alt="Cas Icon" className="h-[1.2em] w-auto" />
+              <img src={Cas} alt="Cas Icon" className="h-[1.2em] sm:h-[60px] w-auto inline-block" />
             </h2>
+
             <p className="text-base leading-relaxed mb-4 text-justify ">
               Chương trình Offline Hội Hoang được thực hiện bởi những fan yêu thích âm nhạc Cá Hồi Hoang, những người đã đồng hành, trưởng thành cùng âm nhạc của Band, và cùng nhau viết tiếp câu chuyện "Cá Hồi Hoang là cái gì đó mãi mãi".
             </p>
@@ -79,7 +81,7 @@ const AboutUs_HeroSection = () => {
         </div>
 
         {/* Nội dung */}
-        <div className="text-sm text-[#EEE1D8] leading-relaxed text-justify max-w-md">
+        <div className="text-[16px] text-[#EEE1D8] leading-relaxed text-justify max-w-md">
           <p className="mb-3">
             Chương trình Offline Hội Hoang được thực hiện bởi những fan đã gắn bó với Cá Hồi Hoang, những người đã trưởng thành cùng âm nhạc của band.
           </p>

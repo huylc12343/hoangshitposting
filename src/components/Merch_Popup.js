@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "../contexts/Theme";
 import trash from "../assets/Trash.png";
 import MerchService from "../services/MerchService";
+import AddSuccessfull from "./AddSuccessfull"; // đường dẫn đúng của bạn
 
 export default function Merch_Popup({
   allCombos,
@@ -10,6 +11,7 @@ export default function Merch_Popup({
   onChangeCombo,
 }) {
   const { theme } = useTheme();
+  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
 
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
@@ -62,7 +64,7 @@ export default function Merch_Popup({
       ></div>
 
       {/* Popup */}
-      <div className="relative bg-[#323232] px-2 sm:pb-4 w-full mb-10 md:max-w-5xl shadow-xl z-50 flex flex-col md:flex-row overflow-y-auto max-h-[90vh] md:rounded-xl rounded-t-xl">
+      <div className="relative bg-[#323232] px-2 sm:pb-4 w-full mb-10 md:max-w-5xl shadow-xl z-50 flex flex-col md:flex-row overflow-y-auto max-h-[90vh] md:rounded-xl rounded-t-2xl">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -108,16 +110,17 @@ export default function Merch_Popup({
               Pre-order
             </span>
 
-            <h2 className="text-2xl sm:text-3xl font-bold mb-2">
+            <h2 className="text-2xl sm:text-[36px] font-imbue font-semibold mb-2"
+            style={{weight:600}}>
               {selectedCombo.name}
             </h2>
-            <p className="text-lg sm:text-xl font-semibold mb-2">
+            <p className="text-lg sm:text-3xl font-bold mb-2">
               {selectedCombo.price}
             </p>
 
-            <h1 className="text-xl mb-2">Mô tả sản phẩm</h1>
+            <h1 className="text-xl mb-2 font-medium">Mô tả sản phẩm</h1>
             {selectedCombo.description && (
-              <p className="text-sm sm:text-base mb-4 whitespace-pre-wrap">
+              <p className="text-base sm:text-base mb-4 whitespace-pre-wrap">
                 {selectedCombo.description}
               </p>
             )}
@@ -225,7 +228,11 @@ export default function Merch_Popup({
                     size: selectedSize,
                     amount: quantity,
                   });
-                  alert("Thêm vào giỏ hàng thành công");
+                  // alert("Thêm vào giỏ hàng thành công");
+                  setIsSuccessOpen(true); // Hiển thị popup
+
+                  window.dispatchEvent(new Event('storage'));
+
                 }}
               >
                 Thêm vào giỏ hàng
@@ -234,6 +241,10 @@ export default function Merch_Popup({
           </div>
         </div>
       </div>
+      <AddSuccessfull
+  isOpen={isSuccessOpen}
+  onClose={() => setIsSuccessOpen(false)}
+/>
     </div>
   );
 }

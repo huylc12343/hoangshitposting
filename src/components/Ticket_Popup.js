@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import demoImg from "../assets/ticket_popup_banner.png";
+import demoImg from "../assets/GAPGAP_Sai_gon_web-14.png";
 import { Link, useNavigate } from "react-router-dom";
 import TicketService from "../services/TicketService";
 import { formatToVND } from "../utils/NumberFormat";

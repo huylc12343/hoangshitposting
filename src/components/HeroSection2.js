@@ -30,19 +30,20 @@ export default function HeroSection2() {
           </span>
 
           {/* Tiêu đề */}
-          <div className="flex flex-col items-center  leading-tight mb-2">
+          <div className="flex flex-col items-center leading-tight mb-2">
             <h1
-              className="text-3xl sm:text-7xl font-imbue font-semibold  tracking-wide"
-              
+              className="text-3xl sm:text-[80px] sm:mb-2 font-imbue font-semibold tracking-wide"
             >
               CÁ HỒI HOANG
             </h1>
+
             <h1
-              className="text-3xl sm:text-7xl  mt-2 font-imbue font-semibold tracking-wide"
+              className="text-3xl sm:text-[80px] sm:mt-10 font-imbue font-semibold tracking-wide"
             >
               LÀ MỘT CÁI GÌ ĐÓ MÃI MÃI
             </h1>
           </div>
+
 
           {/* Dấu ngoặc phải */}
           <span
@@ -59,7 +60,7 @@ export default function HeroSection2() {
 
         {/* Mô tả */}
         <p
-          className="text-xs sm:text-base md:text-lg lg:text-xl text-[#EEE1D8] leading-relaxed opacity-90 font-Averta-CY px-2 sm:px-4"
+          className="text-lg sm:text-lg text-[#EEE1D8] leading-relaxed opacity-90 font-Averta-CY px-2 sm:px-4"
           
         >
           Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023,<br/> 

@@ -34,14 +34,13 @@ export default function DvDongHanhHeroSection() {
         position: "relative",
         textAlign: "center",
         padding: "2rem 1rem",
-        color: "#EEE1D8", // text màu đen
+        color: "#EEE1D8",
         overflow: "hidden",
+
       }}
     >
       <div className="absolute inset-0 bg-black opacity-70"></div>
-      <h2
-        className={`font-imbue text-4xl md:text-7xl font-bold mb-8 relative z-[1] px-4`}
-      >
+      <h2 className="font-imbue text-4xl md:text-7xl font-bold mb-8 relative z-[1] px-4 ">
         ĐƠN VỊ ĐỒNG HÀNH
       </h2>
 
@@ -56,8 +55,10 @@ export default function DvDongHanhHeroSection() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          gap: "2rem",
+          gap: "3rem", // tăng khoảng cách giữa 2 dòng logo
           padding: isMobile ? "0 1rem" : "0",
+          marginBottom: "4rem", // 👈 Thêm dòng này
+
         }}
       >
         {isMobile ? (
@@ -65,7 +66,7 @@ export default function DvDongHanhHeroSection() {
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
-              gap: "1.5rem",
+              gap: "2rem", // tăng khoảng cách giữa các logo mobile
               width: "100%",
             }}
           >
@@ -96,7 +97,7 @@ export default function DvDongHanhHeroSection() {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                gap: "3rem",
+                gap: "4rem", // tăng khoảng cách logo hàng đầu
               }}
             >
               {partners.slice(0, 4).map((partner) => (
@@ -115,8 +116,7 @@ export default function DvDongHanhHeroSection() {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                gap: "3rem",
-                marginLeft: "2rem",
+                gap: "4rem", // tăng khoảng cách logo hàng dưới
               }}
             >
               {partners.slice(4).map((partner) => (

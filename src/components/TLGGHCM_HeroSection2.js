@@ -1,5 +1,5 @@
 import React from 'react';
-import event_image from '../assets/tlgg_bg.png';
+import event_image from '../assets/GAPGAP_Sai_gon_web-15.png';
 import tui from '../assets/tui_chh.jpg';
 
 export default function Event_HeroSection2() {
