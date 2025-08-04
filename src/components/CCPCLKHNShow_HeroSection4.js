@@ -7,7 +7,7 @@ export default function Event_HeroSection3() {
         THỜI GIAN & ĐỊA ĐIỂM
       </h2>
 
-      <p className="mb-4 text-lg ">
+      <p className="mb-4 text-base ">
         Cover Show "CÓ CẦN PHẢI CÓ LÝ KHÔNG?":
         <br />► Thời gian: 19H - 22H 17/05/2025
         <br />► Địa điểm: Hanoi Rock City – 27/52 Đ. Tô Ngọc Vân, Quảng An, Tây Hồ, Hà Nội

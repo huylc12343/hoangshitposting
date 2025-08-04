@@ -14,3 +14,9 @@
 .scroll-wrapper {
   animation: scroll 40s linear infinite;
 }
+/* Chạy chậm hơn trên thiết bị nhỏ (mobile) */
+@media (max-width: 768px) {
+  .scroll-container {
+    animation-duration: 80s; /* gấp đôi thời gian để chạy chậm hơn */
+  }
+}

@@ -26,7 +26,7 @@ return (
         <h1 className="text-3xl md:text-5xl font-imbue mb-4 whitespace-normal md:whitespace-nowrap">
         COVER SHOW "CÓ CẦN PHẢI CÓ LÝ KHÔNG?"
         </h1>
-        <p className="text-base md:text-lg text-gray-200 mb-4">
+        <p className="text-base  text-gray-200 mb-4">
             17/05/2025 - Hà Nội
         </p>
 

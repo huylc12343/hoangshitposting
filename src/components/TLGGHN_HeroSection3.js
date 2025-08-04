@@ -5,7 +5,7 @@ export default function Event_HeroSection3() {
       <h2 className="text-4xl md:text-4xl font-bold text-left mb-6 font-imbue">
         THỜI GIAN & ĐỊA ĐIỂM
       </h2>
-      <p className="mb-4 text-lg ">
+      <p className="mb-4 text-base ">
         Trưng bày "GẤP GAP":
         <br />► Thời gian: 23 - 26/05/2025
         <br />► Địa điểm: MONTAUK BY LP CLUB - 174 Kim Mã, Ba Đình, Hà Nội

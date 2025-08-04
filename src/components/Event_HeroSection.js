@@ -40,7 +40,7 @@ export default function Event_HeroSection() {
             COVER SHOW "CÓ CẦN PHẢI CÓ LÝ KHÔNG?"
           </h1>
 
-          <p className="text-base md:text-lg text-gray-200 mb-6">
+          <p className="text-base text-gray-200 mb-6">
             13/09/2025 - TP.HCM
           </p>
 
