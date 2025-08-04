@@ -81,7 +81,7 @@ const AboutUs_HeroSection = () => {
         </div>
 
         {/* Nội dung */}
-        <div className="text-[16px] text-[#EEE1D8] leading-relaxed text-justify max-w-md">
+        <div className="text-base text-[#EEE1D8] leading-relaxed text-justify max-w-md">
           <p className="mb-3">
             Chương trình Offline Hội Hoang được thực hiện bởi những fan đã gắn bó với Cá Hồi Hoang, những người đã trưởng thành cùng âm nhạc của band.
           </p>

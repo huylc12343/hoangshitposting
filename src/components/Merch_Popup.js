@@ -242,9 +242,9 @@ export default function Merch_Popup({
         </div>
       </div>
       <AddSuccessfull
-  isOpen={isSuccessOpen}
-  onClose={() => setIsSuccessOpen(false)}
-/>
+        isOpen={isSuccessOpen}
+        onClose={() => setIsSuccessOpen(false)}
+      />
     </div>
   );
 }
