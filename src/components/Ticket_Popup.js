@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import demoImg from "../assets/GAPGAP_Sai_gon_web-14.png";
+import demoImg from "../assets/anh_sk_covershow_min.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import TicketService from "../services/TicketService";
 import { formatToVND } from "../utils/NumberFormat";
@@ -56,7 +56,7 @@ export default function Ticket_Popup({ ticket, onClose }) {
         <img
           src={demoImg}
           alt="Ticket"
-          className="w-full h-auto max-h-[200px] object-cover rounded-md mb-4 sm:max-h-[200px]"
+          className="w-full h-auto max-h-[200px] object-cover rounded-md mb-4 sm:max-h-[240px]"
         />
 
         {/* Title + Price section */}

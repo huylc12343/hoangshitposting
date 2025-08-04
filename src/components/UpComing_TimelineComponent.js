@@ -3,8 +3,8 @@ import sampleImage from '../assets/g8-min.png';
 import { Link } from 'react-router-dom';
 import timeline1 from "../assets/bg_timeline_home_min.jpg";
 import timeline2 from "../assets/upcoming_banner2_min.jpg";
-import timeline3 from "../assets/GAPGAP_Sai_gon_web-14.png";
-import timeline4 from "../assets/GAPGAP_Sai_gon_web-15.png";
+import timeline3 from "../assets/anh_sk_covershow_min.jpg";
+import timeline4 from "../assets/anh_sk_trienlam_min.jpg";
 const timelineData = [
   {
     date: "17/05/2025",
@@ -97,7 +97,7 @@ export default function TimelineComponent() {
                                 <img
                                     src={item.image}
                                     alt="event"
-                                    className="w-full h-full object-contain rounded-lg"
+                                    className="w-full h-full object-cover rounded-lg"
                                 />
                                 </div>
                             </div>
