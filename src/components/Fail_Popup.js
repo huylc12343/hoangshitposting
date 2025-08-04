@@ -23,7 +23,9 @@ export default function Fail_Popup({ isOpen, onClose }) {
   <div className="w-full flex justify-center">
     <img src={warningIcon} alt="Success" className="w-[60%] h-[60%]" />
   </div>
-
+  <h2 className="text-3xl text-[#EEE1D8] font-bold text-center font-imbue">
+    Đặt hàng thất bại
+  </h2>
   {/* Nội dung */}
   <div className="text-center text-gray-400 space-y-2">
     <p>Đừng lo! Hãy giữ lại minh chứng chuyển khoản và thử lại sau nhé.</p>
