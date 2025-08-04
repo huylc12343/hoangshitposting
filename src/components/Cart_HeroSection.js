@@ -190,7 +190,7 @@ export default function Cart_HeroSection() {
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl text-white mt-24 space-y-6">
         <div className="text-left">
-          <h1 className="text-5xl font-bold mb-4">Giỏ hàng</h1>
+          <h1 className="text-5xl font-imbue mb-4">Giỏ hàng</h1>
         </div>
 
         {/* Grid layout */}
@@ -200,7 +200,7 @@ export default function Cart_HeroSection() {
           <div className="md:col-span-1 order-first md:order-last w-full">
             {/* Chi tiết sản phẩm - Luôn là một khối có thể thu gọn/mở rộng trên mobile
                   và luôn hiển thị trên desktop */}
-            <div className="bg-[#323232] text-white p-6 md:p-0 md:bg-transparent shadow-lg text-left  rounded-lg mb-4">
+            <div className="bg-[#323232] text-white p-4 md:p-0 md:bg-transparent shadow-lg text-left  rounded-lg mb-4">
               <div className="flex justify-between items-center mb-4 md:mb-0">
                 <h2 className="text-xl font-semibold md:hidden">
                   Chi tiết sản phẩm ({totalItemCount})
@@ -223,7 +223,7 @@ export default function Cart_HeroSection() {
                 className={`transition-all duration-500 ease-in-out overflow-hidden
                   ${
                     showProductList
-                      ? "max-h-[1000px] opacity-100"
+                      ? "max-h-[2000px] opacity-100"
                       : "max-h-0 opacity-0"
                   }
                   md:max-h-full md:opacity-100 md:overflow-visible`} /* Luôn hiển thị trên desktop */
@@ -288,7 +288,7 @@ export default function Cart_HeroSection() {
             {/* Thông tin khách hàng */}
             <div className="bg-[#323232] text-white p-6 shadow-lg text-left rounded-lg">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-semibold">Thông tin khách hàng</h2>
+                <h2 className="text-xl font-semibold">Chi tiết khách hàng</h2>
                 <button
                   onClick={toggleCustomerForm}
                   className="text-sm text-blue-600 hover:underline w-4 h-4"
@@ -405,7 +405,7 @@ export default function Cart_HeroSection() {
                 <form className="space-y-4">
                   <div>
                     <div className="space-y-3">
-                      {/* Option 3 */}
+                      {/* Option 3 */}<p className="font-Averta-CY mb-6">Miễn phí ship cho đơn hàng có giá trị hơn <strong>500.000 VND</strong></p>
                       <label className="flex justify-between items-center border border-white rounded-lg p-4 cursor-pointer hover:border-blue-500 transition">
                         <div className="flex items-center">
                           <input

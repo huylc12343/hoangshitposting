@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from '../assets/ticket_popup_banner.png';
+import bg from '../assets/GAPGAP_Sai_gon_web-14.png';
 export default function Event_HeroSection2() {
   return (
     <section className="w-full text-white">

@@ -72,7 +72,7 @@ export default function TimelineComponent() {
                             <div className="hidden md:flex absolute left-[calc(100%+1.5rem)] top-1/2 -translate-y-1/2 z-10 flex-col items-center">
                                 <div className="w-4 h-4 rounded-full bg-white border-2 border-white" />
                                 {index < timelineData.length - 1 && (
-                                    <div className="absolute top-full w-0.5 bg-white" style={{ height: '370px' }} />
+                                    <div className="absolute top-full w-0.5 bg-white sm:h-[330px]" />
                                 )}
                             </div>
                         </div>

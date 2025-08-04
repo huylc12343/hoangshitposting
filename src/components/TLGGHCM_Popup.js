@@ -40,7 +40,7 @@ const TLGGHCM_Popup = ({ onClose }) => {
     <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-end sm:items-center justify-center text-left sm:px-0">
       <div
         ref={popupRef}
-        className="bg-[#333] w-full sm:max-w-xl sm:rounded-lg max-h-[90vh] pb-16 sm:pb-2 overflow-y-auto shadow-xl transform transition-all duration-300 animate-slide-up sm:animate-none"
+        className="bg-[#333] w-full sm:max-w-xl rounded-xl max-h-[80vh] pb-16 sm:pb-2 overflow-y-auto shadow-xl transform transition-all duration-300 animate-slide-up sm:animate-none"
       >
         <h2 className="text-white text-center mt-8 sm:mt-6 mb-4 text-3xl sm:text-4xl font-imbue font-semibold tracking-wide px-4">
           Đăng ký tham gia triển lãm

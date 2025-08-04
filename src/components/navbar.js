@@ -111,7 +111,7 @@ const Navbar = () => {
 
           {/* Cart - mobile */}
           <Link to="/cart" className="md:hidden relative text-[#EEE1D8] text-xl">
-            <i className="fas fa-shopping-cart"></i>
+            <i className="fas fa-shopping-cart"style={{ color: theme.color }} ></i>
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-white text-red-500 text-xs font-bold px-1.5 py-0.5 rounded-full">
                 {cartCount}
@@ -124,6 +124,7 @@ const Navbar = () => {
             ref={hamburgerRef}
             onClick={() => setMenuOpen(prev => !prev)}
             className="md:hidden text-[#EEE1D8] text-2xl"
+            style={{ color: theme.color }}
           >
             <i className="fas fa-bars"></i>
           </button>

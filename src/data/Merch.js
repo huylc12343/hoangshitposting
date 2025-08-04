@@ -56,7 +56,7 @@ const Merch = [
     description: [
       "Một trong hai thiết kế khăn mới chỉ xuất hiện trong lần mở bán này. Sắc vàng rực rỡ, chuyển động mạnh mẽ của gam màu tạo nên một tinh thần tìm kiếm – thử thách – và tỏa sáng.",
     ],
-    price: "199.000đ",
+    price: 199000,
     isCombo: false,
   },
   {

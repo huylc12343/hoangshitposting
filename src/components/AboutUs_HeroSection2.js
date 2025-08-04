@@ -14,7 +14,7 @@ const AboutUs_HeroSection2 = () => {
       }}
     >
       {/* Tiêu đề giữa */}
-      <h2 className="hidden sm:block text-5xl sm:text-[80px] font-imbue text-center mb-20 text-[#EEE1D8]">
+      <h2 className=" text-5xl sm:text-[80px] font-imbue text-center mb-10 sm:mb-20 text-[#EEE1D8]">
         OFFLINE HỘI HOANG
       </h2>
       {/* <h2 className="sm:hidden block text-5xl sm:text-[80px] font-imbue text-center mb-20 text-[#EEE1D8]">

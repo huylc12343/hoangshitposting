@@ -49,7 +49,7 @@ const MasonryGallery = () => {
         {/* Bên phải: 4/12 - ảnh dọc */}
         <div className="space-y-2 md:col-span-4">
           <img src={g11} alt="g11" className=" w-full object-cover" />
-          <img src={g12} alt="g12" className="h-[510px] w-full object-cover" />
+          <img src={g12} alt="g12" className="h-[465px] w-full object-cover" />
           <img src={g13} alt="g13" className="w-full object-cover" />
           <img src={g14} alt="g14" className="w-full object-cover" />
         </div>

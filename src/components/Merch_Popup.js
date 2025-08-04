@@ -64,7 +64,7 @@ export default function Merch_Popup({
       ></div>
 
       {/* Popup */}
-      <div className="relative bg-[#323232] px-2 sm:pb-4 w-full mb-10 md:max-w-5xl shadow-xl z-50 flex flex-col md:flex-row overflow-y-auto max-h-[90vh] md:rounded-xl rounded-t-2xl">
+      <div className="relative bg-[#323232] px-2 sm:pb-4 w-full md:max-w-5xl shadow-xl z-50 flex flex-col md:flex-row overflow-y-auto max-h-[90vh] md:rounded-xl rounded-t-2xl">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -79,7 +79,7 @@ export default function Merch_Popup({
           <img
             src={selectedCombo.image}
             alt={selectedCombo.name}
-            className="w-full h-auto max-h-[380px] max-w-[380px] md:max-h-[430px] md:max-w-[430px] object-contain mb-4 mt-4 sm:mt-6"
+            className="w-full h-auto max-h-[380px] max-w-[380px] md:max-h-[430px] md:max-w-[430px] object-contain mb-0 mt-4 sm:mt-6"
           />
 
           <div className="grid grid-cols-4 mt-6 gap-4">
