@@ -37,6 +37,7 @@ export default function Merch_HeroSection2() {
       {/* Tiêu đề */}
       <div className="relative z-10 text-white text-center mb-10 mt-24">
         <h1 className="text-5xl sm:text-[80px] font-imbue">Tất cả sản phẩm</h1>
+        <p className='text-base'>Hình ảnh sản phẩm sẽ được cập nhật trong thời gian sớm nhất</p>
       </div>
 
       {/* Lưới sản phẩm */}
