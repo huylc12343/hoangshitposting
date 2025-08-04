@@ -1,21 +1,21 @@
-import product1 from "../assets/combo1-min.jpg";
-import product2 from "../assets/combo2-min.jpg";
-import product3 from "../assets/combo3-min.jpg";
-import product4 from "../assets/combo4-min.jpg";
-import maimai from "../assets/combo4-min.jpg";
-import gapgap from "../assets/combo4-min.jpg";
-import tudo from "../assets/combo4-min.jpg";
-import setCard from "../assets/combo4-min.jpg";
-import nguoitimvang from "../assets/combo4-min.jpg";
-import pickPic from "../assets/pic1_min.jpg";
-import lanyardCCPCLK from "../assets/landyard_min.jpg";
-import aoGG from "../assets/aoden_min.jpg";
-import cahoihop from "../assets/ca_hoi_hop_min.jpg";
-import bandanaGapGap from "../assets/khangapgap_min.jpg";
+import product1 from "../assets/11_min.png";
+import product2 from "../assets/12_min.png";
+import product3 from "../assets/13_min.png";
+import product4 from "../assets/cahoihophh.png";
+import maimai from "../assets/16_min.png";
+import gapgap from "../assets/10_min.png";
+import tudo from "../assets/14_min.png";
+import setCard from "../assets/7_min.png";
+import nguoitimvang from "../assets/15_min.png";
+import pickPic from "../assets/6_min.png";
+import lanyardCCPCLK from "../assets/1_min.png";
+import aoGG from "../assets/2_min.png";
+import cahoihop from "../assets/cahoihophh.png";
+import bandanaGapGap from "../assets/3_min.png";
 import batlua_cahoi from "../assets/bat_lua_ca_hoi.png";
-import khan_nguoi_tim_vang from "../assets/khantimvang_min.jpg";
-import khan_tudo from "../assets/khantudo_min.jpg";
-import tat_cahoi from "../assets/tat_ca_hoi.jpg";
+import khan_nguoi_tim_vang from "../assets/4_min.png";
+import khan_tudo from "../assets/5_min.png";
+import tat_cahoi from "../assets/8_min.png";
 
 const Merch = [
   {
@@ -177,18 +177,18 @@ const Merch = [
     isCombo: true,
     price: 369000,
   },
-  {
-    id: 16,
-    name: "Combo Mãi Mãi",
-    image: maimai,
-    description: [
-      "Bao gồm: Tất + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nCombo “MÃI MÃI” là lời nhắn nhủ dịu dàng đến những trái tim còn giữ tình cảm nguyên vẹn với Cá Hồi Hoang - và với một phần tuổi trẻ của chính mình.",
-    ],
-    isCombo: true,
-    price: 369000,
-    sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
-    colors: ["Trắng", "Đen"],
-  },
+  // {
+  //   id: 16,
+  //   name: "Combo Mãi Mãi",
+  //   image: maimai,
+  //   description: [
+  //     "Bao gồm: Tất + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nCombo “MÃI MÃI” là lời nhắn nhủ dịu dàng đến những trái tim còn giữ tình cảm nguyên vẹn với Cá Hồi Hoang - và với một phần tuổi trẻ của chính mình.",
+  //   ],
+  //   isCombo: true,
+  //   price: 369000,
+  //   sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
+  //   colors: ["Trắng", "Đen"],
+  // },
     {
     id: 16,
     name: "Combo GapGap",
