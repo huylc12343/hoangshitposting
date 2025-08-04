@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hoangshitposting/static/css/main.55222f12.css",
-    "main.js": "/hoangshitposting/static/js/main.0d8cde1e.js",
+    "main.css": "/hoangshitposting/static/css/main.21a148f9.css",
+    "main.js": "/hoangshitposting/static/js/main.3491c7ab.js",
     "static/js/453.648ce41d.chunk.js": "/hoangshitposting/static/js/453.648ce41d.chunk.js",
     "static/media/tui_chh.jpg": "/hoangshitposting/static/media/tui_chh.058d38b4d37d06824258.jpg",
     "static/media/guirat_pick_mockup_03 tim_min.png": "/hoangshitposting/static/media/guirat_pick_mockup_03 tim_min.d8ff8ac41d9df865dab5.png",
@@ -91,12 +91,12 @@
     "index.html": "/hoangshitposting/index.html",
     "static/media/arrow-down-angle-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-down-angle-svgrepo-com.b8434f126a8dbfe1baabe2b03c588c9c.svg",
     "static/media/arrow-up-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-up-svgrepo-com.105962570a84ea14fe61103d7f4aeb21.svg",
-    "main.55222f12.css.map": "/hoangshitposting/static/css/main.55222f12.css.map",
-    "main.0d8cde1e.js.map": "/hoangshitposting/static/js/main.0d8cde1e.js.map",
+    "main.21a148f9.css.map": "/hoangshitposting/static/css/main.21a148f9.css.map",
+    "main.3491c7ab.js.map": "/hoangshitposting/static/js/main.3491c7ab.js.map",
     "453.648ce41d.chunk.js.map": "/hoangshitposting/static/js/453.648ce41d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.55222f12.css",
-    "static/js/main.0d8cde1e.js"
+    "static/css/main.21a148f9.css",
+    "static/js/main.3491c7ab.js"
   ]
 }
