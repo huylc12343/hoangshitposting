@@ -115,8 +115,9 @@ const Merch = [
     name: "Combo Cá Hồi Hộp",
     image: cahoihop,
     description: [
-      `Bao gồm: \nPhone chain\nMóc khóa \nSticker \nCard \nPick \nPin cài \n📌 Lưu ý: Mỗi box “Cá Hồi Hộp” sẽ có thiết kế được chọn ngẫu nhiên.  \nMột hộp quà nhỏ nhưng đầy bất ngờ – dành cho những ai yêu thích cảm giác được “mở hộp” và khám phá. \nThiết kế được chọn ngẫu nhiên – như chính âm nhạc đầy cảm hứng của Cá Hồi Hoang.`,
-    ],
+      `Bao gồm: \nPhone chain + Móc khóa + Sticker + Card + Pick + Pin cài 
+      \n📌 Lưu ý: Mỗi box “Cá Hồi Hộp” sẽ có thiết kế được chọn ngẫu nhiên.  \nMột hộp quà nhỏ nhưng đầy bất ngờ dành cho những ai yêu thích cảm giác được “mở hộp” và khám phá. \nThiết kế được chọn ngẫu nhiên như chính âm nhạc đầy cảm hứng của Cá Hồi Hoang.`,
+          ],
     price: 102000,
     isCombo: true,
   },
@@ -161,7 +162,7 @@ const Merch = [
     name: "Combo Tự Do",
     image: tudo,
     description: [
-      "Bao gồm:\nKhăn tự do\nBật lửa Cá Hồi\nCá Hồi Hộp\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \nLấy cảm hứng từ tinh thần “tự do” trong âm nhạc và cuộc sống, combo này kết hợp khăn Tự Do (chọn 1 trong 2 mẫu: tím hoặc vàng) và hộp Cá Hồi Hộp – hai sản phẩm được yêu thích nhất. Đi kèm là móc khóa và sticker như lời nhắn nhủ nhỏ bé nhưng đầy cảm xúc, dành cho những ai muốn giữ lại một phần Cá Hồi Hoang bên mình.",
+      "Bao gồm:\nKhăn tự do\nBật lửa Cá Hồi\nCá Hồi Hộp\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \nLấy cảm hứng từ tinh thần “tự do” trong âm nhạc và cuộc sống, combo này kết hợp khăn Tự Do (chọn 1 trong 2 mẫu: tím hoặc vàng) và hộp Cá Hồi Hộp hai sản phẩm được yêu thích nhất. Đi kèm là móc khóa và sticker như lời nhắn nhủ nhỏ bé nhưng đầy cảm xúc, dành cho những ai muốn giữ lại một phần Cá Hồi Hoang bên mình.",
     ],
     isCombo: true,
     price: 369000,

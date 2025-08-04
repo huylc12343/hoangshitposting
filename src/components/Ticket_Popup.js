@@ -13,6 +13,7 @@ export default function Ticket_Popup({ ticket, onClose }) {
 
   const popupRef = useRef();
 
+  // Effect to handle clicks outside the popup to close it
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (popupRef.current && !popupRef.current.contains(event.target)) {
@@ -24,10 +25,12 @@ export default function Ticket_Popup({ ticket, onClose }) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [onClose]);
 
+  // Prevents click events inside the popup from propagating to the overlay
   const stopPropagation = (e) => {
     e.stopPropagation();
   };
 
+  // If no ticket data is provided, don't render the popup
   if (!ticket) return null;
 
   return (
@@ -49,22 +52,19 @@ export default function Ticket_Popup({ ticket, onClose }) {
           &times;
         </button>
 
+        {/* Ticket Image */}
         <img
           src={demoImg}
           alt="Ticket"
-          className="w-full h-auto max-h-[250px] object-cover rounded-md mb-4 sm:max-h-[300px]"
+          className="w-full h-auto max-h-[200px] object-cover rounded-md mb-4 sm:max-h-[200px]"
         />
 
         {/* Title + Price section */}
         <div
-          // THAY ĐỔI LỚP TẠI ĐÂY:
-          // flex-col: Mặc định là column (trên mobile)
-          // items-start: Căn trái các item
-          // sm:flex-row sm:justify-between sm:items-center: Trên sm trở lên, chuyển về row, căn giữa và giãn cách
           className="flex flex-col items-start sm:flex-row sm:justify-between sm:items-center mb-2"
         >
           <h2
-            className="text-xl md:text-3xl font-semibold pr-4 mb-1 sm:mb-0" // Thêm mb-1 trên mobile để có khoảng cách giữa tên và giá
+            className="text-xl md:text-3xl font-semibold pr-4 mb-1 sm:mb-0"
             style={{
               fontFamily: "Imbue, serif",
             }}
@@ -81,7 +81,7 @@ export default function Ticket_Popup({ ticket, onClose }) {
           </span>
         </div>
 
-        {/* Event Description and Details - Scrollable on mobile, less so on desktop if needed */}
+        {/* Event Description and Details - Scrollable on mobile */}
         <div
           className="flex flex-col mt-1 mb-6 text-sm md:text-base text-white leading-relaxed space-y-2 flex-grow overflow-y-auto custom-scrollbar-hide pr-2"
           style={{

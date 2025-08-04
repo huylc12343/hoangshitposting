@@ -1,11 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import GalleryService from "../services/GalleryService";
+import RegisSuccess_Popup from "./RegisSuccess_Popup"; // đường dẫn đúng tới file popup thành công
+import RegisFail_Popup from "./RegisFail_Popup"; // Đường dẫn chính xác
 
 const TLGGHCM_Popup = ({ onClose }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+const [showFailPopup, setShowFailPopup] = useState(false);
 
   const popupRef = useRef();
 
@@ -24,16 +28,17 @@ const TLGGHCM_Popup = ({ onClose }) => {
     e.preventDefault();
     GalleryService.sendGalleryInvitation(email, lastName + " " + firstName)
       .then((data) => {
-        alert("Đăng ký thành công!");
+        setShowSuccessPopup(true); // Hiện popup thành công
+
         setFirstName("");
         setLastName("");
         setEmail("");
         setPhoneNumber("");
         if (onClose) onClose();
       })
-      .catch((e) =>
-        alert("Có lỗi xảy ra trong quá trình đăng ký. Lỗi: " + e.message)
-      );
+.catch((e) => {
+  setShowFailPopup(true); // Hiện popup thất bại
+});
   };
 
   return (
@@ -130,7 +135,26 @@ const TLGGHCM_Popup = ({ onClose }) => {
           </button>
         </div>
       </div>
+      {showSuccessPopup && (
+        <RegisSuccess_Popup
+          isOpen={showSuccessPopup}
+          onClose={() => {
+            setShowSuccessPopup(false);
+            if (onClose) onClose(); // đóng popup chính nếu muốn
+          }}
+        />
+      )}
+
+      {showFailPopup && (
+        <RegisFail_Popup
+          isOpen={showFailPopup}
+          onClose={() => setShowFailPopup(false)}
+        />
+      )}
+
+
     </div>
+    
   );
 };
 
