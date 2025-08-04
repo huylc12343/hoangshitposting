@@ -51,7 +51,7 @@ export default function Merch_HeroSection() {
         {combosToDisplay.map((combo) => ( // Removed 'index' from map
           <div
             key={combo.id} // <--- Use combo.id for key
-            className="bg-white cursor-pointer hover:scale-105 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-white cursor-pointer sm:hover:scale-105 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             onClick={() => setSelectedId(combo.id)} // <--- Pass combo.id on click
           >
             <img

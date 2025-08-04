@@ -45,7 +45,7 @@ export default function Merch_HeroSection2() {
         {productsToDisplay.map((product) => (
           <div
             key={product.id}
-            className="bg-white cursor-pointer hover:scale-105 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-white cursor-pointer sm:hover:scale-105 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             onClick={() => handleCardClick(product.id)} // Use handleCardClick
           >
             <img
