@@ -3,6 +3,7 @@ import { useTheme } from "../contexts/Theme";
 import trash from "../assets/Trash.png";
 import MerchService from "../services/MerchService";
 import AddSuccessfull from "./AddSuccessfull"; // đường dẫn đúng của bạn
+import { formatToVND } from "../utils/NumberFormat";
 
 export default function Merch_Popup({
   allCombos,
@@ -117,7 +118,7 @@ export default function Merch_Popup({
               {selectedCombo.name}
             </h2>
             <p className="text-lg sm:text-3xl font-bold mb-2">
-              {selectedCombo.price}
+              {formatToVND(selectedCombo.price)}
             </p>
 
             <h1 className="text-xl mb-2 font-medium">Mô tả sản phẩm</h1>
