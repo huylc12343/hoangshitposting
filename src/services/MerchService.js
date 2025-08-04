@@ -77,7 +77,9 @@ export default class MerchService {
           merches: merchData.merches.map((m) => {
             return {
               id: m.id,
-              name: m.name,
+              name: `${m.name} ${m.color ? `Màu ${m.color}` : ""} ${
+                m.size ? `Size ${m.size}` : ""
+              }`,
               price: m.price,
               metadata: {
                 color: m.color,

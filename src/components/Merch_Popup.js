@@ -110,8 +110,10 @@ export default function Merch_Popup({
               Pre-order
             </span>
 
-            <h2 className="text-2xl sm:text-[36px] font-imbue font-semibold mb-2"
-            style={{weight:600}}>
+            <h2
+              className="text-2xl sm:text-[36px] font-imbue font-semibold mb-2"
+              style={{ weight: 600 }}
+            >
               {selectedCombo.name}
             </h2>
             <p className="text-lg sm:text-3xl font-bold mb-2">
@@ -231,8 +233,7 @@ export default function Merch_Popup({
                   // alert("Thêm vào giỏ hàng thành công");
                   setIsSuccessOpen(true); // Hiển thị popup
 
-                  window.dispatchEvent(new Event('storage'));
-
+                  window.dispatchEvent(new Event("storage"));
                 }}
               >
                 Thêm vào giỏ hàng
@@ -243,7 +244,10 @@ export default function Merch_Popup({
       </div>
       <AddSuccessfull
         isOpen={isSuccessOpen}
-        onClose={() => setIsSuccessOpen(false)}
+        onClose={() => {
+          setIsSuccessOpen(false);
+          onClose();
+        }}
       />
     </div>
   );

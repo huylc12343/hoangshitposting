@@ -9,12 +9,14 @@ import { formatToVND } from "../utils/NumberFormat";
 import TicketService from "../services/TicketService";
 import { imageToBase64 } from "../utils/ImageConverter";
 import { useNavigate } from "react-router-dom";
+import Fail_Popup from "./Fail_Popup";
 
 export default function Cart_HeroSection({ ticket }) {
   const navigate = useNavigate();
 
   const { theme } = useTheme();
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [showFailPopup, setShowFailPopup] = useState(false);
 
   const [showCustomerForm, setShowCustomerForm] = useState(true);
   const [showTicketForm, setShowTicketForm] = useState(true);
@@ -85,12 +87,10 @@ export default function Cart_HeroSection({ ticket }) {
           setShowSuccessPopup(true); // Hiện popup thành công
         })
         .catch((error) => {
-          alert("Có lỗi xảy ra trong quá trình đặt vé. Vui lòng thử lại sau.");
-          setLoading(false);
-          navigate("/");
+          setShowFailPopup(true);
         });
     } else {
-      alert("Có lỗi xảy ra. Vui lòng thử lại sau.");
+      setShowFailPopup(true); // Hiện popup thất bại nếu không có holdId
     }
   };
 
@@ -112,9 +112,11 @@ export default function Cart_HeroSection({ ticket }) {
   var url = "https://img.vietqr.io/image/MB-93685111-qr_only.png?";
 
   const content =
+    customerLastName +
+    " " +
     customerFirstName +
     " " +
-    customerLastName +
+    customerPhoneNumber +
     " " +
     "Thanh toan " +
     quantity +
@@ -365,7 +367,9 @@ export default function Cart_HeroSection({ ticket }) {
                           Tran Thi Hai Yen
                           <br />
                           Cú pháp chuyển khoản:
-                          <br /> [Họ tên] thanh toan [Số lượng vé] ve [Loại vé]
+                          <br /> {customerLastName} {customerFirstName}{" "}
+                          {customerPhoneNumber} thanh toan {quantity} ve{" "}
+                          {ticket.name}
                         </p>
                         <p
                           download="ma_qr_chuyen_khoan.png"
@@ -469,6 +473,13 @@ export default function Cart_HeroSection({ ticket }) {
           isOpen={showSuccessPopup}
           onClose={() => setShowSuccessPopup(false)}
           onConfirm={() => setShowSuccessPopup(false)}
+        />
+        <Fail_Popup
+          isOpen={showFailPopup}
+          onClose={() => {
+            setShowFailPopup(false);
+            navigate("/");
+          }}
         />
       </div>
     </div>
