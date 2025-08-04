@@ -16,7 +16,7 @@ const TuDoTheme = {
 
 const NguoiTimVangTheme = {
     name:"NgTimVang",
-    color: "#772C22",
+    color: "#BC4535",
     background: `url(${NguoiTimVangbg})`,
     icon: NguoiTimVangIcon,
 };
