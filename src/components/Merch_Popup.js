@@ -129,7 +129,7 @@ export default function Merch_Popup({
           </div>
 
           {/* Options */}
-          <div className="mt-4 flex flex-col">
+          <div className="mt-4 flex flex-col pb-10 md:pb-0">
             <div className="flex flex-col sm:flex-row gap-6 mb-6">
               {/* Colors */}
               {selectedCombo.colors?.length > 0 && (
