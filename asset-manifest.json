@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hoangshitposting/static/css/main.692118aa.css",
-    "main.js": "/hoangshitposting/static/js/main.00094fde.js",
+    "main.css": "/hoangshitposting/static/css/main.13c53729.css",
+    "main.js": "/hoangshitposting/static/js/main.accdd10e.js",
     "static/js/453.648ce41d.chunk.js": "/hoangshitposting/static/js/453.648ce41d.chunk.js",
     "static/media/tui_chh.jpg": "/hoangshitposting/static/media/tui_chh.058d38b4d37d06824258.jpg",
     "static/media/bg-TuDo-min.jpg": "/hoangshitposting/static/media/bg-TuDo-min.f9f83797bfe77e1cc02d.jpg",
@@ -53,12 +53,9 @@
     "static/media/emty_merch.png": "/hoangshitposting/static/media/emty_merch.ec707556c36cdffc90a0.png",
     "static/media/fsm_min.png": "/hoangshitposting/static/media/fsm_min.40155a6f7d1b726eb550.png",
     "static/media/Success_Popup_img.png": "/hoangshitposting/static/media/Success_Popup_img.e4b74fac1dc23dcd5e02.png",
-    "static/media/combo2-min.jpg": "/hoangshitposting/static/media/combo2-min.772ac58bfd7fa624af57.jpg",
-    "static/media/combo3-min.jpg": "/hoangshitposting/static/media/combo3-min.3940122768f01fa66d15.jpg",
     "static/media/g9-min.png": "/hoangshitposting/static/media/g9-min.eb774bbfca5a17b27f44.png",
     "static/media/combo1-min.jpg": "/hoangshitposting/static/media/combo1-min.4df344c97b43801cfb5e.jpg",
     "static/media/g10-min.png": "/hoangshitposting/static/media/g10-min.f1c00e5b5da5867de87c.png",
-    "static/media/combo4-min.jpg": "/hoangshitposting/static/media/combo4-min.e0aa77498cdfe63f4007.jpg",
     "static/media/g7-min.png": "/hoangshitposting/static/media/g7-min.59b84fade2ab90eb345a.png",
     "static/media/g12-min.png": "/hoangshitposting/static/media/g12-min.4e776db7827971c41865.png",
     "static/media/fa-solid-900.ttf": "/hoangshitposting/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
@@ -102,12 +99,12 @@
     "index.html": "/hoangshitposting/index.html",
     "static/media/arrow-down-angle-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-down-angle-svgrepo-com.b8434f126a8dbfe1baabe2b03c588c9c.svg",
     "static/media/arrow-up-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-up-svgrepo-com.105962570a84ea14fe61103d7f4aeb21.svg",
-    "main.692118aa.css.map": "/hoangshitposting/static/css/main.692118aa.css.map",
-    "main.00094fde.js.map": "/hoangshitposting/static/js/main.00094fde.js.map",
+    "main.13c53729.css.map": "/hoangshitposting/static/css/main.13c53729.css.map",
+    "main.accdd10e.js.map": "/hoangshitposting/static/js/main.accdd10e.js.map",
     "453.648ce41d.chunk.js.map": "/hoangshitposting/static/js/453.648ce41d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.692118aa.css",
-    "static/js/main.00094fde.js"
+    "static/css/main.13c53729.css",
+    "static/js/main.accdd10e.js"
   ]
 }
