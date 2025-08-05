@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hoangshitposting/static/css/main.13c53729.css",
-    "main.js": "/hoangshitposting/static/js/main.accdd10e.js",
+    "main.css": "/hoangshitposting/static/css/main.f6f20d08.css",
+    "main.js": "/hoangshitposting/static/js/main.67477ccb.js",
     "static/js/453.648ce41d.chunk.js": "/hoangshitposting/static/js/453.648ce41d.chunk.js",
     "static/media/tui_chh.jpg": "/hoangshitposting/static/media/tui_chh.058d38b4d37d06824258.jpg",
     "static/media/bg-TuDo-min.jpg": "/hoangshitposting/static/media/bg-TuDo-min.f9f83797bfe77e1cc02d.jpg",
@@ -99,12 +99,12 @@
     "index.html": "/hoangshitposting/index.html",
     "static/media/arrow-down-angle-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-down-angle-svgrepo-com.b8434f126a8dbfe1baabe2b03c588c9c.svg",
     "static/media/arrow-up-svgrepo-com.svg": "/hoangshitposting/static/media/arrow-up-svgrepo-com.105962570a84ea14fe61103d7f4aeb21.svg",
-    "main.13c53729.css.map": "/hoangshitposting/static/css/main.13c53729.css.map",
-    "main.accdd10e.js.map": "/hoangshitposting/static/js/main.accdd10e.js.map",
+    "main.f6f20d08.css.map": "/hoangshitposting/static/css/main.f6f20d08.css.map",
+    "main.67477ccb.js.map": "/hoangshitposting/static/js/main.67477ccb.js.map",
     "453.648ce41d.chunk.js.map": "/hoangshitposting/static/js/453.648ce41d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13c53729.css",
-    "static/js/main.accdd10e.js"
+    "static/css/main.f6f20d08.css",
+    "static/js/main.67477ccb.js"
   ]
 }
