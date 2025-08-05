@@ -63,8 +63,8 @@ export default function HeroSection2() {
           className="text-base text-[#EEE1D8] leading-relaxed opacity-90 font-Averta-CY px-0 sm:px-4"
           
         >
-          Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023, <br className='hidden sm:visible'/> 
-          nhưng với người hâm mộ, âm nhạc ấy vẫn luôn tồn tại là ký ức, <br className='hidden sm:visible'/>
+          Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023, <br className="hidden sm:inline" /> 
+          nhưng với người hâm mộ, âm nhạc ấy vẫn luôn tồn tại là ký ức, <br className="hidden sm:inline" />
           là nguồn cảm hứng, là nơi chữa lành, và sẽ luôn là một điều gì đó mãi mãi
         </p>
       </div>
