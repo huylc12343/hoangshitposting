@@ -27,18 +27,11 @@ export default function Merch_HeroSection2() {
 
   return (
     <div
-      className="relative w-full min-h-screen flex flex-col items-center justify-start p-8 overflow-x-hidden overflow-y-auto"
-      style={{
-        backgroundImage: `url(${Merch_bg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      className="relative w-full  bg-black min-h-screen flex flex-col items-center justify-start p-8 overflow-x-hidden overflow-y-auto"
     >
       <div
         className="absolute inset-0 z-0"
-        style={{
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,1))',
-        }}
+        style={{ backgroundColor: 'black', opacity: 0.7 }}
       ></div>
 
       <div className="relative z-10 text-white text-center mb-12 mt-24 w-full max-w-7xl">
