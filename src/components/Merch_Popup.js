@@ -16,6 +16,8 @@ export default function Merch_Popup({
 
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedType, setSelectedType] = useState(null);
+
   const [quantity, setQuantity] = useState(1);
 
   const selectedCombo = allCombos.find((combo) => combo.id === selectedId);
@@ -27,6 +29,8 @@ export default function Merch_Popup({
     if (selectedCombo) {
       setSelectedColor(selectedCombo.colors?.[0] || null);
       setSelectedSize(selectedCombo.sizes?.[0] || null);
+      setSelectedType(selectedCombo.type?.[0] || null);  // Thêm dòng này
+
       setQuantity(1);
     }
   }, [selectedId]);
@@ -78,7 +82,9 @@ export default function Merch_Popup({
         {/* Left: Image & Thumbnails */}
         <div className="w-full md:w-1/2 p-4 flex flex-col items-center ">
           <img
-            src={selectedCombo.image}
+            src={selectedCombo.imagesByType && selectedType
+                ? selectedCombo.imagesByType[selectedType]
+                : selectedCombo.image}
             alt={selectedCombo.name}
             className="w-full h-auto max-h-[380px] max-w-[380px] md:max-h-[430px] md:max-w-[430px] object-contain mb-0 mt-4 sm:mt-6"
           />
@@ -130,6 +136,34 @@ export default function Merch_Popup({
           </div>
 
           {/* Options */}
+          {selectedCombo.type?.length > 0 && selectedCombo.imagesByType && (
+            <div className="flex-none">
+              <label className="block text-sm mb-1">Loại</label>
+              <div className="flex flex-wrap gap-2">
+                {selectedCombo.type.map((typeValue) => {
+                  const image = selectedCombo.imagesByType[typeValue];
+                  return (
+                    <div
+                      key={typeValue}
+                      className={`w-8 h-8 border-2 rounded cursor-pointer overflow-hidden ${
+                        selectedType === typeValue
+                          ? "border-blue-500"
+                          : "border-[#4D4D4D]"
+                      }`}
+                      onClick={() => setSelectedType(typeValue)}
+                    >
+                      <img
+                        src={image}
+                        alt={`Loại ${typeValue}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           <div className="mt-4 flex flex-col pb-10 md:pb-0">
             <div className="flex flex-col sm:flex-row gap-6 mb-6">
               {/* Colors */}
@@ -195,6 +229,7 @@ export default function Merch_Popup({
                   </button>
                 </div>
               </div>
+              {/* type */}
 
               {/* Sizes */}
               {selectedCombo.sizes?.length > 0 && (
@@ -229,6 +264,7 @@ export default function Merch_Popup({
                     ...selectedCombo,
                     color: selectedColor,
                     size: selectedSize,
+                    type: selectedType, // thêm dòng này
                     amount: quantity,
                   });
                   // alert("Thêm vào giỏ hàng thành công");

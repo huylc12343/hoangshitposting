@@ -1,22 +1,32 @@
-import product1 from "../assets/11_min.png";
-import product2 from "../assets/12_min.png";
-import product3 from "../assets/13_min.png";
-import product4 from "../assets/cahoihophh.png";
-import maimai from "../assets/16_min.png";
-import gapgap from "../assets/10_min.png";
-import tudo from "../assets/14_min.png";
+import comboCa from "../assets/11_min.png";
+import comboHoi from "../assets/12_min.png";
+import comboHoang from "../assets/13_min.png";
+import comboMaiMai from "../assets/16_min.png";
+import comboGapGap from "../assets/10_min.png";
+import comboTudo from "../assets/14_min.png";
 import setCard from "../assets/7_min.png";
-import nguoitimvang from "../assets/15_min.png";
-import pickPic from "../assets/6_min.png";
-import lanyardCCPCLK from "../assets/1_min.png";
-import aoGG from "../assets/2_min.png";
+import comboTimVang from "../assets/15_min.png";
+import pickPic from "../assets/pic1_min.jpg";
+import lanyardCCPCLK from "../assets/landyard_min.jpg";
+import aoGG from "../assets/2ao_min.jpg";
 import cahoihop from "../assets/cahoihophh.png";
-import bandanaGapGap from "../assets/3_min.png";
+import bandanaGapGap from "../assets/khangapgap_min.jpg";
 import batlua_cahoi from "../assets/bat_lua_ca_hoi.png";
-import khan_nguoi_tim_vang from "../assets/4_min.png";
-import khan_tudo from "../assets/5_min.png";
+import khan_nguoi_tim_vang from "../assets/khantimvang_min.jpg"
+import khan_tudo from "../assets/khantudo_min.jpg";
 import tat_cahoi from "../assets/8_min.png";
 
+import batlua_1 from "../assets/bat_lua1.png";
+import batlua_2 from "../assets/bat_lua2.png";
+import batlua_3 from "../assets/bat_lua3.png";
+import batlua_4 from "../assets/bat_lua3.png";
+import batlua_5 from "../assets/bat_lua3.png";
+import batlua_6 from "../assets/bat_lua3.png";
+import batlua_7 from "../assets/bat_lua3.png";
+import batlua_8 from "../assets/bat_lua3.png";
+import batlua_9 from "../assets/bat_lua3.png";
+import batlua_10 from "../assets/bat_lua3.png";
+import batlua_11 from "../assets/bat_lua3.png";
 const Merch = [
   {
     id: 1,
@@ -90,17 +100,30 @@ const Merch = [
     price: 50000,
     isCombo: false,
   },
-  // {
-  //   id: 8,
-  //   name: "Bật lửa Cá Hồi",
-  //   image: batlua_cahoi,
-  //   description: [
-  //     'Thiết kế bật lửa độc đáo với hình ảnh chú cá hồi rực lửa, gợi liên tưởng đến nỗi khát khao và đam mê âm nhạc mãnh liệt - một món đồ sưu tầm vừa ngầu vừa nghệ.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
-  //   ],
-  //   price: 40000,
-  //   isCombo: false,
-  //   type: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
-  // },
+{
+  id: 8,
+  name: "Bật lửa Cá Hồi",
+  image: batlua_cahoi, // Ảnh mặc định nếu không chọn
+  imagesByType: {
+    "1": batlua_1,
+    "2": batlua_2,
+    "3": batlua_3,
+    "4": batlua_4,
+    "5": batlua_5,
+    "6": batlua_6,
+    "7": batlua_7,
+    "8": batlua_8,
+    "9": batlua_9,
+    "10": batlua_10,
+    "11": batlua_11,
+  },
+  description: [
+    'Thiết kế bật lửa độc đáo với hình ảnh chú cá hồi rực lửa, gợi liên tưởng đến nỗi khát khao và đam mê âm nhạc mãnh liệt - một món đồ sưu tầm vừa ngầu vừa nghệ.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
+  ],
+  price: 40000,
+  isCombo: false,
+  type: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+},
   {
     id: 9,
     name: "Tất",
@@ -124,7 +147,7 @@ const Merch = [
   {
     id: 11,
     name: "Combo Cá",
-    image: product1,
+    image: comboCa,
     description: [
       "Bao gồm: Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen) + Dây đeo thẻ\n\n🎁 Tặng kèm: 1 móc khóa + 1 sticker\n\nMột lựa chọn tinh gọn nhưng vẫn đủ “đậm chất Cá”. Combo gồm áo phông (chọn size từ S đến 4XL, màu trắng hoặc đen) và dây đeo thẻ - để bạn mang theo tinh thần Cá Hồi Hoang trong mọi khoảnh khắc thường nhật. ",
     ],
@@ -136,7 +159,7 @@ const Merch = [
   {
     id: 12,
     name: "Combo Hồi",
-    image: product2,
+    image: comboHoi,
     description: [
       "Bao gồm: Khăn Gấp Gap + Cá Hồi Hộp \n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nKhông chỉ là vật phẩm lưu niệm, đây còn là lời tri ân dịu dàng gửi đến hành trình âm nhạc mà Cá Hồi Hoang và người nghe đã cùng nhau viết nên - lặng lẽ, chân thành, và không dễ phai mờ.",
     ],
@@ -148,7 +171,7 @@ const Merch = [
   {
     id: 13,
     name: "Combo Hoang",
-    image: product3,
+    image: comboHoang,
     description: [
       "Bao gồm: Khăn + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 phone chain\n\nCombo mang đậm phong cách “hoang dã” nhưng vẫn đầy chất thơ. Mỗi chi tiết đều được chăm chút kỹ lưỡng, từ chất vải đến thiết kế, thể hiện tinh thần tự do, sâu lắng đúng với tinh thần âm nhạc từ Cá Hồi Hoang.",
     ],
@@ -160,7 +183,7 @@ const Merch = [
   {
     id: 14,
     name: "Combo Tự Do",
-    image: tudo,
+    image: comboTudo,
     description: [
       'Bao gồm: Khăn Tự Do + Bật lửa Cá Hồi + Cá Hồi Hộp\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nLấy cảm hứng từ bài hát "Tự Do" của Cá Hồi Hoang, combo này kết hợp khăn Tự Do và Cá Hồi Hộp - hai sản phẩm được yêu thích nhất. Đi kèm là móc khóa và sticker như lời nhắn nhủ nhỏ bé nhưng đầy xúc động.',
     ],
@@ -170,29 +193,29 @@ const Merch = [
   {
     id: 15,
     name: "Combo Tìm Vàng",
-    image: nguoitimvang,
+    image: comboTimVang,
     description: [
       "Bao gồm: Khăn Tìm Vàng + Bật lửa Cá Hồi + Cá Hồi Hộp\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nLấy cảm hứng từ tinh thần khám phá và bứt phá, combo kết hợp khăn Tìm Vàng, bật lửa Cá Hồi và Cá Hồi Hộp - một lựa chọn đậm cá tính. Món quà dành cho những tâm hồn luôn hướng về ánh sáng và hành trình không ngừng vươn xa.",
     ],
     isCombo: true,
     price: 369000,
   },
-  // {
-  //   id: 16,
-  //   name: "Combo Mãi Mãi",
-  //   image: maimai,
-  //   description: [
-  //     "Bao gồm: Tất + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nCombo “MÃI MÃI” là lời nhắn nhủ dịu dàng đến những trái tim còn giữ tình cảm nguyên vẹn với Cá Hồi Hoang - và với một phần tuổi trẻ của chính mình.",
-  //   ],
-  //   isCombo: true,
-  //   price: 369000,
-  //   sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
-  //   colors: ["Trắng", "Đen"],
-  // },
-    {
+  {
     id: 16,
+    name: "Combo Mãi Mãi",
+    image: comboMaiMai,
+    description: [
+      "Bao gồm: Tất + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nCombo “MÃI MÃI” là lời nhắn nhủ dịu dàng đến những trái tim còn giữ tình cảm nguyên vẹn với Cá Hồi Hoang - và với một phần tuổi trẻ của chính mình.",
+    ],
+    isCombo: true,
+    price: 369000,
+    sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
+    colors: ["Trắng", "Đen"],
+  },
+    {
+    id: 17,
     name: "Combo GapGap",
-    image: gapgap,
+    image: comboGapGap,
     description: [
       "Bao gồm: Khăn + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 phone chain\n\nCombo mang đậm phong cách “hoang dã” nhưng vẫn đầy chất thơ. Mỗi chi tiết đều được chăm chút kỹ lưỡng, từ chất vải đến thiết kế, thể hiện tinh thần tự do, sâu lắng đúng với tinh thần âm nhạc từ Cá Hồi Hoang.",
     ],

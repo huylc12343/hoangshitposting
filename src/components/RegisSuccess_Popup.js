@@ -29,12 +29,9 @@ export default function RegisSuccess_Popup({ isOpen, onClose }) {
         </h2>
         <div className="text-center text-gray-400 space-y-2">
           <p>
-            Email kèm vé mời tham gia Triển lãm sẽ được gửi đến bạn trong vòng 48h nha.   Liên hệ fanpage Hoang shitposting nếu cần hỗ trợ nhé!
+            Email kèm vé mời tham gia Triển lãm sẽ được gửi đến bạn trong vòng 48h nha.
           </p>
-          <p>
-            Hoặc bạn có thể liên hệ fanpage Hoangshitposting để được hỗ trợ
-            nhanh chóng.
-          </p>
+          <p>Liên hệ fanpage Hoang shitposting nếu cần hỗ trợ nhé!</p>
         </div>
         <div className="flex justify-center mt-6 ">
           <button
@@ -42,7 +39,7 @@ export default function RegisSuccess_Popup({ isOpen, onClose }) {
             className="text-[#EEE1D8] px-4 py-2 w-full h-auto rounded text-base font-Averta-CY font-semibold hover:bg-gray-200"
             style={{ backgroundColor: theme.color }}
           >
-            Tiếp tục mua sắm
+            Đợi chúng mình nhé
           </button>
         </div>
       </div>

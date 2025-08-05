@@ -96,6 +96,9 @@ export default function Cart_HeroSection() {
         setLoading(false);
         setShowConfirmPopup(false); // Ẩn popup xác nhận
         setShowSuccessPopup(true); // Hiện popup thành công
+        MerchService.clearCart();  // <- thêm dòng này
+        setItems([]);
+        window.dispatchEvent(new Event('storage'));   
       })
       .catch((error) => {
         setShowFailPopup(true);

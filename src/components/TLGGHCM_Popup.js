@@ -4,10 +4,10 @@ import RegisSuccess_Popup from "./RegisSuccess_Popup"; // đường dẫn đúng
 import RegisFail_Popup from "./RegisFail_Popup"; // Đường dẫn chính xác
 
 const TLGGHCM_Popup = ({ onClose }) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+const [firstName, setFirstName] = useState("");
+const [lastName, setLastName] = useState("");
+const [email, setEmail] = useState("");
+const [phoneNumber, setPhoneNumber] = useState("");
 const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 const [showFailPopup, setShowFailPopup] = useState(false);
 
@@ -29,17 +29,16 @@ const [showFailPopup, setShowFailPopup] = useState(false);
     GalleryService.sendGalleryInvitation(email, lastName + " " + firstName)
       .then((data) => {
         setShowSuccessPopup(true); // Hiện popup thành công
-
         setFirstName("");
         setLastName("");
         setEmail("");
         setPhoneNumber("");
-        if (onClose) onClose();
+        // if (onClose) onClose();
       })
-.catch((e) => {
-  setShowFailPopup(true); // Hiện popup thất bại
-});
-  };
+      .catch((e) => {
+        setShowFailPopup(true); // Hiện popup thất bại
+      });
+        };
 
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-end sm:items-center justify-center text-left sm:px-0">
@@ -127,7 +126,7 @@ const [showFailPopup, setShowFailPopup] = useState(false);
         {/* Sticky button for mobile */}
         <div className="sm:hidden fixed bottom-0 left-0 w-full px-6 pb-4 bg-[#333] z-50">
           <button
-            type="submit"
+            type="button"
             onClick={handleSubmit}
             className="bg-[#cd4b3f] text-white py-4 px-8 rounded-md text-xl w-full transition-colors hover:bg-[#e05e50]"
           >
@@ -135,15 +134,15 @@ const [showFailPopup, setShowFailPopup] = useState(false);
           </button>
         </div>
       </div>
-      {showSuccessPopup && (
-        <RegisSuccess_Popup
-          isOpen={showSuccessPopup}
-          onClose={() => {
-            setShowSuccessPopup(false);
-            if (onClose) onClose(); // đóng popup chính nếu muốn
-          }}
-        />
-      )}
+        {showSuccessPopup && (
+          <RegisSuccess_Popup
+            isOpen={true}
+            onClose={() => {
+              setShowSuccessPopup(false); // đóng popup thành công
+              if (onClose) onClose();     // đóng popup chính sau đó
+            }}
+          />
+        )}
 
       {showFailPopup && (
         <RegisFail_Popup

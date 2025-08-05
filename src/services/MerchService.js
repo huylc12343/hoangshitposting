@@ -9,7 +9,8 @@ export default class MerchService {
         return (
           c.id == product.id &&
           c.size == product.size &&
-          c.color == product.color
+          c.color == product.color &&
+          c.type == product.type
         );
       });
       if (existingData) {
@@ -77,13 +78,12 @@ export default class MerchService {
           merches: merchData.merches.map((m) => {
             return {
               id: m.id,
-              name: `${m.name} ${m.color ? `Màu ${m.color}` : ""} ${
-                m.size ? `Size ${m.size}` : ""
-              }`,
+              name: `${m.name} ${m.color ? `Màu ${m.color}` : ""}  ${m.type ? `Loại ${m.type}` : ""} ${ m.size ? `Size ${m.size}` : ""}`,
               price: m.price,
               metadata: {
                 color: m.color,
                 size: m.size,
+                type: m.type,
               },
               amount: m.amount,
             };
@@ -102,4 +102,7 @@ export default class MerchService {
       throw error;
     }
   }
+  static clearCart() {
+  localStorage.setItem("cart", JSON.stringify([]));
+}
 }
