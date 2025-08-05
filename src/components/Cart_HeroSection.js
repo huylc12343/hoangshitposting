@@ -142,10 +142,10 @@ export default function Cart_HeroSection() {
             >
               Giỏ hàng của bạn hiện đang trống...
             </h1>
-            <p className="font-Averta-CY text-base mt-8 mb-0">
+            {/* <p className="font-Averta-CY text-base mt-8 mb-0">
               Hãy cùng chúng mình bắt đầu chuyến phiêu lưu vào thế giới cá hồi
               hoang ngay nhé!"
-            </p>
+            </p> */}
             <button
               className={`px-4 py-2 rounded-md mt-6 lg:mt-16 lg:text-xl`}
               style={{
