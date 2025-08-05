@@ -23,13 +23,13 @@ const TimelineHeroSection = forwardRef((props, ref) => {
 
       {/* Nội dung chính */}
       <div className="relative z-10">
-        <h1 className="text-4xl mt-20 sm:text-5xl md:text-6xl lg:text-7xl  text-center mb-16 font-imbue">
+        <h1 className="text-[32px] mt-20 sm:text-[80px] text-center mb-16 font-imbue">
           TIMELINE SỰ KIỆN
         </h1>
         <Timeline_Components />
         <div className="w-full flex justify-center md:justify-center py-10">
               <Link to="/event"><button
-                className="mt-4 px-6 py-3 rounded-md text-[#EEE1D8] font-Averta-CY shadow-md transition duration-300 hover:opacity-90"
+                className="mt-4 px-6 py-3 rounded-md text-[#EEE1D8] text-base font-Averta-CY shadow-md transition duration-300 hover:opacity-90"
                 style={{
                   backgroundColor: theme.color,
                 }}

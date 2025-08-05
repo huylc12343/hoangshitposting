@@ -6,7 +6,7 @@ export default function HeroSection2() {
 
   return (
     <div
-      className="relative w-full min-h-screen flex items-center justify-center px-4 py-20 sm:py-28 md:py-32 lg:py-40 overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center px-3 py-20 sm:py-28 md:py-32 lg:py-40 overflow-hidden"
       style={{
         backgroundImage: theme.background,
         backgroundSize: 'cover',
@@ -60,12 +60,12 @@ export default function HeroSection2() {
 
         {/* Mô tả */}
         <p
-          className="text-lg sm:text-lg text-[#EEE1D8] leading-relaxed opacity-90 font-Averta-CY px-2 sm:px-4"
+          className="text-base text-[#EEE1D8] leading-relaxed opacity-90 font-Averta-CY px-0 sm:px-4"
           
         >
-          Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023,<br/> 
-          nhưng với người hâm mộ, âm nhạc ấy vẫn luôn tồn tại là ký ức, <br/>
-          là nguồn cảm hứng, là nơi chữa lành, và sẽ luôn là một điều gì đó mãi mãi ~
+          Dù Cá Hồi Hoang đã thông báo dừng hoạt động vào năm 2023, <br className='hidden sm:visible'/> 
+          nhưng với người hâm mộ, âm nhạc ấy vẫn luôn tồn tại là ký ức, <br className='hidden sm:visible'/>
+          là nguồn cảm hứng, là nơi chữa lành, và sẽ luôn là một điều gì đó mãi mãi
         </p>
       </div>
     </div>

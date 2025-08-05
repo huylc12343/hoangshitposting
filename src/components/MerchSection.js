@@ -1,13 +1,24 @@
 import React from 'react';
-import merchMainImage from '../assets/combo4-min.jpg';
-import merchItem1 from '../assets/combo3-min.jpg';
-import merchItem2 from '../assets/combo2-min.jpg';
-import merchItem3 from '../assets/combo1-min.jpg';
+import cahoihop from '../assets/cahoihophh.png';
+import landyard from '../assets/landyard_min.jpg';
+import aoGapGap from '../assets/2ao_min.jpg';
+import khanGapGap from '../assets/khangapgap_min.jpg';
 import { useTheme } from '../contexts/Theme';
-
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import Merch_Popup from './Merch_Popup';
+import allCombos from '../data/Merch';
 export default function Merch() {
   const { theme } = useTheme();
+  const navigate = useNavigate();
+  const [selectedId, setSelectedId] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
 
+  const handleSelectCombo = (id) => {
+    setSelectedId(id);
+    setShowPopup(true);
+  };
   return (
     <section
       className="relative w-full py-20 text-[#EEE1D8] px-4 md:px-8 lg:px-12 bg-cover bg-center bg-no-repeat"
@@ -26,9 +37,10 @@ export default function Merch() {
           {/* Left large image */}
           <div className="flex justify-center items-center p-2 overflow-hidden bg-white/5">
             <img
-              src={merchMainImage}
+              src={cahoihop}
               alt="Main Merch"
               className="w-full h-auto max-h-[600px] object-cover transform transition duration-300 hover:scale-105"
+              onClick={() => handleSelectCombo(10)}
             />
           </div>
 
@@ -36,27 +48,32 @@ export default function Merch() {
           <div className="grid grid-cols-2 grid-rows-2 gap-4 p-2">
             <div className="flex justify-center items-center overflow-hidden bg-white/5">
               <img
-                src={merchItem1}
+                src={landyard}
                 alt="Merch Item 1"
                 className="w-full h-auto object-cover transform transition duration-300 hover:scale-105"
+                onClick={() => handleSelectCombo(1)}
               />
             </div>
             <div className="flex justify-center items-center overflow-hidden bg-white/5">
               <img
-                src={merchItem2}
+                src={aoGapGap}
                 alt="Merch Item 2"
                 className="w-full h-auto object-cover transform transition duration-300 hover:scale-105"
+                onClick={() => handleSelectCombo(2)}
               />
             </div>
             <div className="flex justify-center items-center overflow-hidden bg-white/5">
               <img
-                src={merchItem3}
-                alt="Merch Item 3"
+                src={khanGapGap}
                 className="w-full h-auto object-cover transform transition duration-300 hover:scale-105"
+                onClick={() => handleSelectCombo(3)}
               />
             </div>
-            <div className="group flex justify-center items-center overflow-hidden bg-[#EEE1D8]  transition duration-300 cursor-pointer">
-              <div className="text-lg md:text-xl  font-semibold text-[#BC4535] group-hover:scale-105 font-Averta-CY">Tìm hiểu thêm</div>
+            <div className="group flex justify-center items-center overflow-hidden bg-[#EEE1D8]  transition duration-300 cursor-pointer"
+            onClick={() => navigate("/merch")}>
+              <div className="text-lg md:text-xl  font-semibold text-[#BC4535] group-hover:scale-105 font-Averta-CY" 
+                
+                >Tìm hiểu thêm</div>
             </div>
           </div>
         </div>
@@ -66,9 +83,10 @@ export default function Merch() {
           {/* Hàng 1: Merch Item 1 full width */}
           <div className="flex justify-center items-center overflow-hidden bg-white/5">
             <img
-              src={merchItem1}
+              src={landyard}
               alt="Merch Item 1"
               className="w-full h-auto object-cover transform transition duration-300 hover:scale-105"
+              onClick={() => handleSelectCombo(1)}
             />
           </div>
 
@@ -76,17 +94,32 @@ export default function Merch() {
           <div className="grid grid-cols-2 gap-2">
             <div className="flex justify-center items-center overflow-hidden bg-white/5">
               <img
-                src={merchItem2}
+                src={aoGapGap}
                 alt="Merch Item 2"
                 className="w-full h-auto object-cover transform transition duration-300 hover:scale-105"
+                onClick={() => handleSelectCombo(2)}
               />
             </div>
-            <div className="flex justify-center items-center overflow-hidden bg-white/5 hover:bg-white/10 transition duration-300 cursor-pointer">
-              <span className="text-base font-semibold text-[#EEE1D8]">Tìm hiểu thêm</span>
-            </div>
+            <button className="flex justify-center items-center overflow-hidden bg-[#EEE1D8] transition duration-300 cursor-pointer"
+              onClick={() => {
+                navigate("/merch");
+              }}
+            >
+              <span className={"text-base font-Averta-CY text-[#BC4535]"}>
+                Tìm hiểu thêm</span>
+            </button>
           </div>
         </div>
       </div>
+      {showPopup && (
+  <Merch_Popup
+    allCombos={allCombos}
+    selectedId={selectedId}
+    onClose={() => setShowPopup(false)}
+    onChangeCombo={(newId) => setSelectedId(newId)}
+  />
+)}
     </section>
+    
   );
 }
