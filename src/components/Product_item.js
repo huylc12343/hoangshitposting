@@ -40,14 +40,14 @@ export default function Product_item({
   };
 
   const confirmDelete = () => {
-    const result = window.confirm(
-      "Bạn xác nhận muốn xoá " + item.name + " ra khỏi giỏ hàng?" // Assuming item.name is the correct property for the product title
-    );
-    if (result) {
+    // const result = window.confirm(
+    //   "Bạn xác nhận muốn xoá " + item.name + " ra khỏi giỏ hàng?" // Assuming item.name is the correct property for the product title
+    // );
+    // if (result) {
       MerchService.removeFromCart(item.id);
       onItemRemoved();
       window.dispatchEvent(new Event('storage'));
-    }
+    // }
   };
 
   return (

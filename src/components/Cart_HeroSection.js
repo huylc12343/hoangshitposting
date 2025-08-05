@@ -422,13 +422,18 @@ export default function Cart_HeroSection() {
                             <p className="font-semibold">Viettel Post</p>
                           </div>
                         </div>
-                        <div className="text-sm font-semibold text-white">
-                          {formatToVND(
-                            calculateItemValue() >= 500000
-                              ? 0
-                              : shippingData?.GIA_CUOC ?? 0
-                          )}
-                        </div>
+                          <div className="text-sm font-Averta-CY font-semibold text-white text-right">
+                            {calculateItemValue() >= 500000 ? (
+                              <>
+                                <div className="line-through text-[#BC4535]">
+                                  {formatToVND(shippingData?.GIA_CUOC ?? 0)}
+                                </div>
+                                <div className="text-[#EEE1D8]">0₫</div>
+                              </>
+                            ) : (
+                              <>{formatToVND(shippingData?.GIA_CUOC ?? 0)}</>
+                            )}
+                          </div>
                       </label>
                     </div>
                   </div>
@@ -567,7 +572,8 @@ export default function Cart_HeroSection() {
             </button>
           ) : (
             <button
-              className="w-full text-gray-500 py-4 rounded text-lg hover:opacity-90 transition bg-gray-300"
+              className="w-full text-gray-500 py-4 rounded text-lg hover:opacity-90 transition bg-[#EEE1D8]"
+              style={{color:theme.color}}
               disabled
             >
               Hoàn thành đặt hàng
