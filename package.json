@@ -1,5 +1,6 @@
 {
   "name": "hoangshitposting",
+  "homepage":"https://huylc12343.github.io/hoangshitposting/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +18,7 @@
     "flowbite-react": "^0.12.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.7.0",
+    "react-router-dom": "^7.7.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
