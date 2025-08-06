@@ -16,6 +16,9 @@ import khan_nguoi_tim_vang from "../assets/khantimvang_min.jpg"
 import khan_tudo from "../assets/khantudo_min.jpg";
 import tat_cahoi from "../assets/8_min.png";
 
+import aoden from "../assets/aoden_min.jpg";
+import aotrang from "../assets/aotrang_min.jpg";
+
 import batlua_1 from "../assets/bat_lua1.png";
 import batlua_2 from "../assets/bat_lua2.png";
 import batlua_3 from "../assets/bat_lua3.png";
@@ -42,6 +45,10 @@ const Merch = [
     id: 2,
     name: "Áo phông Gấp Gap",
     image: aoGG,
+    imagesByType: {
+    "Trắng": aotrang,
+    "Đen": aoden,
+  },
     description: [
       'Áo phông unisex form rộng, có hai màu đen hoặc trắng, form rộng dễ mặc. Điểm nhấn là hình chú cá nhỏ in ở ngực trái, biểu tượng cho thông điệp “Cá Hồi Hoang là cái gì đó mãi mãi”.',
     ],
@@ -122,7 +129,7 @@ const Merch = [
   ],
   price: 40000,
   isCombo: false,
-  type: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+  colors: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
 },
   {
     id: 9,

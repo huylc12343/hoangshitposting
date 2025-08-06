@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "../contexts/Theme";
 import trash from "../assets/Trash.png";
 import MerchService from "../services/MerchService";
-import AddSuccessfull from "./AddSuccessfull"; // đường dẫn đúng của bạn
+import AddSuccessfull from "./AddSuccessfull";
 import { formatToVND } from "../utils/NumberFormat";
 
 export default function Merch_Popup({
@@ -13,37 +13,41 @@ export default function Merch_Popup({
 }) {
   const { theme } = useTheme();
   const [isSuccessOpen, setIsSuccessOpen] = useState(false);
-
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedType, setSelectedType] = useState(null);
-
   const [quantity, setQuantity] = useState(1);
 
   const selectedCombo = allCombos.find((combo) => combo.id === selectedId);
-  const currentComboIndex = selectedCombo
-    ? allCombos.indexOf(selectedCombo)
-    : -1;
+  const visibleCombos = allCombos.slice(0, 4);
+
+  const isNumeric = (val) => !isNaN(Number(val));
+  const isColorArrayNumeric = selectedCombo?.colors?.every(isNumeric);
 
   useEffect(() => {
     if (selectedCombo) {
-      setSelectedColor(selectedCombo.colors?.[0] || null);
       setSelectedSize(selectedCombo.sizes?.[0] || null);
-      setSelectedType(selectedCombo.type?.[0] || null);  // Thêm dòng này
+      setSelectedColor(selectedCombo.colors?.[0] || null);
+
+      if (selectedCombo.type?.length > 0) {
+        setSelectedType(selectedCombo.type[0]);
+      } else if (
+        isColorArrayNumeric &&
+        selectedCombo.imagesByType?.[selectedCombo.colors[0]]
+      ) {
+        setSelectedType(selectedCombo.colors[0]);
+      } else if (selectedCombo.imagesByType) {
+        const firstType = Object.keys(selectedCombo.imagesByType)[0];
+        setSelectedType(firstType);
+      } else {
+        setSelectedType(null);
+      }
 
       setQuantity(1);
     }
   }, [selectedId]);
 
   if (!selectedCombo) return null;
-
-  const handleQuantityChange = (type) => {
-    setQuantity((prev) => {
-      if (type === "increment") return prev + 1;
-      if (type === "decrement" && prev > 1) return prev - 1;
-      return prev;
-    });
-  };
 
   const getColorHex = (colorName) => {
     switch (colorName) {
@@ -58,19 +62,19 @@ export default function Merch_Popup({
     }
   };
 
-  const visibleCombos = allCombos.slice(0, 4);
+  const handleQuantityChange = (type) => {
+    setQuantity((prev) => {
+      if (type === "increment") return prev + 1;
+      if (type === "decrement" && prev > 1) return prev - 1;
+      return prev;
+    });
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
-      {/* Overlay */}
-      <div
-        className="absolute inset-0 bg-black opacity-70"
-        onClick={onClose}
-      ></div>
+      <div className="absolute inset-0 bg-black opacity-70" onClick={onClose}></div>
 
-      {/* Popup */}
       <div className="relative bg-[#323232] px-2 sm:pb-4 w-full md:max-w-5xl shadow-xl z-50 flex flex-col md:flex-row overflow-y-auto max-h-[90vh] md:rounded-xl rounded-t-2xl">
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-0 right-3 text-[#EEE1D8] text-2xl z-50 hover:text-gray-300 transition"
@@ -79,12 +83,14 @@ export default function Merch_Popup({
           &times;
         </button>
 
-        {/* Left: Image & Thumbnails */}
-        <div className="w-full md:w-1/2 p-4 flex flex-col items-center ">
+        {/* Left - Image */}
+        <div className="w-full md:w-1/2 p-4 flex flex-col items-center">
           <img
-            src={selectedCombo.imagesByType && selectedType
-                ? selectedCombo.imagesByType[selectedType]
-                : selectedCombo.image}
+            src={
+              selectedCombo.imagesByType && (selectedType || selectedColor)
+                ? selectedCombo.imagesByType[selectedType || selectedColor]
+                : selectedCombo.image
+            }
             alt={selectedCombo.name}
             className="w-full h-auto max-h-[380px] max-w-[380px] md:max-h-[430px] md:max-w-[430px] object-contain mb-0 mt-4 sm:mt-6"
           />
@@ -106,9 +112,8 @@ export default function Merch_Popup({
           </div>
         </div>
 
-        {/* Right: Info & Options */}
+        {/* Right - Info */}
         <div className="w-full md:w-1/2 p-4 sm:mt-4 sm:p-6 text-white text-left flex flex-col justify-between">
-          {/* Info */}
           <div>
             <span
               className="text-[#EEE1D8] px-3 py-1 text-xs sm:text-sm font-medium rounded mb-2 inline-block"
@@ -117,12 +122,10 @@ export default function Merch_Popup({
               Pre-order
             </span>
 
-            <h2
-              className="text-2xl sm:text-[36px] font-imbue font-semibold mb-2"
-              style={{ weight: 600 }}
-            >
+            <h2 className="text-2xl sm:text-[36px] font-imbue font-semibold mb-2">
               {selectedCombo.name}
             </h2>
+
             <p className="text-lg sm:text-3xl font-bold mb-2">
               {formatToVND(selectedCombo.price)}
             </p>
@@ -130,44 +133,38 @@ export default function Merch_Popup({
             <h1 className="text-xl mb-2 font-medium">Mô tả sản phẩm</h1>
             {selectedCombo.description && (
               <p className="text-base sm:text-base mb-4 whitespace-pre-wrap">
-                {selectedCombo.description}
+                {Array.isArray(selectedCombo.description)
+                  ? selectedCombo.description.join("\n\n")
+                  : selectedCombo.description}
               </p>
             )}
           </div>
 
-          {/* Options */}
-          {selectedCombo.type?.length > 0 && selectedCombo.imagesByType && (
-            <div className="flex-none">
+          {/* Loại (nếu colors là số) */}
+          {selectedCombo.imagesByType && isColorArrayNumeric && (
+            <div className="flex-none mt-4">
               <label className="block text-sm mb-1">Loại</label>
               <div className="flex flex-wrap gap-2">
-                {selectedCombo.type.map((typeValue) => {
-                  const image = selectedCombo.imagesByType[typeValue];
-                  return (
-                    <div
-                      key={typeValue}
-                      className={`w-8 h-8 border-2 rounded cursor-pointer overflow-hidden ${
-                        selectedType === typeValue
-                          ? "border-blue-500"
-                          : "border-[#4D4D4D]"
-                      }`}
-                      onClick={() => setSelectedType(typeValue)}
-                    >
-                      <img
-                        src={image}
-                        alt={`Loại ${typeValue}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  );
-                })}
+                {Object.entries(selectedCombo.imagesByType).map(([key, image]) => (
+                  <div
+                    key={key}
+                    className={`w-8 h-8 border-2 rounded cursor-pointer overflow-hidden ${
+                      selectedType === key ? "border-blue-500" : "border-[#4D4D4D]"
+                    }`}
+                    onClick={() => setSelectedType(key)}
+                  >
+                    <img src={image} alt={`Loại ${key}`} className="w-full h-full object-cover" />
+                  </div>
+                ))}
               </div>
             </div>
           )}
 
+          {/* Options */}
           <div className="mt-4 flex flex-col pb-10 md:pb-0">
             <div className="flex flex-col sm:flex-row gap-6 mb-6">
-              {/* Colors */}
-              {selectedCombo.colors?.length > 0 && (
+              {/* Màu sắc (nếu không phải số) */}
+              {selectedCombo.colors?.length > 0 && !isColorArrayNumeric && (
                 <div className="flex-none">
                   <label className="block text-sm mb-1">Màu sắc</label>
                   <div className="flex space-x-1 items-center">
@@ -180,7 +177,12 @@ export default function Merch_Popup({
                           borderColor:
                             selectedColor === color ? theme.color : "#4D4D4D",
                         }}
-                        onClick={() => setSelectedColor(color)}
+                        onClick={() => {
+                          setSelectedColor(color);
+                          if (selectedCombo.imagesByType?.[color]) {
+                            setSelectedType(color);
+                          }
+                        }}
                       >
                         {selectedColor === color && (
                           <svg
@@ -190,7 +192,7 @@ export default function Merch_Popup({
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
                             style={{
-                              color: color === "Trắng" ? "#000000" : "#FFFFFF",
+                              backgroundCColor: getColorHex(color),
                             }}
                           >
                             <path
@@ -207,7 +209,7 @@ export default function Merch_Popup({
                 </div>
               )}
 
-              {/* Quantity */}
+              {/* Số lượng */}
               <div className="flex-none">
                 <label className="block text-sm mb-1">Số lượng</label>
                 <div className="inline-flex bg-[#3A3A3A] items-center border border-[#4D4D4D] rounded-lg overflow-hidden text-sm">
@@ -229,9 +231,8 @@ export default function Merch_Popup({
                   </button>
                 </div>
               </div>
-              {/* type */}
 
-              {/* Sizes */}
+              {/* Kích cỡ */}
               {selectedCombo.sizes?.length > 0 && (
                 <div className="flex-none">
                   <label className="block text-sm mb-1">Kích cỡ</label>
@@ -254,7 +255,7 @@ export default function Merch_Popup({
               )}
             </div>
 
-            {/* Add to cart button - Fixed bottom on mobile */}
+            {/* Nút thêm vào giỏ hàng */}
             <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#323232] z-50 md:relative md:bg-transparent md:p-0 md:mt-4">
               <button
                 className="py-3 text-white font-semibold transition w-full text-sm rounded"
@@ -264,12 +265,10 @@ export default function Merch_Popup({
                     ...selectedCombo,
                     color: selectedColor,
                     size: selectedSize,
-                    type: selectedType, // thêm dòng này
+                    type: selectedColor,
                     amount: quantity,
                   });
-                  // alert("Thêm vào giỏ hàng thành công");
-                  setIsSuccessOpen(true); // Hiển thị popup
-
+                  setIsSuccessOpen(true);
                   window.dispatchEvent(new Event("storage"));
                 }}
               >
@@ -279,6 +278,7 @@ export default function Merch_Popup({
           </div>
         </div>
       </div>
+
       <AddSuccessfull
         isOpen={isSuccessOpen}
         onClose={() => {
