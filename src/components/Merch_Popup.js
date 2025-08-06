@@ -265,7 +265,7 @@ export default function Merch_Popup({
                     ...selectedCombo,
                     color: selectedColor,
                     size: selectedSize,
-                    type: selectedColor,
+                    // type: selectedColor,
                     amount: quantity,
                   });
                   setIsSuccessOpen(true);

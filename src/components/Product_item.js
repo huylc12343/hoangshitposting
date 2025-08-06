@@ -80,11 +80,11 @@ export default function Product_item({
               Màu sắc: {item.color}
             </p>
           )}
-          {item.type && (
+          {/* {item.type && (
             <p className="text-gray-200 text-xs sm:text-sm">
               Loại: {item.type}
             </p>
-          )}
+          )} */}
         </div>
 
         {/* Quantity Controls and Trash icon (visible on all screen sizes) */}

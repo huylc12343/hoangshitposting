@@ -36,7 +36,7 @@ export default function Merch_HeroSection2() {
 
       <div className="relative z-10 text-white text-center mb-12 mt-24 w-full max-w-7xl">
         <h1 className="text-5xl sm:text-[80px] font-imbue mb-4">Merch Combo</h1>
-        <p className='text-base'>Hình ảnh combo sẽ được cập nhật trong thời gian sớm nhất</p>
+        {/* <p className='text-base'>Hình ảnh combo sẽ được cập nhật trong thời gian sớm nhất</p> */}
       </div>
 
       {/* Danh sách combo từ dữ liệu merchCombos đã được lọc */}
