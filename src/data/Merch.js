@@ -156,7 +156,7 @@ const Merch = [
     description: [
       "Bao gồm: Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen) + Dây đeo thẻ\n\n🎁 Tặng kèm: 1 móc khóa + 1 sticker\n\nMột lựa chọn tinh gọn nhưng vẫn đủ “đậm chất Cá”. Combo gồm áo phông (chọn size từ S đến 4XL, màu trắng hoặc đen) và dây đeo thẻ - để bạn mang theo tinh thần Cá Hồi Hoang trong mọi khoảnh khắc thường nhật. ",
     ],
-    price: 549000,
+    price: 285000,
     isCombo: true,
     sizes: ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
     colors: ["Trắng", "Đen"],
@@ -168,7 +168,7 @@ const Merch = [
     description: [
       "Bao gồm: Khăn Gấp Gap + Cá Hồi Hộp \n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nKhông chỉ là vật phẩm lưu niệm, đây còn là lời tri ân dịu dàng gửi đến hành trình âm nhạc mà Cá Hồi Hoang và người nghe đã cùng nhau viết nên - lặng lẽ, chân thành, và không dễ phai mờ.",
     ],
-    price: 459000,
+    price: 265000,
     // sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     isCombo: true,
     //colors: ['Trắng', 'Đen'],
@@ -180,7 +180,7 @@ const Merch = [
     description: [
       "Bao gồm: Khăn + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 phone chain\n\nCombo mang đậm phong cách “hoang dã” nhưng vẫn đầy chất thơ. Mỗi chi tiết đều được chăm chút kỹ lưỡng, từ chất vải đến thiết kế, thể hiện tinh thần tự do, sâu lắng đúng với tinh thần âm nhạc từ Cá Hồi Hoang.",
     ],
-    price: 369000,
+    price: 415000,
     sizes: ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
     isCombo: true,
     colors: ["Trắng", "Đen"],
@@ -193,7 +193,7 @@ const Merch = [
       'Bao gồm: Khăn Tự Do + Bật lửa Cá Hồi + Cá Hồi Hộp\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nLấy cảm hứng từ bài hát "Tự Do" của Cá Hồi Hoang, combo này kết hợp khăn Tự Do và Cá Hồi Hộp - hai sản phẩm được yêu thích nhất. Đi kèm là móc khóa và sticker như lời nhắn nhủ nhỏ bé nhưng đầy xúc động.',
     ],
     isCombo: true,
-    price: 369000,
+    price: 285000,
   },
   {
     id: 15,
@@ -203,7 +203,7 @@ const Merch = [
       "Bao gồm: Khăn Tìm Vàng + Bật lửa Cá Hồi + Cá Hồi Hộp\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nLấy cảm hứng từ tinh thần khám phá và bứt phá, combo kết hợp khăn Tìm Vàng, bật lửa Cá Hồi và Cá Hồi Hộp - một lựa chọn đậm cá tính. Món quà dành cho những tâm hồn luôn hướng về ánh sáng và hành trình không ngừng vươn xa.",
     ],
     isCombo: true,
-    price: 369000,
+    price: 285000,
   },
   // {
   //   id: 16,
@@ -213,7 +213,7 @@ const Merch = [
   //     "Bao gồm: Tất + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nCombo “MÃI MÃI” là lời nhắn nhủ dịu dàng đến những trái tim còn giữ tình cảm nguyên vẹn với Cá Hồi Hoang - và với một phần tuổi trẻ của chính mình.",
   //   ],
   //   isCombo: true,
-  //   price: 369000,
+  //   price: 285000,
   //   sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
   //   colors: ["Trắng", "Đen"],
   // },
@@ -225,7 +225,7 @@ const Merch = [
       "Bao gồm: Khăn + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 phone chain\n\nCombo mang đậm phong cách “hoang dã” nhưng vẫn đầy chất thơ. Mỗi chi tiết đều được chăm chút kỹ lưỡng, từ chất vải đến thiết kế, thể hiện tinh thần tự do, sâu lắng đúng với tinh thần âm nhạc từ Cá Hồi Hoang.",
     ],
     isCombo: true,
-    price: 369000,
+    price: 550000,
     sizes: ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
     colors: ["Trắng", "Đen"],
   },
