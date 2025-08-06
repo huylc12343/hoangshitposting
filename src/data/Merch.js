@@ -19,17 +19,17 @@ import tat_cahoi from "../assets/tat_min.jpg";
 import aoden from "../assets/aoden_min.jpg";
 import aotrang from "../assets/aotrang_min.jpg";
 
-import batlua_1 from "../assets/bat_lua1.png";
-import batlua_2 from "../assets/bat_lua2.png";
-import batlua_3 from "../assets/bat_lua3.png";
-import batlua_4 from "../assets/bat_lua3.png";
-import batlua_5 from "../assets/bat_lua3.png";
-import batlua_6 from "../assets/bat_lua3.png";
-import batlua_7 from "../assets/bat_lua3.png";
-import batlua_8 from "../assets/bat_lua3.png";
-import batlua_9 from "../assets/bat_lua3.png";
-import batlua_10 from "../assets/bat_lua3.png";
-import batlua_11 from "../assets/bat_lua3.png";
+import batlua_1 from "../assets/blua_do_min.png";
+import batlua_2 from "../assets/bluaxanhdam_min.png";
+import batlua_3 from "../assets/bluasuongxam_min.png";
+import batlua_4 from "../assets/bluadentrang_min.png";
+import batlua_5 from "../assets/bluadendo_min.png";
+import batlua_6 from "../assets/batluaxanhngoc_min.png";
+import batlua_7 from "../assets/blua_trangden_min.png";
+import batlua_8 from "../assets/blua_trangdo_min.png";
+// import batlua_9 from "../assets/bat_lua3.png";
+// import batlua_10 from "../assets/bat_lua3.png";
+// import batlua_11 from "../assets/bat_lua3.png";
 const Merch = [
   {
     id: 1,
@@ -110,7 +110,7 @@ const Merch = [
 // {
 //   id: 8,
 //   name: "Bật lửa Cá Hồi",
-//   image: batlua_cahoi, // Ảnh mặc định nếu không chọn
+//   image: batlua_cahoi,
 //   imagesByType: {
 //     "1": batlua_1,
 //     "2": batlua_2,
@@ -120,16 +120,13 @@ const Merch = [
 //     "6": batlua_6,
 //     "7": batlua_7,
 //     "8": batlua_8,
-//     "9": batlua_9,
-//     "10": batlua_10,
-//     "11": batlua_11,
 //   },
 //   description: [
 //     'Thiết kế bật lửa độc đáo với hình ảnh chú cá hồi rực lửa, gợi liên tưởng đến nỗi khát khao và đam mê âm nhạc mãnh liệt - một món đồ sưu tầm vừa ngầu vừa nghệ.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
 //   ],
 //   price: 40000,
 //   isCombo: false,
-//   colors: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+//   colors: ["1", "2", "3", "4", "5", "6", "7", "8"],
 // },
   {
     id: 9,
