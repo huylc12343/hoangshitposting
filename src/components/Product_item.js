@@ -27,7 +27,7 @@ export default function Product_item({
     item.amount++;
     setAmount(amount + 1);
     onItemUpdated(item);
-    window.dispatchEvent(new Event('storage'));
+    window.dispatchEvent(new Event("storage"));
   };
 
   const handleDecrease = () => {
@@ -36,7 +36,7 @@ export default function Product_item({
     item.amount--;
     setAmount(amount - 1);
     onItemUpdated(item);
-    window.dispatchEvent(new Event('storage'));
+    window.dispatchEvent(new Event("storage"));
   };
 
   const confirmDelete = () => {
@@ -44,16 +44,18 @@ export default function Product_item({
     //   "Bạn xác nhận muốn xoá " + item.name + " ra khỏi giỏ hàng?" // Assuming item.name is the correct property for the product title
     // );
     // if (result) {
-      MerchService.removeFromCart(item.id);
-      onItemRemoved();
-      window.dispatchEvent(new Event('storage'));
+    MerchService.removeFromCart(item.id);
+    onItemRemoved();
+    window.dispatchEvent(new Event("storage"));
     // }
   };
 
   return (
     <div className="flex items-center sm:p-4 text-left border border-[#EEE1D8] bg-[#272727] p-1 rounded-lg shadow-md text-white">
       {/* Image Container */}
-      <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 bg-[#2A2A2A] overflow-hidden mr-3 sm:mr-4 rounded-lg"> {/* Added rounded-lg */}
+      <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 bg-[#2A2A2A] overflow-hidden mr-3 sm:mr-4 rounded-lg">
+        {" "}
+        {/* Added rounded-lg */}
         <img
           src={displayImage}
           alt={item.name}
@@ -62,7 +64,9 @@ export default function Product_item({
       </div>
 
       {/* Product Details (Name, Size, Quantity Controls) */}
-      <div className="flex-grow flex flex-col justify-center h-full"> {/* Changed self-start to justify-center and h-full */}
+      <div className="flex-grow flex flex-col justify-center h-full">
+        {" "}
+        {/* Changed self-start to justify-center and h-full */}
         {/* Title and Size */}
         <div>
           <p
@@ -80,13 +84,17 @@ export default function Product_item({
               Màu sắc: {item.color}
             </p>
           )}
+          {item.type && (
+            <p className="text-gray-200 text-xs sm:text-sm">
+              Phân loại: {item.type}
+            </p>
+          )}
           {/* {item.type && (
             <p className="text-gray-200 text-xs sm:text-sm">
               Loại: {item.type}
             </p>
           )} */}
         </div>
-
         {/* Quantity Controls and Trash icon (visible on all screen sizes) */}
         <div className="flex items-center mt-2">
           {/* Minus button */}
@@ -108,10 +116,7 @@ export default function Product_item({
             +
           </div>
           {/* Trash icon */}
-          <div
-            className="ml-4 cursor-pointer"
-            onClick={confirmDelete}
-          >
+          <div className="ml-4 cursor-pointer" onClick={confirmDelete}>
             <img src={trash} alt="Delete" className="h-5 w-5" />
           </div>
         </div>
@@ -119,8 +124,10 @@ export default function Product_item({
 
       {/* Right Section (Price) */}
       {/* Changed self-start to self-center */}
-      <div className="flex-shrink-0 ml-4 text-right self-center"> 
-        <p className="text-base font-Averta-CY"> {/* Added font-bold for price */}
+      <div className="flex-shrink-0 ml-4 text-right self-center">
+        <p className="text-base font-Averta-CY">
+          {" "}
+          {/* Added font-bold for price */}
           {formatToVND(item.price * amount)}
         </p>
       </div>

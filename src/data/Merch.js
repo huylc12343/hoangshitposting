@@ -12,7 +12,7 @@ import aoGG from "../assets/2ao_min.jpg";
 import cahoihop from "../assets/cahoihop_ofc_min.jpg";
 import bandanaGapGap from "../assets/khangapgap_min.jpg";
 import batlua_cahoi from "../assets/batlua_min.jpg";
-import khan_nguoi_tim_vang from "../assets/khantimvang_min.jpg"
+import khan_nguoi_tim_vang from "../assets/khantimvang_min.jpg";
 import khan_tudo from "../assets/khantudo_min.jpg";
 import tat_cahoi from "../assets/tat_min.jpg";
 
@@ -46,15 +46,15 @@ const Merch = [
     name: "Áo phông Gấp Gap",
     image: aoGG,
     imagesByType: {
-    "Trắng": aotrang,
-    "Đen": aoden,
-  },
+      Trắng: aotrang,
+      Đen: aoden,
+    },
     description: [
-      'Áo phông unisex form rộng, có hai màu đen hoặc trắng, form rộng dễ mặc. Điểm nhấn là hình chú cá nhỏ in ở ngực trái, biểu tượng cho thông điệp “Cá Hồi Hoang là cái gì đó mãi mãi”.',
+      "Áo phông unisex form rộng, có hai màu đen hoặc trắng, form rộng dễ mặc. Điểm nhấn là hình chú cá nhỏ in ở ngực trái, biểu tượng cho thông điệp “Cá Hồi Hoang là cái gì đó mãi mãi”.",
     ],
     price: 250000,
     isCombo: false,
-    sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
+    sizes: ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
     colors: ["Trắng", "Đen"],
   },
   {
@@ -62,7 +62,7 @@ const Merch = [
     name: "Khăn Gấp Gap",
     image: bandanaGapGap,
     description: [
-      "Khăn lụa xanh đậm với họa tiết xoáy nước đặc trưng, chất vải mềm nhẹ, dễ sử dụng để quàng cổ, cột túi hoặc đơn giản là giữ làm kỷ niệm. Một món phụ kiện vừa đẹp vừa mang dấu ấn riêng.",
+      "Kích thước: 70*70 cm\n\nKhăn lụa xanh đậm với họa tiết xoáy nước đặc trưng, chất vải mềm nhẹ, dễ sử dụng để quàng cổ, cột túi hoặc đơn giản là giữ làm kỷ niệm. Một món phụ kiện vừa đẹp vừa mang dấu ấn riêng.",
     ],
     price: 179000,
     isCombo: false,
@@ -72,7 +72,7 @@ const Merch = [
     name: "Khăn tìm vàng",
     image: khan_nguoi_tim_vang,
     description: [
-      "Một trong hai thiết kế khăn chỉ xuất hiện duy nhất trong lần mở bán này. Tông vàng rực rỡ cùng bố cục chuyển động tạo cảm giác tràn đầy năng lượng - gợi lên tinh thần thử sức, vượt giới hạn và toả sáng.\n\nThiết kế độc quyền cho sự kiện “Gấp Gap - Có Cần Phải Có Lý Không?” Sài Gòn",
+      "Kích thước: 70*70 cm\n\nMột trong hai thiết kế khăn chỉ xuất hiện duy nhất trong lần mở bán này. Tông vàng rực rỡ cùng bố cục chuyển động tạo cảm giác tràn đầy năng lượng - gợi lên tinh thần thử sức, vượt giới hạn và toả sáng.\n\nThiết kế độc quyền cho sự kiện “Gấp Gap - Có Cần Phải Có Lý Không?” Sài Gòn",
     ],
     price: 199000,
     isCombo: false,
@@ -107,27 +107,27 @@ const Merch = [
     price: 50000,
     isCombo: false,
   },
-// {
-//   id: 8,
-//   name: "Bật lửa Cá Hồi",
-//   image: batlua_cahoi,
-//   imagesByType: {
-//     "1": batlua_1,
-//     "2": batlua_2,
-//     "3": batlua_3,
-//     "4": batlua_4,
-//     "5": batlua_5,
-//     "6": batlua_6,
-//     "7": batlua_7,
-//     "8": batlua_8,
-//   },
-//   description: [
-//     'Thiết kế bật lửa độc đáo với hình ảnh chú cá hồi rực lửa, gợi liên tưởng đến nỗi khát khao và đam mê âm nhạc mãnh liệt - một món đồ sưu tầm vừa ngầu vừa nghệ.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
-//   ],
-//   price: 40000,
-//   isCombo: false,
-//   colors: ["1", "2", "3", "4", "5", "6", "7", "8"],
-// },
+  {
+    id: 8,
+    name: "Bật lửa Cá Hồi",
+    image: batlua_cahoi,
+    imagesByType: {
+      1: batlua_1,
+      2: batlua_2,
+      3: batlua_3,
+      4: batlua_4,
+      5: batlua_5,
+      6: batlua_6,
+      7: batlua_7,
+      8: batlua_8,
+    },
+    description: [
+      'Thiết kế bật lửa độc đáo với hình ảnh chú cá hồi rực lửa, gợi liên tưởng đến nỗi khát khao và đam mê âm nhạc mãnh liệt - một món đồ sưu tầm vừa ngầu vừa nghệ.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
+    ],
+    price: 40000,
+    isCombo: false,
+    types: ["1", "2", "3", "4", "5", "6", "7", "8"],
+  },
   {
     id: 9,
     name: "Tất",
@@ -144,7 +144,8 @@ const Merch = [
     name: "Combo Cá Hồi Hộp",
     image: cahoihop,
     description: [
-      `Bao gồm: Phone chain + Móc khóa + Sticker + Card + Pick + Pin cài\n Lưu ý: Mỗi box “Cá Hồi Hộp” sẽ có thiết kế được chọn ngẫu nhiên. \n\nMột hộp quà nhỏ nhưng đầy bất ngờ - dành cho những ai yêu thích cảm giác được “mở hộp” và khám phá. Thiết kế được chọn ngẫu nhiên - như chính âm nhạc mang đầy cảm hứng của Cá Hồi Hoang.`,],
+      `Bao gồm: Phone chain + Móc khóa + Sticker + Card + Pick + Pin cài\n Lưu ý: Mỗi box “Cá Hồi Hộp” sẽ có thiết kế được chọn ngẫu nhiên. \n\nMột hộp quà nhỏ nhưng đầy bất ngờ - dành cho những ai yêu thích cảm giác được “mở hộp” và khám phá. Thiết kế được chọn ngẫu nhiên - như chính âm nhạc mang đầy cảm hứng của Cá Hồi Hoang.`,
+    ],
     price: 102000,
     isCombo: true,
   },
@@ -157,7 +158,7 @@ const Merch = [
     ],
     price: 549000,
     isCombo: true,
-    sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
+    sizes: ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
     colors: ["Trắng", "Đen"],
   },
   {
@@ -180,7 +181,7 @@ const Merch = [
       "Bao gồm: Khăn + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 phone chain\n\nCombo mang đậm phong cách “hoang dã” nhưng vẫn đầy chất thơ. Mỗi chi tiết đều được chăm chút kỹ lưỡng, từ chất vải đến thiết kế, thể hiện tinh thần tự do, sâu lắng đúng với tinh thần âm nhạc từ Cá Hồi Hoang.",
     ],
     price: 369000,
-    sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
+    sizes: ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
     isCombo: true,
     colors: ["Trắng", "Đen"],
   },
@@ -216,7 +217,7 @@ const Merch = [
   //   sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
   //   colors: ["Trắng", "Đen"],
   // },
-    {
+  {
     id: 17,
     name: "Combo GapGap",
     image: comboGapGap,
@@ -225,7 +226,7 @@ const Merch = [
     ],
     isCombo: true,
     price: 369000,
-    sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
+    sizes: ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
     colors: ["Trắng", "Đen"],
   },
 ];

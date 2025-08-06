@@ -78,12 +78,13 @@ export default class MerchService {
           merches: merchData.merches.map((m) => {
             return {
               id: m.id,
-              name: `${m.name} ${m.color ? `Màu ${m.color}` : ""}  ${m.type ? `Loại ${m.type}` : ""} ${ m.size ? `Size ${m.size}` : ""}`,
+              name: `${m.name} ${m.color ? `Màu ${m.color}` : ""}  ${
+                m.type ? `Loại ${m.type}` : ""
+              } ${m.size ? `Size ${m.size}` : ""}`,
               price: m.price,
               metadata: {
-                color: m.color,
-                size: m.size,
-                type: m.type,
+                color: m.type ?? m.color ?? "",
+                size: m.size ?? "",
               },
               amount: m.amount,
             };
@@ -103,6 +104,6 @@ export default class MerchService {
     }
   }
   static clearCart() {
-  localStorage.setItem("cart", JSON.stringify([]));
-}
+    localStorage.setItem("cart", JSON.stringify([]));
+  }
 }

@@ -96,9 +96,9 @@ export default function Cart_HeroSection() {
         setLoading(false);
         setShowConfirmPopup(false); // Ẩn popup xác nhận
         setShowSuccessPopup(true); // Hiện popup thành công
-        MerchService.clearCart();  // <- thêm dòng này
+        MerchService.clearCart(); // <- thêm dòng này
         setItems([]);
-        window.dispatchEvent(new Event('storage'));   
+        window.dispatchEvent(new Event("storage"));
       })
       .catch((error) => {
         setShowFailPopup(true);
@@ -408,7 +408,11 @@ export default function Cart_HeroSection() {
                 <form className="space-y-4">
                   <div>
                     <div className="space-y-3">
-                      {/* Option 3 */}<p className="font-Averta-CY mb-6">Miễn phí ship cho đơn hàng có giá trị hơn <strong>500.000 VND</strong></p>
+                      {/* Option 3 */}
+                      <p className="font-Averta-CY mb-6">
+                        Miễn phí ship cho đơn hàng có giá trị hơn{" "}
+                        <strong>500.000 VND</strong>
+                      </p>
                       <label className="flex justify-between items-center border border-white rounded-lg p-4 cursor-pointer hover:border-blue-500 transition">
                         <div className="flex items-center">
                           <input
@@ -422,18 +426,18 @@ export default function Cart_HeroSection() {
                             <p className="font-semibold">Viettel Post</p>
                           </div>
                         </div>
-                          <div className="text-sm font-Averta-CY font-semibold text-white text-right">
-                            {calculateItemValue() >= 500000 ? (
-                              <>
-                                <div className="line-through text-[#BC4535]">
-                                  {formatToVND(shippingData?.GIA_CUOC ?? 0)}
-                                </div>
-                                <div className="text-[#EEE1D8]">0₫</div>
-                              </>
-                            ) : (
-                              <>{formatToVND(shippingData?.GIA_CUOC ?? 0)}</>
-                            )}
-                          </div>
+                        <div className="text-sm font-Averta-CY font-semibold text-white text-right">
+                          {calculateItemValue() >= 500000 ? (
+                            <>
+                              <div className="line-through text-[#BC4535]">
+                                {formatToVND(shippingData?.GIA_CUOC ?? 0)}
+                              </div>
+                              <div className="text-[#EEE1D8]">0₫</div>
+                            </>
+                          ) : (
+                            <>{formatToVND(shippingData?.GIA_CUOC ?? 0)}</>
+                          )}
+                        </div>
                       </label>
                     </div>
                   </div>
@@ -573,7 +577,7 @@ export default function Cart_HeroSection() {
           ) : (
             <button
               className="w-full text-gray-500 py-4 rounded text-lg hover:opacity-90 transition bg-[#EEE1D8]"
-              style={{color:theme.color}}
+              style={{ color: theme.color }}
               disabled
             >
               Hoàn thành đặt hàng
