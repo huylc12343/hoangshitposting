@@ -1,14 +1,14 @@
-import React from 'react';
-import cahoihop from '../assets/cahoihophh.png';
-import landyard from '../assets/landyard_min.jpg';
-import aoGapGap from '../assets/2ao_min.jpg';
-import khanGapGap from '../assets/khangapgap_min.jpg';
-import { useTheme } from '../contexts/Theme';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import React from "react";
+import cahoihop from "../assets/cahoihop_ofc_min.jpg";
+import landyard from "../assets/landyard_min.jpg";
+import aoGapGap from "../assets/2ao_min.jpg";
+import khanGapGap from "../assets/khangapgap_min.jpg";
+import { useTheme } from "../contexts/Theme";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Merch_Popup from './Merch_Popup';
-import allCombos from '../data/Merch';
+import Merch_Popup from "./Merch_Popup";
+import allCombos from "../data/Merch";
 export default function Merch() {
   const { theme } = useTheme();
   const navigate = useNavigate();
@@ -69,11 +69,13 @@ export default function Merch() {
                 onClick={() => handleSelectCombo(3)}
               />
             </div>
-            <div className="group flex justify-center items-center overflow-hidden bg-[#EEE1D8]  transition duration-300 cursor-pointer"
-            onClick={() => navigate("/merch")}>
-              <div className="text-lg md:text-xl  font-semibold text-[#BC4535] group-hover:scale-105 font-Averta-CY" 
-                
-                >Tìm hiểu thêm</div>
+            <div
+              className="group flex justify-center items-center overflow-hidden bg-[#EEE1D8]  transition duration-300 cursor-pointer"
+              onClick={() => navigate("/merch")}
+            >
+              <div className="text-lg md:text-xl  font-semibold text-[#BC4535] group-hover:scale-105 font-Averta-CY">
+                Tìm hiểu thêm
+              </div>
             </div>
           </div>
         </div>
@@ -100,26 +102,27 @@ export default function Merch() {
                 onClick={() => handleSelectCombo(2)}
               />
             </div>
-            <button className="flex justify-center items-center overflow-hidden bg-[#EEE1D8] transition duration-300 cursor-pointer"
+            <button
+              className="flex justify-center items-center overflow-hidden bg-[#EEE1D8] transition duration-300 cursor-pointer"
               onClick={() => {
                 navigate("/merch");
               }}
             >
               <span className={"text-base font-Averta-CY text-[#BC4535]"}>
-                Tìm hiểu thêm</span>
+                Tìm hiểu thêm
+              </span>
             </button>
           </div>
         </div>
       </div>
       {showPopup && (
-  <Merch_Popup
-    allCombos={allCombos}
-    selectedId={selectedId}
-    onClose={() => setShowPopup(false)}
-    onChangeCombo={(newId) => setSelectedId(newId)}
-  />
-)}
+        <Merch_Popup
+          allCombos={allCombos}
+          selectedId={selectedId}
+          onClose={() => setShowPopup(false)}
+          onChangeCombo={(newId) => setSelectedId(newId)}
+        />
+      )}
     </section>
-    
   );
 }

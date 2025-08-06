@@ -82,7 +82,7 @@ const Merch = [
     name: "Khăn tự do",
     image: khan_tudo,
     description: [
-      'Chiếc khăn với sắc tím và xanh chuyển động hài hoà nhưng vẫn đậm nét cá tính. Thiết kế dành riêng cho những tâm hồn không ngừng khát khao khám phá bản ngã.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
+      'Kích thước: 70*70 cm\n\nChiếc khăn với sắc tím và xanh chuyển động hài hoà nhưng vẫn đậm nét cá tính. Thiết kế dành riêng cho những tâm hồn không ngừng khát khao khám phá bản ngã.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
     ],
     price: 199000,
     isCombo: false,
