@@ -229,7 +229,7 @@ const Merch = [
     ],
     isCombo: true,
     price: 285000,
-    sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
+    sizes: ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
     colors: ["Trắng", "Đen"],
   },
   {
@@ -259,7 +259,7 @@ const Merch = [
       8: mockhoa_8,
     },
     description: [
-      'Móc khoá in hình fanart từng Album nhỏ gọn, dễ mang theo, đậm chất Cá Hồi Hoang.\n\n\n\n\n',
+      "Móc khoá in hình fanart từng Album nhỏ gọn, dễ mang theo, đậm chất Cá Hồi Hoang.\n\n\n\n\n",
     ],
     price: 20000,
     isCombo: false,
@@ -275,7 +275,7 @@ const Merch = [
       3: pincai_3,
     },
     description: [
-      'Pin có hình vẽ các chú cá tinh tế, cực hút mắt, có thể cài áo, túi, mũ, cặp vô cùng xinh xắn.\n\n\n\n\n',
+      "Pin có hình vẽ các chú cá tinh tế, cực hút mắt, có thể cài áo, túi, mũ, cặp vô cùng xinh xắn.\n\n\n\n\n",
     ],
     price: 30000,
     isCombo: false,
@@ -286,12 +286,12 @@ const Merch = [
     name: "Cúc áo",
     image: cucao,
     description: [
-      'Cúc gốm 4 phiên bản, thiết kế riêng cho Gấp Gap. Phụ kiện tối giản nhưng mang tính lưu giữ cao.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
+      'Set 10 cái random\n\nCúc gồm 4 phiên bản, thiết kế riêng cho Gấp Gap. Phụ kiện tối giản nhưng mang tính lưu giữ cao.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
     ],
     price: 50000,
     isCombo: false,
   },
-    {
+  {
     id: 21,
     name: "Phonechain fanart album",
     image: phonechain,
@@ -306,7 +306,7 @@ const Merch = [
       8: mockhoa_8,
     },
     description: [
-      'Dây đeo điện thoại với họa tiết nổi bật của các Album, điểm nhấn ấn tượng cho người mê nhạc Cá.\n\n\n\n\n',
+      "Dây đeo điện thoại với họa tiết nổi bật của các Album, điểm nhấn ấn tượng cho người mê nhạc Cá.\n\n\n\n\n",
     ],
     price: 25000,
     isCombo: false,
