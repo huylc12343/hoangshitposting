@@ -1,7 +1,7 @@
 import comboCa from "../assets/comboca_min.jpg";
 import comboHoi from "../assets/combohoi_min.jpg";
 import comboHoang from "../assets/combohoang_min.jpg";
-import comboMaiMai from "../assets/combotudo_min.jpg";
+import comboMaiMai from "../assets/combomaimai.jpg";
 import comboGapGap from "../assets/combogapgap_min.jpg";
 import comboTudo from "../assets/combotudo_min.jpg";
 import setCard from "../assets/setcard_min.jpg";
@@ -27,9 +27,24 @@ import batlua_5 from "../assets/bluadendo_min.png";
 import batlua_6 from "../assets/batluaxanhngoc_min.png";
 import batlua_7 from "../assets/blua_trangden_min.png";
 import batlua_8 from "../assets/blua_trangdo_min.png";
-// import batlua_9 from "../assets/bat_lua3.png";
-// import batlua_10 from "../assets/bat_lua3.png";
-// import batlua_11 from "../assets/bat_lua3.png";
+
+import mockhoa from "../assets/keychain.jpg";
+import mockhoa_1 from "../assets/CTDMMT.PNG";
+import mockhoa_2 from "../assets/VA.png";
+import mockhoa_3 from "../assets/fx.png";
+import mockhoa_4 from "../assets/gap.png";
+import mockhoa_5 from "../assets/gapgap.png";
+import mockhoa_6 from "../assets/giacmogiay.png";
+import mockhoa_7 from "../assets/chuong2.png";
+import mockhoa_8 from "../assets/102112.png";
+
+import pincai from "../assets/pincai.jpg";
+import pincai_1 from "../assets/pin5am.PNG";
+import pincai_2 from "../assets/pin5amdo.PNG";
+import pincai_3 from "../assets/ccpclk.PNG";
+
+import phonechain from "../assets/Phonechain.PNG";
+import cucao from "../assets/cucao.jpg";
 const Merch = [
   {
     id: 1,
@@ -205,18 +220,18 @@ const Merch = [
     isCombo: true,
     price: 285000,
   },
-  // {
-  //   id: 16,
-  //   name: "Combo Mãi Mãi",
-  //   image: comboMaiMai,
-  //   description: [
-  //     "Bao gồm: Tất + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nCombo “MÃI MÃI” là lời nhắn nhủ dịu dàng đến những trái tim còn giữ tình cảm nguyên vẹn với Cá Hồi Hoang - và với một phần tuổi trẻ của chính mình.",
-  //   ],
-  //   isCombo: true,
-  //   price: 285000,
-  //   sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
-  //   colors: ["Trắng", "Đen"],
-  // },
+  {
+    id: 16,
+    name: "Combo Mãi Mãi",
+    image: comboMaiMai,
+    description: [
+      "Bao gồm: Tất + Áo phông (được chọn size từ S đến 4XL và màu trắng hoặc đen)\n\n🎁 Tặng kèm: 1 sticker + 1 móc khoá \n\nCombo “MÃI MÃI” là lời nhắn nhủ dịu dàng đến những trái tim còn giữ tình cảm nguyên vẹn với Cá Hồi Hoang - và với một phần tuổi trẻ của chính mình.",
+    ],
+    isCombo: true,
+    price: 285000,
+    sizes: ["S", "M", "L", "XL", "XXL","3XL","4XL"],
+    colors: ["Trắng", "Đen"],
+  },
   {
     id: 17,
     name: "Combo GapGap",
@@ -228,6 +243,74 @@ const Merch = [
     price: 550000,
     sizes: ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
     colors: ["Trắng", "Đen"],
+  },
+  {
+    id: 18,
+    name: "Móc khoá fanart album",
+    image: mockhoa,
+    imagesByType: {
+      1: mockhoa_1,
+      2: mockhoa_2,
+      3: mockhoa_3,
+      4: mockhoa_4,
+      5: mockhoa_5,
+      6: mockhoa_6,
+      7: mockhoa_7,
+      8: mockhoa_8,
+    },
+    description: [
+      'Móc khoá in hình fanart từng Album nhỏ gọn, dễ mang theo, đậm chất Cá Hồi Hoang.\n\n\n\n\n',
+    ],
+    price: 20000,
+    isCombo: false,
+    types: ["1", "2", "3", "4", "5", "6", "7", "8"],
+  },
+  {
+    id: 19,
+    name: "Pin cài Cá Hồi",
+    image: pincai,
+    imagesByType: {
+      1: pincai_1,
+      2: pincai_2,
+      3: pincai_3,
+    },
+    description: [
+      'Pin có hình vẽ các chú cá tinh tế, cực hút mắt, có thể cài áo, túi, mũ, cặp vô cùng xinh xắn.\n\n\n\n\n',
+    ],
+    price: 30000,
+    isCombo: false,
+    types: ["1", "2", "3"],
+  },
+  {
+    id: 20,
+    name: "Cúc áo",
+    image: cucao,
+    description: [
+      'Cúc gốm 4 phiên bản, thiết kế riêng cho Gấp Gap. Phụ kiện tối giản nhưng mang tính lưu giữ cao.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
+    ],
+    price: 50000,
+    isCombo: false,
+  },
+    {
+    id: 21,
+    name: "Phonechain fanart album",
+    image: phonechain,
+    imagesByType: {
+      1: mockhoa_1,
+      2: mockhoa_2,
+      3: mockhoa_3,
+      4: mockhoa_4,
+      5: mockhoa_5,
+      6: mockhoa_6,
+      7: mockhoa_7,
+      8: mockhoa_8,
+    },
+    description: [
+      'Dây đeo điện thoại với họa tiết nổi bật của các Album, điểm nhấn ấn tượng cho người mê nhạc Cá.\n\n\n\n\n',
+    ],
+    price: 25000,
+    isCombo: false,
+    types: ["1", "2", "3", "4", "5", "6", "7", "8"],
   },
 ];
 

@@ -84,7 +84,7 @@ export default function Product_item({
               Màu sắc: {item.color}
             </p>
           )}
-          {item.type && (
+          {!isNaN(item.type) && (
             <p className="text-gray-200 text-xs sm:text-sm">
               Phân loại: {item.type}
             </p>
