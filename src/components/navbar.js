@@ -65,7 +65,7 @@ const Navbar = () => {
             <li className="hover:text-blue-300 cursor-pointer"><Link to="/">Trang chủ</Link></li>
             <li className="hover:text-blue-300 cursor-pointer"><Link to="/about">Về chúng mình</Link></li>
             <li className="hover:text-blue-300 cursor-pointer"><Link to="/upcoming">Sự kiện</Link></li>
-            <li className="hover:text-blue-300 cursor-pointer"><Link to="/merch">Merch</Link></li>
+            {/* <li className="hover:text-blue-300 cursor-pointer"><Link to="/merch">Merch</Link></li> */}
           </ul>
         </div>
 
@@ -94,7 +94,7 @@ const Navbar = () => {
           </div>
 
           {/* Cart - desktop */}
-          <Link to="/cart">
+          {/* <Link to="/cart">
             <button
               className="hidden md:flex items-center gap-2 px-4 py-2 text-[#EEE1D8] rounded-md hover:opacity-90 transition duration-300"
               style={{ backgroundColor: theme.color }}
@@ -107,17 +107,17 @@ const Navbar = () => {
                 </span>
               )}
             </button>
-          </Link>
+          </Link> */}
 
           {/* Cart - mobile */}
-          <Link to="/cart" className="md:hidden relative text-[#EEE1D8] text-xl">
+          {/* <Link to="/cart" className="md:hidden relative text-[#EEE1D8] text-xl">
             <i className="fas fa-shopping-cart"style={{ color: theme.color }} ></i>
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-white text-red-500 text-xs font-bold px-1.5 py-0.5 rounded-full">
                 {cartCount}
               </span>
             )}
-          </Link>
+          </Link> */}
 
           {/* Hamburger - mobile */}
           <button
@@ -142,7 +142,7 @@ const Navbar = () => {
           <Link to="/" onClick={() => setMenuOpen(false)}>Trang chủ</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>Về chúng mình</Link>
           <Link to="/upcoming" onClick={() => setMenuOpen(false)}>Sự kiện</Link>
-          <Link to="/merch" onClick={() => setMenuOpen(false)}>Merch</Link>
+          {/* <Link to="/merch" onClick={() => setMenuOpen(false)}>Merch</Link> */}
         </div>
       )}
     </>

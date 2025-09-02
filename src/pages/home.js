@@ -27,7 +27,7 @@ const Home = () => {
       <HeroSection3 />
       <AutoScroll2 />
       <TimelineHeroSection />
-      <Merch />
+      {/* <Merch /> */}
       <DonViDongHanh />
       <HoverImageWithButton />
     </div>
