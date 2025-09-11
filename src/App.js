@@ -29,7 +29,6 @@ function App() {
           {/* <Route path="/merch" element={<Merch />} /> */}
           <Route path="/upcoming" element={<Upcoming />} />
           {/* <Route path="/cart" element={<Cart />} /> */}
-          <Route path="/event" element={<Event />} />
           <Route path="/buyticket/:id" element={<BuyTicket />} />
           <Route path="/CCPCLKHN" element={<PageCCPCLKHN />} />
           <Route path="/GapGapHN" element={<TrienLam_GapGapHN />} />
