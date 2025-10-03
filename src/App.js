@@ -26,9 +26,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/merch" element={<Merch />} /> */}
+          <Route path="/merch" element={<Merch />} />
           <Route path="/upcoming" element={<Upcoming />} />
-          {/* <Route path="/cart" element={<Cart />} /> */}
+          <Route path="/cart" element={<Cart />} />
           <Route path="/buyticket/:id" element={<BuyTicket />} />
           <Route path="/CCPCLKHN" element={<PageCCPCLKHN />} />
           <Route path="/GapGapHN" element={<TrienLam_GapGapHN />} />
