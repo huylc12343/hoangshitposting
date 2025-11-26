@@ -102,16 +102,16 @@ const Merch = [
     price: 199000,
     isCombo: false,
   },
-  {
-    id: 6,
-    name: "Set pick Gấp Gap (bộ 3 cái)",
-    image: pickPic,
-    description: [
-      "Bộ pick đàn gồm 3 chiếc random màu xanh biển hoặc xanh lá cây được giao ngẫu nhiên như một hộp nhạc cụ mini dành cho các fan yêu guitar và mong muốn giữ một phần “chạm dây” của Cá Hồi Hoang bên mình.",
-    ],
-    price: 50000,
-    isCombo: false,
-  },
+  // {
+  //   id: 6,
+  //   name: "Set pick Gấp Gap (bộ 3 cái)",
+  //   image: pickPic,
+  //   description: [
+  //     "Bộ pick đàn gồm 3 chiếc random màu xanh biển hoặc xanh lá cây được giao ngẫu nhiên như một hộp nhạc cụ mini dành cho các fan yêu guitar và mong muốn giữ một phần “chạm dây” của Cá Hồi Hoang bên mình.",
+  //   ],
+  //   price: 50000,
+  //   isCombo: false,
+  // },
   {
     id: 7,
     name: "Set card fanart album",
@@ -122,27 +122,27 @@ const Merch = [
     price: 50000,
     isCombo: false,
   },
-  {
-    id: 8,
-    name: "Bật lửa Cá Hồi",
-    image: batlua_cahoi,
-    imagesByType: {
-      1: batlua_1,
-      2: batlua_2,
-      3: batlua_3,
-      4: batlua_4,
-      5: batlua_5,
-      6: batlua_6,
-      7: batlua_7,
-      8: batlua_8,
-    },
-    description: [
-      'Thiết kế bật lửa độc đáo với hình ảnh chú cá hồi rực lửa, gợi liên tưởng đến nỗi khát khao và đam mê âm nhạc mãnh liệt - một món đồ sưu tầm vừa ngầu vừa nghệ.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
-    ],
-    price: 40000,
-    isCombo: false,
-    types: ["1", "2", "3", "4", "5", "6", "7", "8"],
-  },
+  // {
+  //   id: 8,
+  //   name: "Bật lửa Cá Hồi",
+  //   image: batlua_cahoi,
+  //   imagesByType: {
+  //     1: batlua_1,
+  //     2: batlua_2,
+  //     3: batlua_3,
+  //     4: batlua_4,
+  //     5: batlua_5,
+  //     6: batlua_6,
+  //     7: batlua_7,
+  //     8: batlua_8,
+  //   },
+  //   description: [
+  //     'Thiết kế bật lửa độc đáo với hình ảnh chú cá hồi rực lửa, gợi liên tưởng đến nỗi khát khao và đam mê âm nhạc mãnh liệt - một món đồ sưu tầm vừa ngầu vừa nghệ.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
+  //   ],
+  //   price: 40000,
+  //   isCombo: false,
+  //   types: ["1", "2", "3", "4", "5", "6", "7", "8"],
+  // },
   {
     id: 9,
     name: "Tất",
@@ -281,16 +281,16 @@ const Merch = [
     isCombo: false,
     types: ["1", "2", "3"],
   },
-  {
-    id: 20,
-    name: "Cúc áo",
-    image: cucao,
-    description: [
-      'Set 10 cái random\n\nCúc gồm 4 phiên bản, thiết kế riêng cho Gấp Gap. Phụ kiện tối giản nhưng mang tính lưu giữ cao.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
-    ],
-    price: 50000,
-    isCombo: false,
-  },
+  // {
+  //   id: 20,
+  //   name: "Cúc áo",
+  //   image: cucao,
+  //   description: [
+  //     'Set 10 cái random\n\nCúc gồm 4 phiên bản, thiết kế riêng cho Gấp Gap. Phụ kiện tối giản nhưng mang tính lưu giữ cao.\n\nThiết kế độc quyền cho sự kiện "Gấp Gap - Có Cần Phải Có Lý Không?" Sài Gòn',
+  //   ],
+  //   price: 50000,
+  //   isCombo: false,
+  // },
   {
     id: 21,
     name: "Phonechain fanart album",

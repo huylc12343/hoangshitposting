@@ -31,7 +31,7 @@ const timelineData = [
     location: "TP.HCM",
     image: event3,
     link: "/event",
-    buttonText: "Mua vé",
+    buttonText: "Nhìn lại",
   },
     {
     date: "12-14/09/2025",
@@ -39,7 +39,7 @@ const timelineData = [
     location: "TP.HCM",
     image: event4,
     link: "/GapGapHCM",
-    buttonText: "Xem thêm",
+    buttonText: "Nhìn lại",
   },
 ];
 

@@ -23,7 +23,7 @@ const Merch = () => {
 
   return (
     <div>
-      <Merch_HeroSection />
+      {/* <Merch_HeroSection /> */}
       <Merch_HeroSection2 onCardClick={handleCardClick} />
       {isPopupOpen && (
         <Merch_Popup

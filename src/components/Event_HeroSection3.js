@@ -1,41 +1,22 @@
 import React, { useRef, useState } from 'react';
-import artist_img from '../assets/PWM01219-min.jpg';
-import bg_img from '../assets/Subtract.png';
-
+import gg from '../assets/gg.jpg';
+import btt from '../assets/btt.jpg';
+import lyluong from '../assets/lyluong.jpg';
+import ncc from '../assets/ncc.jpg';
+import anhbien from '../assets/anhbien.jpg';
+import bicardo from '../assets/bicardo.jpg';
+import nss from '../assets/nss.jpg';
 const artistData = [
-  {
-    name: 'Lý Bực',
-    image: artist_img,
-    description: 'Singer',
-  },
-  {
-    name: 'Bùi Xuân Lộc',
-    image: artist_img,
-    description: 'Những đứa trẻ',
-  },
-  {
-    name: 'Góp Thong Thả',
-    image: artist_img,
-    description: 'Singer',
-  },
-  {
-    name: 'Fishymeow',
-    image: artist_img,
-    description: 'Singer',
-  },
-    {
-    name: 'Fuzes',
-    image: artist_img,
-    description: 'Singer',
-  },
-    {
-    name: 'Trần Hoàn',
-    image: artist_img,
-    description: 'Singer',
-  },
+  { name: 'Giấy Gấp', image: gg },
+  { name: 'Hải Sâm', image: anhbien },
+  { name: 'No Sleep Session', image: nss },
+  { name: 'Bicardo & band', image: bicardo },
+  { name: 'NC Huynh & band', image: ncc },
+  { name: 'Tay Trái Band', image: btt },
+  { name: 'Lý Lương', image: lyluong },
 ];
 
-export default function Event_HeroSection2() {
+export default function CCPCLKHNShow_HeroSection3() {
   const scrollContainerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -59,11 +40,11 @@ export default function Event_HeroSection2() {
 
   return (
     <section className="w-full">
-      <h2 className="text-3xl md:text-4xl font-bold text-left mb-10 font-imbue text-white">
+      <h2 className="text-3xl md:text-4xl mt-2 font-semibold text-left mb-10 font-imbue text-white">
         FULL LINEUP
       </h2>
-      <h3>Coming soon...</h3>
-      {/* <div
+
+      <div
         ref={scrollContainerRef}
         className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide cursor-grab active:cursor-grabbing"
         style={{
@@ -79,26 +60,15 @@ export default function Event_HeroSection2() {
         onTouchMove={handleMouseMove}
       >
         {artistData.map((artist, index) => (
-          <div key={index} className="flex-none w-[250px] h-[330px]">
-            <div
-              className="relative w-full h-full overflow-hidden shadow-md hover:shadow-lg transition duration-300 bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${bg_img})`,
-              }}
-            >
-              <img
-                src={artist.image}
-                alt={artist.name}
-                className="absolute top-4 left-1/2 transform -translate-x-1/2 w-[85%] h-40 object-cover z-10"
-              />
-              <div className="absolute top-[180px] left-4 right-4 z-20">
-                <h3 className="text-xl font-bold text-black mb-1">{artist.name}</h3>
-                <p className="text-sm text-gray-700">{artist.description}</p>
-              </div>
-            </div>
+          <div key={index} className="flex-none">
+            <img
+              src={artist.image}
+              alt={artist.name}
+              className="h-[270px] w-auto object-contain"
+            />
           </div>
         ))}
-      </div> */}
+      </div>
     </section>
   );
 }

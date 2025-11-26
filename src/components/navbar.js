@@ -65,7 +65,7 @@ const Navbar = () => {
             <li className="hover:text-blue-300 cursor-pointer"><Link to="/">Trang chủ</Link></li>
             <li className="hover:text-blue-300 cursor-pointer"><Link to="/about">Về chúng mình</Link></li>
             <li className="hover:text-blue-300 cursor-pointer"><Link to="/upcoming">Sự kiện</Link></li>
-            {/* <li className="hover:text-blue-300 cursor-pointer"><Link to="/merch">Merch</Link></li> */}
+            <li className="hover:text-blue-300 cursor-pointer"><Link to="/merch">Merch</Link></li>
           </ul>
         </div>
 
@@ -142,7 +142,7 @@ const Navbar = () => {
           <Link to="/" onClick={() => setMenuOpen(false)}>Trang chủ</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>Về chúng mình</Link>
           <Link to="/upcoming" onClick={() => setMenuOpen(false)}>Sự kiện</Link>
-          {/* <Link to="/merch" onClick={() => setMenuOpen(false)}>Merch</Link> */}
+          <Link to="/merch" onClick={() => setMenuOpen(false)}>Merch</Link>
         </div>
       )}
     </>

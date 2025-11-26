@@ -31,7 +31,7 @@ const timelineData = [
     description:
       "Với sứ mệnh giữ gìn, lan toả tình yêu dành cho âm nhạc Cá Hồi Hoang, Cover Show tại Sài Gòn là nơi ký ức ùa về, cảm xúc vỡ oà và kết nối được thắp sáng - để hành trình sống cùng âm nhạc Cá “sẽ luôn là cái gì đó mãi mãi”. \n\nFULL LINEUP: upcoming...",
     image: timeline3,
-    link: "/upcoming", // ✅ Link riêng
+    link: "/event", // ✅ Link riêng
   },
   {
     date: "12 - 14/09/2025",

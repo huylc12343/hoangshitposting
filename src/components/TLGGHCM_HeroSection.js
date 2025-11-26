@@ -37,17 +37,17 @@ export default function Event_HeroSection() {
             12 - 14/09/2025 - TP.HCM
           </p>
 
-          <div className="relative w-full h-[80px] rounded-[4px] overflow-hidden">
-            {/* Nền ảnh */}
+          {/* <div className="relative w-full h-[80px] rounded-[4px] overflow-hidden">
+            
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url(${bg_button})` }}
             ></div>
 
-            {/* Lớp phủ màu #BC4535 với độ trong suốt */}
+            
             <div className="absolute inset-0 bg-[#BC4535] opacity-80"></div>
 
-            {/* Nút nội dung */}
+            
             <button
               onClick={() => setShowPopup(true)}
               className="relative z-10 w-full h-full flex items-center justify-center gap-3 text-white text-lg font-Averta-CY hover:opacity-90 transition"
@@ -59,7 +59,7 @@ export default function Event_HeroSection() {
               />
               Tham gia triển lãm
             </button>
-          </div>
+          </div> */}
 
           <div className="mt-10">
             <Event_HeroSection2 />

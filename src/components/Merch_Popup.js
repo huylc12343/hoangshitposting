@@ -172,7 +172,7 @@ export default function Merch_Popup({
           )}
 
           {/* Options */}
-          <div className="mt-4 flex flex-col pb-10 md:pb-0">
+          <div className="mt-0 flex flex-col pb-10 md:pb-0">
             <div className="flex flex-col sm:flex-row gap-6 mb-6">
               {/* Màu sắc (nếu không phải số) */}
               {selectedCombo.colors?.length > 0 && (
@@ -222,7 +222,7 @@ export default function Merch_Popup({
 
               {/* Số lượng */}
               <div className="flex-none">
-                <label className="block text-sm mb-1">Số lượng</label>
+                {/* <label className="block text-sm mb-1">Số lượng</label>
                 <div className="inline-flex bg-[#3A3A3A] items-center border border-[#4D4D4D] rounded-lg overflow-hidden text-sm">
                   <button
                     className="px-2 py-1 hover:bg-gray-700"
@@ -240,7 +240,7 @@ export default function Merch_Popup({
                   >
                     +
                   </button>
-                </div>
+                </div> */}
               </div>
 
               {/* Kích cỡ */}
@@ -267,23 +267,26 @@ export default function Merch_Popup({
             </div>
 
             {/* Nút thêm vào giỏ hàng */}
-            <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#323232] z-50 md:relative md:bg-transparent md:p-0 md:mt-4">
+            <div className="fixed bottom-0 left-0 right-0 pl-4 pr-4 pb-4 pt-0 bg-[#323232] z-50 md:relative md:bg-transparent md:p-0 md:mt-0">
               <button
                 className="py-3 text-white font-semibold transition w-full text-sm rounded"
                 style={{ backgroundColor: theme.color }}
                 onClick={() => {
-                  MerchService.addToCart({
-                    ...selectedCombo,
-                    color: selectedColor,
-                    size: selectedSize,
-                    type: selectedType,
-                    amount: quantity,
-                  });
-                  setIsSuccessOpen(true);
-                  window.dispatchEvent(new Event("storage"));
+                  // MerchService.addToCart({
+                  //   ...selectedCombo,
+                  //   color: selectedColor,
+                  //   size: selectedSize,
+                  //   type: selectedType,
+                  //   amount: quantity,
+                  // });
+                  // setIsSuccessOpen(true);
+                  // window.dispatchEvent(new Event("storage"));
+                  
+                  window.open("https://docs.google.com/forms/d/e/1FAIpQLSeaU-0bcv1HEe64EIWxy0WnzOxdeGqYB2YPozjG0Qf_CNQpmA/viewform");
+
                 }}
               >
-                Thêm vào giỏ hàng
+                Pre-order ngay
               </button>
             </div>
           </div>

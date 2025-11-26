@@ -44,9 +44,9 @@ export default function Event_HeroSection() {
             13/09/2025 - TP.HCM
           </p>
 
-          <Ticket_Selection onTicketSelect={handleTicketSelection} />
+          {/* <Ticket_Selection onTicketSelect={handleTicketSelection} /> */}
 
-          <div className="mt-40">
+          <div className="mt-10">
             <Event_HeroSection2 />
           </div>
           <div className="mt-10">
